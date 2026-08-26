@@ -1334,7 +1334,7 @@ const CSS = `
   animation: mmFade .7s ease both;
 }
 .mm-start-mark { display: flex; align-items: center; gap: 2.4cqmin; }
-.mm-start-title { font-size: var(--fs-xl); font-weight: 600; letter-spacing: -0.03em; }
+.mm-start-title { font-size: var(--fs-xl); font-weight: 600; letter-spacing: -0.03em; color: var(--ink); }
 .mm-start-title--light { font-weight: 300; color: var(--ink-70); }
 .mm-start-rule { width: 6cqmin; height: var(--bw); background: var(--ink-40); border-radius: var(--bw); }
 .mm-start-sub { font-size: var(--fs-sm); color: var(--ink-40); margin: 0; }
@@ -1354,7 +1354,7 @@ const CSS = `
 /* home */
 .mm-mode { flex: 0 0 auto; gap: var(--gap); padding: calc(var(--pad) * 0.8) var(--pad); }
 .mm-mode-row { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--gap); }
-.mm-mode-name { margin: 0; font-size: var(--fs-lg); font-weight: 600; letter-spacing: -0.02em; }
+.mm-mode-name { margin: 0; font-size: 7.4cqmin; font-weight: 600; letter-spacing: -0.02em; }
 .mm-locked { background: transparent; }
 .mm-locked .mm-mode-name { color: var(--ink-40); font-weight: 500; }
 .mm-locked .mm-stat-value { color: var(--ink-15); }

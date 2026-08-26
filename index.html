@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>minimo-mono</title>
     <style>
-      html, body, #root {
+      html, body {
+        position: fixed;
+        inset: 0;
+        width: 100%;
         height: 100%;
         margin: 0;
+        overflow: hidden;
+        overscroll-behavior: none;
+        touch-action: none;
         background: #DDDDE1;
+      }
+      #root {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
       }
     </style>
   </head>
