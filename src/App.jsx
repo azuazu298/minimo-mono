@@ -1303,7 +1303,15 @@ const CSS = `
 .mm-btn:disabled { opacity: .34; cursor: default; }
 .mm-btn:focus-visible { outline: var(--bw) solid var(--ink); outline-offset: 0.6cqmin; }
 
-.mm-btn--solid { background: #2B2B2F; border-color: #2B2B2F; color: #fff; font-weight: 600; }
+.mm-btn--solid {
+  background: transparent;
+  border-width: calc(var(--bw) * 1.6);
+  border-color: var(--ink);
+  color: var(--ink);
+  font-weight: 700;
+  padding-top: calc(var(--pad) * 0.55 - var(--bw) * 0.6);
+  padding-bottom: calc(var(--pad) * 0.55 - var(--bw) * 0.6);
+}
 
 .mm-btn--icon, .mm-btn--icon-sm {
   padding: 0;
@@ -1432,7 +1440,15 @@ const CSS = `
 .mm-option.is-correct { opacity: 1; color: var(--good); border-color: var(--good); background: var(--good-bg); }
 .mm-option.is-wrong { opacity: 1; color: var(--bad); border-color: var(--bad); background: var(--bad-bg); }
 .mm-option.is-dim { opacity: .3; }
-.mm-next { flex: 0 0 auto; }
+.mm-next {
+  flex: 0 0 auto;
+  background: #111113;
+  border-color: #111113;
+  color: #fff;
+  border-width: var(--bw);
+  padding-top: calc(var(--pad) * 0.55);
+  padding-bottom: calc(var(--pad) * 0.55);
+}
 
 .mm-count { flex: 1; align-items: center; justify-content: center; gap: 3cqmin; }
 .mm-count-num { font-family: var(--mono); font-size: 22cqmin; font-weight: 300; letter-spacing: -0.04em; animation: mmPop .5s ease; }
@@ -1606,7 +1622,8 @@ const CSS = `
 /* pointer-only: keeps tapped buttons from staying highlighted on touch */
 @media (hover: hover) and (pointer: fine) {
   .mm-btn:hover:not(:disabled) { border-color: var(--ink-40); background: rgba(17,17,19,.035); }
-  .mm-btn--solid:hover:not(:disabled) { background: #26262a; border-color: #26262a; }
+  .mm-btn--solid:hover:not(:disabled) { background: rgba(17,17,19,.04); }
+  .mm-next:hover:not(:disabled) { background: #26262a; border-color: #26262a; }
   .mm-btn--icon-sm:hover:not(:disabled) { color: var(--ink); border-color: var(--ink-15); }
   .mm-danger:hover { background: var(--bad-bg); border-color: var(--bad); }
   .mm-chip:hover { border-color: var(--ink-40); }
