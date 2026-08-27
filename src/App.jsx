@@ -500,7 +500,9 @@ function PlayScreen({ config, sound, bookmarks, onToggleBookmark, onGameOver }) 
         </div>
         <div className="mm-question-body">
           <h2 className="mm-word">{current.word}</h2>
-          <p className={`mm-meaning ${answered ? "show" : ""}`}>{current.meaning}</p>
+          <p key={`${qNum}-${current.id}`} className={`mm-meaning ${answered ? "show" : ""}`}>
+            {current.meaning}
+          </p>
         </div>
         <Meter ratio={timeLeft / ROUND_TIME} />
       </Panel>

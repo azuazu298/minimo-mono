@@ -8,11 +8,11 @@
 // That's it — nothing else in the app needs to change.
 
 import { WORDS_BATCH_01 } from "./batch-01.js";
-// import { WORDS_BATCH_02 } from "./batch-02.js";
+import { WORDS_BATCH_02 } from "./batch-02.js";
 // import { WORDS_BATCH_03 } from "./batch-03.js";
 
 export const WORDS = [
   ...WORDS_BATCH_01,
-  // ...WORDS_BATCH_02,
+  ...WORDS_BATCH_02,
   // ...WORDS_BATCH_03,
 ];
