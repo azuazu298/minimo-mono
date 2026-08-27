@@ -1303,7 +1303,7 @@ const CSS = `
 .mm-btn:disabled { opacity: .34; cursor: default; }
 .mm-btn:focus-visible { outline: var(--bw) solid var(--ink); outline-offset: 0.6cqmin; }
 
-.mm-btn--solid { background: var(--ink); border-color: var(--ink); color: #fff; font-weight: 600; }
+.mm-btn--solid { background: #2B2B2F; border-color: #2B2B2F; color: #fff; font-weight: 600; }
 
 .mm-btn--icon, .mm-btn--icon-sm {
   padding: 0;
@@ -1353,7 +1353,7 @@ const CSS = `
 
 /* home */
 .mm-mode { flex: 0 0 auto; gap: var(--gap); padding: calc(var(--pad) * 0.8) var(--pad); }
-.mm-mode-row { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--gap); }
+.mm-mode-row { flex: 1; display: flex; align-items: center; justify-content: space-between; gap: var(--gap); }
 .mm-mode-name { margin: 0; font-size: 7.4cqmin; font-weight: 600; letter-spacing: -0.02em; }
 .mm-locked { background: transparent; }
 .mm-locked .mm-mode-name { color: var(--ink-40); font-weight: 500; }
