@@ -9,10 +9,12 @@
 
 import { WORDS_BATCH_01 } from "./batch-01.js";
 import { WORDS_BATCH_02 } from "./batch-02.js";
-// import { WORDS_BATCH_03 } from "./batch-03.js";
+import { WORDS_BATCH_03 } from "./batch-03.js";
+// import { WORDS_BATCH_04 } from "./batch-04.js";
 
 export const WORDS = [
   ...WORDS_BATCH_01,
   ...WORDS_BATCH_02,
-  // ...WORDS_BATCH_03,
+  ...WORDS_BATCH_03,
+  // ...WORDS_BATCH_04,
 ];
