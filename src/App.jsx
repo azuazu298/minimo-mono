@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import { toBlob } from "html-to-image";
 import {
   Menu,
   Home,
@@ -375,14 +376,15 @@ const Ico = ({ as: C, s = 5, fill = "none" }) => (
   </span>
 );
 
-const Panel = ({ children, className = "", style, grow }) => (
+const Panel = React.forwardRef(({ children, className = "", style, grow }, ref) => (
   <section
+    ref={ref}
     className={`mm-panel ${className}`}
     style={{ ...(grow ? { flex: grow } : null), ...style }}
   >
     {children}
   </section>
-);
+));
 
 const Eyebrow = ({ children, right }) => (
   <div className="mm-eyebrow-row">
@@ -493,7 +495,7 @@ function HomeScreen({ best, bookmarks, onPlay, onList, onInfo, onNotice }) {
         statValue={String(best).padStart(4, "0")}
         onInfo={() => onInfo("classic")}
         action={
-          <Btn variant="solid" className="mm-wide" onClick={() => onPlay({ mode: "classic" })}>
+          <Btn variant="solid" className="mm-wide mm-cta-start" onClick={() => onPlay({ mode: "classic" })}>
             Start
           </Btn>
         }
@@ -767,13 +769,50 @@ function PlayScreen({ config, sound, bookmarks, onToggleBookmark, onGameOver }) 
 
 function ResultScreen({ result, best, isBest, onAgain, onHome }) {
   const [share, setShare] = useState(false);
+  const [capturing, setCapturing] = useState(false);
+  const cardRef = useRef(null);
+
+  const captureAndShare = async () => {
+    if (!cardRef.current || capturing) return;
+    setCapturing(true);
+    try {
+      const blob = await toBlob(cardRef.current, {
+        pixelRatio: 2,
+        backgroundColor: "#ffffff",
+      });
+      if (!blob) throw new Error("capture failed");
+
+      const file = new File([blob], "minimo-mono-score.png", { type: "image/png" });
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        await navigator.share({ files: [file], title: "minimo-mono" });
+      } else {
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "minimo-mono-score.png";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        setTimeout(() => URL.revokeObjectURL(url), 5000);
+      }
+    } catch (e) {
+      setShare(true);
+    } finally {
+      setCapturing(false);
+    }
+  };
 
   return (
     <div className="mm-stack mm-fade">
-      <Panel grow="1" className="mm-result">
+      <Panel ref={cardRef} grow="1" className="mm-result">
         <div className="mm-result-head">
           <span className="mm-eyebrow">{result.mode}</span>
-          <Btn variant="icon-sm" onClick={() => setShare(true)} title="Share this run">
+          <Btn
+            variant="icon-sm"
+            onClick={captureAndShare}
+            disabled={capturing}
+            title="Save or share this score"
+          >
             <Ico as={Camera} s={5} />
           </Btn>
         </div>
@@ -823,7 +862,7 @@ function ResultScreen({ result, best, isBest, onAgain, onHome }) {
         }
       >
         <p className="mm-body-text">
-          Screenshot sharing is not available yet.{"\n"}This feature is still in progress.
+          Couldn't create the image.{"\n"}Please try again in a moment.
         </p>
       </Overlay>
     </div>
@@ -1440,6 +1479,8 @@ const CSS = `
 .mm-option.is-correct { opacity: 1; color: var(--good); border-color: var(--good); background: var(--good-bg); }
 .mm-option.is-wrong { opacity: 1; color: var(--bad); border-color: var(--bad); background: var(--bad-bg); }
 .mm-option.is-dim { opacity: .3; }
+.mm-cta-start { border-color: var(--ink-15); }
+
 .mm-next {
   flex: 0 0 auto;
   background: #111113;
