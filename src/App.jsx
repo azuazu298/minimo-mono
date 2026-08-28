@@ -356,6 +356,18 @@ function PlayScreen({ config, sound, bookmarks, onToggleBookmark, onGameOver }) 
   const [timeLeft, setTimeLeft] = useState(ROUND_TIME);
   const overRef = useRef(false);
 
+  const buildOptionsFor = useCallback((w) => {
+    // { corrects: [...3 strings], wrongs: [...5 strings] }
+    // 1 correct is drawn at random, plus 3 of the 5 pooled wrongs, then shuffled.
+    const correctText = w.corrects[Math.floor(Math.random() * w.corrects.length)];
+    const wrongPool = shuffle(w.wrongs).slice(0, 3);
+    const options = [
+      { id: "a", text: correctText, isCorrect: true },
+      ...wrongPool.map((text, i) => ({ id: "bcd"[i], text })),
+    ];
+    return shuffle(options);
+  }, []);
+
   const nextQuestion = useCallback(
     (n) => {
       let candidates = pool;
@@ -365,19 +377,18 @@ function PlayScreen({ config, sound, bookmarks, onToggleBookmark, onGameOver }) 
         candidates = byDiff.length ? byDiff : QUESTIONS;
       }
       const w = candidates[Math.floor(Math.random() * candidates.length)];
-      const v = w.variations[Math.floor(Math.random() * w.variations.length)];
       setCurrent({
         id: w.id,
         word: w.word,
         meaning: w.meaning,
         difficulty: w.difficulty,
-        options: shuffle(v.options),
+        options: buildOptionsFor(w),
       });
       setPicked(null);
       setTimeLeft(ROUND_TIME);
       setQNum(n);
     },
-    [pool, config.mode]
+    [pool, config.mode, buildOptionsFor]
   );
 
   useEffect(() => {

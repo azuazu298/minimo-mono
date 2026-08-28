@@ -1,29 +1,22 @@
 // TOEIC batch 02 — words 51-100 (source list order)
+// New format: 3 corrects (paraphrases) + 5 pooled wrongs per word.
 export const WORDS_BATCH_02 = [
   {
     id: 51,
     word: "thrive",
     meaning: "繁栄する、成功する",
     difficulty: 2,
-    variations: [
-      { id: "51-A", options: [
-        { id: "a", text: "to grow or develop successfully", isCorrect: true },
-        { id: "b", text: "to slowly decline over several years" },
-        { id: "c", text: "to remain exactly the same without change" },
-        { id: "d", text: "to be temporarily closed for repairs" },
-      ]},
-      { id: "51-B", options: [
-        { id: "a", text: "to become increasingly successful or strong", isCorrect: true },
-        { id: "b", text: "to struggle constantly without improvement" },
-        { id: "c", text: "to be replaced by a newer alternative" },
-        { id: "d", text: "to operate only during limited hours" },
-      ]},
-      { id: "51-C", options: [
-        { id: "a", text: "to flourish, especially in a favorable environment", isCorrect: true },
-        { id: "b", text: "to fail despite significant effort" },
-        { id: "c", text: "to expand without any clear direction" },
-        { id: "d", text: "to merge with a much larger company" },
-      ]},
+    corrects: [
+      "to grow or develop successfully",
+      "to become increasingly successful or strong",
+      "to flourish, especially in a favorable environment",
+    ],
+    wrongs: [
+      "the practice of spending money carefully to avoid waste",
+      "to slowly decline over a period of several years",
+      "to be temporarily closed for scheduled repairs",
+      "to remain exactly the same without any noticeable change",
+      "to be replaced by a newer, unrelated alternative",
     ],
   },
   {
@@ -31,25 +24,17 @@ export const WORDS_BATCH_02 = [
     word: "lucrative",
     meaning: "儲かる、利益の多い",
     difficulty: 3,
-    variations: [
-      { id: "52-A", options: [
-        { id: "a", text: "producing a large amount of profit", isCorrect: true },
-        { id: "b", text: "costing far more than it earns" },
-        { id: "c", text: "requiring very little time or effort" },
-        { id: "d", text: "available only to a small group" },
-      ]},
-      { id: "52-B", options: [
-        { id: "a", text: "highly profitable, especially in business", isCorrect: true },
-        { id: "b", text: "barely covering its own operating costs" },
-        { id: "c", text: "difficult to measure in financial terms" },
-        { id: "d", text: "temporarily unavailable due to high demand" },
-      ]},
-      { id: "52-C", options: [
-        { id: "a", text: "bringing in a great deal of money", isCorrect: true },
-        { id: "b", text: "losing money steadily over time" },
-        { id: "c", text: "uncertain in terms of future profit" },
-        { id: "d", text: "shared equally among all employees" },
-      ]},
+    corrects: [
+      "producing a large amount of profit",
+      "highly profitable, especially in business",
+      "bringing in a great deal of money",
+    ],
+    wrongs: [
+      "having a bright, shiny appearance",
+      "costing significantly more than it actually earns",
+      "requiring very little time or effort to complete",
+      "available only to a very small, exclusive group",
+      "losing money steadily over an extended period",
     ],
   },
   {
@@ -57,25 +42,17 @@ export const WORDS_BATCH_02 = [
     word: "decade",
     meaning: "10年間",
     difficulty: 1,
-    variations: [
-      { id: "53-A", options: [
-        { id: "a", text: "a period of ten years", isCorrect: true },
-        { id: "b", text: "a period of one hundred years" },
-        { id: "c", text: "a single calendar year" },
-        { id: "d", text: "a period lasting only a few months" },
-      ]},
-      { id: "53-B", options: [
-        { id: "a", text: "a span of time equal to ten years", isCorrect: true },
-        { id: "b", text: "a span of time equal to one month" },
-        { id: "c", text: "a repeating cycle within a single year" },
-        { id: "d", text: "an unspecified length of time" },
-      ]},
-      { id: "53-C", options: [
-        { id: "a", text: "ten consecutive years considered as a unit", isCorrect: true },
-        { id: "b", text: "a group of ten people working together" },
-        { id: "c", text: "a list of ten important events" },
-        { id: "d", text: "a set of ten identical products" },
-      ]},
+    corrects: [
+      "a period of ten years",
+      "a span of time equal to ten years",
+      "ten consecutive years considered as a unit",
+    ],
+    wrongs: [
+      "a unit used to measure how loud a sound is",
+      "a period of one hundred years",
+      "a single calendar year, from January to December",
+      "a repeating cycle that happens within a single year",
+      "a group of ten people working on the same project",
     ],
   },
   {
@@ -83,25 +60,17 @@ export const WORDS_BATCH_02 = [
     word: "directions",
     meaning: "道順、指示",
     difficulty: 1,
-    variations: [
-      { id: "54-A", options: [
-        { id: "a", text: "instructions on how to reach a place", isCorrect: true },
-        { id: "b", text: "a written summary of a meeting" },
-        { id: "c", text: "a formal request for a refund" },
-        { id: "d", text: "a warning about a dangerous area" },
-      ]},
-      { id: "54-B", options: [
-        { id: "a", text: "guidance explaining the way to get somewhere", isCorrect: true },
-        { id: "b", text: "a schedule listing several appointments" },
-        { id: "c", text: "a survey asking for customer opinions" },
-        { id: "d", text: "a certificate proving one's identity" },
-      ]},
-      { id: "54-C", options: [
-        { id: "a", text: "information that shows the route to a destination", isCorrect: true },
-        { id: "b", text: "information that describes a product's features" },
-        { id: "c", text: "information kept private from the public" },
-        { id: "d", text: "information collected for research purposes" },
-      ]},
+    corrects: [
+      "instructions on how to reach a place",
+      "guidance explaining the way to get somewhere",
+      "information that shows the route to a destination",
+    ],
+    wrongs: [
+      "changes made to fix mistakes in a document",
+      "a written summary produced after a meeting ends",
+      "a formal request submitted for a refund",
+      "a warning about a dangerous area to avoid",
+      "a certificate proving someone's identity",
     ],
   },
   {
@@ -109,25 +78,17 @@ export const WORDS_BATCH_02 = [
     word: "reservation",
     meaning: "予約",
     difficulty: 1,
-    variations: [
-      { id: "55-A", options: [
-        { id: "a", text: "an arrangement made in advance to secure something", isCorrect: true },
-        { id: "b", text: "a formal complaint filed after a poor experience" },
-        { id: "c", text: "a discount offered during a special promotion" },
-        { id: "d", text: "a receipt confirming a completed payment" },
-      ]},
-      { id: "55-B", options: [
-        { id: "a", text: "a booking made ahead of time for a service", isCorrect: true },
-        { id: "b", text: "a rule limiting how a service can be used" },
-        { id: "c", text: "a fee charged for canceling an appointment" },
-        { id: "d", text: "a review written after using a service" },
-      ]},
-      { id: "55-C", options: [
-        { id: "a", text: "an advance arrangement to hold a table, room, or seat", isCorrect: true },
-        { id: "b", text: "a spontaneous decision made without planning" },
-        { id: "c", text: "a policy describing a company's return process" },
-        { id: "d", text: "a schedule outlining staff working hours" },
-      ]},
+    corrects: [
+      "an arrangement made in advance to secure something",
+      "a booking made ahead of time for a service",
+      "an advance arrangement to hold a table, room, or seat",
+    ],
+    wrongs: [
+      "a formal notice that someone is leaving a job",
+      "a complaint filed after receiving poor service",
+      "a discount offered during a limited-time sale",
+      "a rule limiting how a service may be used",
+      "a receipt confirming that a payment was completed",
     ],
   },
   {
@@ -135,25 +96,17 @@ export const WORDS_BATCH_02 = [
     word: "street stalls",
     meaning: "露店、屋台",
     difficulty: 2,
-    variations: [
-      { id: "56-A", options: [
-        { id: "a", text: "small temporary shops set up along a street", isCorrect: true },
-        { id: "b", text: "large permanent stores located inside a mall" },
-        { id: "c", text: "private offices rented by small businesses" },
-        { id: "d", text: "government buildings open to the public" },
-      ]},
-      { id: "56-B", options: [
-        { id: "a", text: "outdoor stands where vendors sell goods or food", isCorrect: true },
-        { id: "b", text: "indoor counters found only in large supermarkets" },
-        { id: "c", text: "warehouses used for storing unsold merchandise" },
-        { id: "d", text: "kiosks used exclusively for selling tickets" },
-      ]},
-      { id: "56-C", options: [
-        { id: "a", text: "simple outdoor booths used for selling items", isCorrect: true },
-        { id: "b", text: "formal exhibitions held once a year" },
-        { id: "c", text: "delivery trucks parked outside a business" },
-        { id: "d", text: "waiting areas located near a train station" },
-      ]},
+    corrects: [
+      "small temporary shops set up along a street",
+      "outdoor stands where vendors sell goods or food",
+      "simple outdoor booths used for selling items",
+    ],
+    wrongs: [
+      "large permanent stores located inside a shopping mall",
+      "private offices rented by small local businesses",
+      "government buildings that are open to the public",
+      "warehouses used only for storing unsold merchandise",
+      "delivery trucks parked outside a large business",
     ],
   },
   {
@@ -161,25 +114,17 @@ export const WORDS_BATCH_02 = [
     word: "acoustic",
     meaning: "音響の",
     difficulty: 3,
-    variations: [
-      { id: "57-A", options: [
-        { id: "a", text: "relating to sound or the sense of hearing", isCorrect: true },
-        { id: "b", text: "relating to the taste of food" },
-        { id: "c", text: "relating to the appearance of a building" },
-        { id: "d", text: "relating to the temperature of a room" },
-      ]},
-      { id: "57-B", options: [
-        { id: "a", text: "designed to affect how sound is heard or produced", isCorrect: true },
-        { id: "b", text: "designed to increase the speed of a vehicle" },
-        { id: "c", text: "designed to reduce the cost of production" },
-        { id: "d", text: "designed to improve the flavor of a dish" },
-      ]},
-      { id: "57-C", options: [
-        { id: "a", text: "connected to sound quality or hearing", isCorrect: true },
-        { id: "b", text: "connected to visual design or color" },
-        { id: "c", text: "connected to physical strength or endurance" },
-        { id: "d", text: "connected to financial planning or budgeting" },
-      ]},
+    corrects: [
+      "relating to sound or the sense of hearing",
+      "designed to affect how sound is heard or produced",
+      "connected to sound quality or hearing",
+    ],
+    wrongs: [
+      "relating to activities that take place in water",
+      "relating to how a room's temperature is controlled",
+      "relating to the visual design of a building's interior",
+      "relating to the nutritional value of a meal",
+      "relating to how quickly a vehicle can accelerate",
     ],
   },
   {
@@ -187,25 +132,17 @@ export const WORDS_BATCH_02 = [
     word: "dominate",
     meaning: "支配する、優位に立つ",
     difficulty: 3,
-    variations: [
-      { id: "58-A", options: [
-        { id: "a", text: "to have a controlling influence over something", isCorrect: true },
-        { id: "b", text: "to withdraw completely from a competition" },
-        { id: "c", text: "to share equal control with others" },
-        { id: "d", text: "to lose interest in an ongoing project" },
-      ]},
-      { id: "58-B", options: [
-        { id: "a", text: "to be the most powerful or important part of something", isCorrect: true },
-        { id: "b", text: "to be a minor, easily forgotten part of something" },
-        { id: "c", text: "to be excluded from an important decision" },
-        { id: "d", text: "to be temporarily replaced by a competitor" },
-      ]},
-      { id: "58-C", options: [
-        { id: "a", text: "to have more power or control than others in a situation", isCorrect: true },
-        { id: "b", text: "to have no influence over a situation at all" },
-        { id: "c", text: "to have a brief, one-time impact on a situation" },
-        { id: "d", text: "to have equal standing with every competitor" },
-      ]},
+    corrects: [
+      "to have a controlling influence over something",
+      "to be the most powerful or important part of something",
+      "to have more power or control than others in a situation",
+    ],
+    wrongs: [
+      "to give money or goods to a good cause",
+      "to withdraw completely from an ongoing competition",
+      "to share equal control with several other parties",
+      "to lose interest in a project shortly after starting it",
+      "to be temporarily replaced by a rival company",
     ],
   },
   {
@@ -213,25 +150,17 @@ export const WORDS_BATCH_02 = [
     word: "vary",
     meaning: "異なる、変化する",
     difficulty: 2,
-    variations: [
-      { id: "59-A", options: [
-        { id: "a", text: "to be different from one another", isCorrect: true },
-        { id: "b", text: "to remain identical in every case" },
-        { id: "c", text: "to be measured with complete precision" },
-        { id: "d", text: "to be canceled without any warning" },
-      ]},
-      { id: "59-B", options: [
-        { id: "a", text: "to change or differ depending on the situation", isCorrect: true },
-        { id: "b", text: "to stay fixed regardless of the situation" },
-        { id: "c", text: "to increase steadily without exception" },
-        { id: "d", text: "to be decided by a single person" },
-      ]},
-      { id: "59-C", options: [
-        { id: "a", text: "to show differences among similar things", isCorrect: true },
-        { id: "b", text: "to show no differences at all" },
-        { id: "c", text: "to hide differences on purpose" },
-        { id: "d", text: "to record differences for future reference" },
-      ]},
+    corrects: [
+      "to be different from one another",
+      "to change or differ depending on the situation",
+      "to show differences among similar things",
+    ],
+    wrongs: [
+      "to check that something is true or accurate",
+      "to remain identical in every single case",
+      "to be measured with an unusually high level of precision",
+      "to be canceled without any prior warning",
+      "to be decided entirely by a single person",
     ],
   },
   {
@@ -239,25 +168,17 @@ export const WORDS_BATCH_02 = [
     word: "enable",
     meaning: "可能にする",
     difficulty: 2,
-    variations: [
-      { id: "60-A", options: [
-        { id: "a", text: "to make it possible for something to happen", isCorrect: true },
-        { id: "b", text: "to make it impossible for something to happen" },
-        { id: "c", text: "to delay something until a later date" },
-        { id: "d", text: "to cancel something that was already planned" },
-      ]},
-      { id: "60-B", options: [
-        { id: "a", text: "to give someone the ability or means to do something", isCorrect: true },
-        { id: "b", text: "to prevent someone from doing something" },
-        { id: "c", text: "to criticize someone for doing something" },
-        { id: "d", text: "to ignore someone's request completely" },
-      ]},
-      { id: "60-C", options: [
-        { id: "a", text: "to provide the conditions needed for something to occur", isCorrect: true },
-        { id: "b", text: "to remove the conditions needed for something to occur" },
-        { id: "c", text: "to hide the conditions needed for something to occur" },
-        { id: "d", text: "to question whether something should occur at all" },
-      ]},
+    corrects: [
+      "to make it possible for something to happen",
+      "to give someone the ability or means to do something",
+      "to provide the conditions needed for something to occur",
+    ],
+    wrongs: [
+      "to officially register for a course or program",
+      "to make it impossible for something to happen",
+      "to delay something until a later, unspecified date",
+      "to criticize someone for attempting a difficult task",
+      "to cancel a plan that had already been approved",
     ],
   },
   {
@@ -265,25 +186,17 @@ export const WORDS_BATCH_02 = [
     word: "turn in ~",
     meaning: "~を提出する",
     difficulty: 2,
-    variations: [
-      { id: "61-A", options: [
-        { id: "a", text: "to submit something, such as a report or homework", isCorrect: true },
-        { id: "b", text: "to throw away something no longer needed" },
-        { id: "c", text: "to postpone something until further notice" },
-        { id: "d", text: "to request more time to finish something" },
-      ]},
-      { id: "61-B", options: [
-        { id: "a", text: "to hand in a completed piece of work", isCorrect: true },
-        { id: "b", text: "to begin working on a new assignment" },
-        { id: "c", text: "to lose an important document by accident" },
-        { id: "d", text: "to review someone else's completed work" },
-      ]},
-      { id: "61-C", options: [
-        { id: "a", text: "to deliver a finished document to the person expecting it", isCorrect: true },
-        { id: "b", text: "to keep a finished document for personal records" },
-        { id: "c", text: "to destroy a document that is no longer accurate" },
-        { id: "d", text: "to copy a document for a coworker" },
-      ]},
+    corrects: [
+      "to submit something, such as a report or homework",
+      "to hand in a completed piece of work",
+      "to deliver a finished document to the person expecting it",
+    ],
+    wrongs: [
+      "to refuse an offer or invitation politely",
+      "to throw away something that is no longer needed",
+      "to request additional time to finish a task",
+      "to begin working on a brand-new assignment",
+      "to review a colleague's completed work before it is sent",
     ],
   },
   {
@@ -291,25 +204,17 @@ export const WORDS_BATCH_02 = [
     word: "convey",
     meaning: "伝える",
     difficulty: 3,
-    variations: [
-      { id: "62-A", options: [
-        { id: "a", text: "to communicate an idea, feeling, or message", isCorrect: true },
-        { id: "b", text: "to physically repair a broken message system" },
-        { id: "c", text: "to translate a document word for word" },
-        { id: "d", text: "to hide a message from certain people" },
-      ]},
-      { id: "62-B", options: [
-        { id: "a", text: "to make a thought or feeling understood by others", isCorrect: true },
-        { id: "b", text: "to make a thought or feeling completely private" },
-        { id: "c", text: "to record a thought or feeling for later use" },
-        { id: "d", text: "to forget a thought or feeling entirely" },
-      ]},
-      { id: "62-C", options: [
-        { id: "a", text: "to express or communicate something clearly", isCorrect: true },
-        { id: "b", text: "to confuse or obscure something intentionally" },
-        { id: "c", text: "to summarize something using very few words" },
-        { id: "d", text: "to exaggerate something beyond what is true" },
-      ]},
+    corrects: [
+      "to communicate an idea, feeling, or message",
+      "to make a thought or feeling understood by others",
+      "to express or communicate something clearly",
+    ],
+    wrongs: [
+      "to change something from one form into another",
+      "to physically repair a broken communication device",
+      "to translate a document word for word into another language",
+      "to keep a message completely private from certain people",
+      "to record a conversation for future reference",
     ],
   },
   {
@@ -317,25 +222,17 @@ export const WORDS_BATCH_02 = [
     word: "allocate",
     meaning: "割り当てる",
     difficulty: 3,
-    variations: [
-      { id: "63-A", options: [
-        { id: "a", text: "to set aside a resource for a particular purpose", isCorrect: true },
-        { id: "b", text: "to remove a resource from a project entirely" },
-        { id: "c", text: "to combine several resources into a single one" },
-        { id: "d", text: "to sell a resource that is no longer needed" },
-      ]},
-      { id: "63-B", options: [
-        { id: "a", text: "to distribute something, such as money or time, for a purpose", isCorrect: true },
-        { id: "b", text: "to waste something without any clear purpose" },
-        { id: "c", text: "to hide something so it cannot be used" },
-        { id: "d", text: "to duplicate something unnecessarily" },
-      ]},
-      { id: "63-C", options: [
-        { id: "a", text: "to assign a specific amount of something to a task", isCorrect: true },
-        { id: "b", text: "to refuse to assign any amount to a task" },
-        { id: "c", text: "to postpone assigning an amount until later" },
-        { id: "d", text: "to assign an unlimited amount without restriction" },
-      ]},
+    corrects: [
+      "to set aside a resource for a particular purpose",
+      "to distribute something, such as money or time, for a purpose",
+      "to assign a specific amount of something to a task",
+    ],
+    wrongs: [
+      "to publicly support a particular cause or idea",
+      "to remove a resource from a project entirely",
+      "to combine several separate resources into a single one",
+      "to sell a resource that is no longer required",
+      "to duplicate a resource without a clear reason",
     ],
   },
   {
@@ -343,25 +240,17 @@ export const WORDS_BATCH_02 = [
     word: "tip",
     meaning: "心づけ、こつ",
     difficulty: 1,
-    variations: [
-      { id: "64-A", options: [
-        { id: "a", text: "a small amount of money given for good service", isCorrect: true },
-        { id: "b", text: "a large sum of money required to join a club" },
-        { id: "c", text: "a fee charged automatically on every purchase" },
-        { id: "d", text: "a fine issued for arriving late" },
-      ]},
-      { id: "64-B", options: [
-        { id: "a", text: "a helpful piece of advice", isCorrect: true },
-        { id: "b", text: "a formal complaint about poor service" },
-        { id: "c", text: "a detailed report on quarterly earnings" },
-        { id: "d", text: "a rule that must be followed without exception" },
-      ]},
-      { id: "64-C", options: [
-        { id: "a", text: "a useful suggestion that makes a task easier", isCorrect: true },
-        { id: "b", text: "a mandatory requirement that cannot be skipped" },
-        { id: "c", text: "a warning about a serious danger" },
-        { id: "d", text: "a summary of a long meeting" },
-      ]},
+    corrects: [
+      "a small amount of money given for good service",
+      "a helpful piece of advice",
+      "a useful suggestion that makes a task easier",
+    ],
+    wrongs: [
+      "a large sum of money required to join a private club",
+      "a formal complaint about the quality of a service",
+      "a detailed report summarizing quarterly earnings",
+      "a rule that must be followed with no exceptions allowed",
+      "a fine issued to someone for arriving late",
     ],
   },
   {
@@ -369,25 +258,17 @@ export const WORDS_BATCH_02 = [
     word: "inevitable",
     meaning: "避けられない",
     difficulty: 3,
-    variations: [
-      { id: "65-A", options: [
-        { id: "a", text: "certain to happen and impossible to avoid", isCorrect: true },
-        { id: "b", text: "unlikely to happen under normal circumstances" },
-        { id: "c", text: "easily prevented with simple planning" },
-        { id: "d", text: "dependent entirely on someone's personal choice" },
-      ]},
-      { id: "65-B", options: [
-        { id: "a", text: "bound to occur no matter what is done", isCorrect: true },
-        { id: "b", text: "avoidable if the right steps are taken early" },
-        { id: "c", text: "optional and only occurring by request" },
-        { id: "d", text: "forbidden under most circumstances" },
-      ]},
-      { id: "65-C", options: [
-        { id: "a", text: "unavoidable, given the current situation", isCorrect: true },
-        { id: "b", text: "avoidable, with just a small amount of effort" },
-        { id: "c", text: "uncertain, and impossible to predict" },
-        { id: "d", text: "temporary, and expected to change soon" },
-      ]},
+    corrects: [
+      "certain to happen and impossible to avoid",
+      "bound to occur no matter what is done",
+      "unavoidable, given the current situation",
+    ],
+    wrongs: [
+      "extremely useful and difficult to do without",
+      "unlikely to happen under normal circumstances",
+      "easily prevented with a small amount of planning",
+      "dependent entirely on a single person's personal choice",
+      "forbidden under most standard circumstances",
     ],
   },
   {
@@ -395,25 +276,17 @@ export const WORDS_BATCH_02 = [
     word: "leave for ~",
     meaning: "~に向けて出発する",
     difficulty: 1,
-    variations: [
-      { id: "66-A", options: [
-        { id: "a", text: "to depart in order to travel to a place", isCorrect: true },
-        { id: "b", text: "to arrive after a long journey" },
-        { id: "c", text: "to cancel a planned trip" },
-        { id: "d", text: "to return from a recent trip" },
-      ]},
-      { id: "66-B", options: [
-        { id: "a", text: "to set out on a trip toward a destination", isCorrect: true },
-        { id: "b", text: "to postpone a trip to a later date" },
-        { id: "c", text: "to plan a trip without setting a date" },
-        { id: "d", text: "to remain at a location instead of traveling" },
-      ]},
-      { id: "66-C", options: [
-        { id: "a", text: "to begin a journey heading toward somewhere", isCorrect: true },
-        { id: "b", text: "to end a journey upon reaching somewhere" },
-        { id: "c", text: "to describe a journey taken in the past" },
-        { id: "d", text: "to book a journey for a future date" },
-      ]},
+    corrects: [
+      "to depart in order to travel to a place",
+      "to set out on a trip toward a destination",
+      "to begin a journey heading toward somewhere",
+    ],
+    wrongs: [
+      "to accidentally forget an item at a previous location",
+      "to arrive somewhere after a long journey",
+      "to cancel a trip that had already been planned",
+      "to return home after finishing a recent trip",
+      "to book a trip for a date that hasn't been chosen",
     ],
   },
   {
@@ -421,25 +294,17 @@ export const WORDS_BATCH_02 = [
     word: "given that",
     meaning: "~を考慮すると",
     difficulty: 4,
-    variations: [
-      { id: "67-A", options: [
-        { id: "a", text: "considering the fact that something is true", isCorrect: true },
-        { id: "b", text: "regardless of whether something is true" },
-        { id: "c", text: "despite clear evidence that something is false" },
-        { id: "d", text: "without any regard for the facts" },
-      ]},
-      { id: "67-B", options: [
-        { id: "a", text: "because a certain condition or fact applies", isCorrect: true },
-        { id: "b", text: "even though a certain condition does not apply" },
-        { id: "c", text: "after ignoring a certain important condition" },
-        { id: "d", text: "before a certain condition has been confirmed" },
-      ]},
-      { id: "67-C", options: [
-        { id: "a", text: "taking into account a particular fact or situation", isCorrect: true },
-        { id: "b", text: "overlooking a particular fact or situation entirely" },
-        { id: "c", text: "questioning whether a particular fact is true" },
-        { id: "d", text: "denying that a particular situation exists" },
-      ]},
+    corrects: [
+      "considering the fact that something is true",
+      "because a certain condition or fact applies",
+      "taking into account a particular fact or situation",
+    ],
+    wrongs: [
+      "in celebration of a recent achievement",
+      "despite clear evidence that something is false",
+      "without any regard for the surrounding circumstances",
+      "before a certain condition has been officially confirmed",
+      "regardless of whether a particular fact is actually true",
     ],
   },
   {
@@ -447,25 +312,17 @@ export const WORDS_BATCH_02 = [
     word: "report to work",
     meaning: "出勤する",
     difficulty: 2,
-    variations: [
-      { id: "68-A", options: [
-        { id: "a", text: "to arrive at one's job to begin working", isCorrect: true },
-        { id: "b", text: "to permanently resign from one's job" },
-        { id: "c", text: "to take an extended leave from one's job" },
-        { id: "d", text: "to request a transfer to a different job" },
-      ]},
-      { id: "68-B", options: [
-        { id: "a", text: "to show up at the workplace as scheduled", isCorrect: true },
-        { id: "b", text: "to skip a scheduled shift without notice" },
-        { id: "c", text: "to apply for a new position elsewhere" },
-        { id: "d", text: "to retire from a long career" },
-      ]},
-      { id: "68-C", options: [
-        { id: "a", text: "to appear at one's workplace to start a shift", isCorrect: true },
-        { id: "b", text: "to complain formally about a workplace issue" },
-        { id: "c", text: "to celebrate an anniversary at one's workplace" },
-        { id: "d", text: "to receive training at a new workplace" },
-      ]},
+    corrects: [
+      "to arrive at one's job to begin working",
+      "to show up at the workplace as scheduled",
+      "to appear at one's workplace to start a shift",
+    ],
+    wrongs: [
+      "to write a summary describing a completed project",
+      "to permanently resign from a long-held position",
+      "to request a transfer to a different department",
+      "to apply for a position at a completely new company",
+      "to take an extended, unpaid leave from a job",
     ],
   },
   {
@@ -473,25 +330,17 @@ export const WORDS_BATCH_02 = [
     word: "consequence",
     meaning: "結果、影響",
     difficulty: 2,
-    variations: [
-      { id: "69-A", options: [
-        { id: "a", text: "a result that follows from an earlier action", isCorrect: true },
-        { id: "b", text: "a plan created before any action is taken" },
-        { id: "c", text: "a rule that prevents an action from happening" },
-        { id: "d", text: "a description of an action in great detail" },
-      ]},
-      { id: "69-B", options: [
-        { id: "a", text: "something that happens as an effect of a cause", isCorrect: true },
-        { id: "b", text: "something that happens completely by random chance" },
-        { id: "c", text: "something that happens before its cause occurs" },
-        { id: "d", text: "something that prevents a cause from occurring" },
-      ]},
-      { id: "69-C", options: [
-        { id: "a", text: "the outcome, often negative, of a decision or event", isCorrect: true },
-        { id: "b", text: "the reason behind a decision or event" },
-        { id: "c", text: "a summary of a decision or event" },
-        { id: "d", text: "an alternative to a decision or event" },
-      ]},
+    corrects: [
+      "a result that follows from an earlier action",
+      "something that happens as an effect of a cause",
+      "the outcome, often negative, of a decision or event",
+    ],
+    wrongs: [
+      "a large meeting where professionals discuss a shared topic",
+      "a plan created before any action has been taken",
+      "a rule designed to prevent an action from happening",
+      "a detailed description of an action, written afterward",
+      "an alternative option considered instead of a decision",
     ],
   },
   {
@@ -499,25 +348,17 @@ export const WORDS_BATCH_02 = [
     word: "prominent",
     meaning: "著名な、目立った",
     difficulty: 3,
-    variations: [
-      { id: "70-A", options: [
-        { id: "a", text: "important or well-known, and easily noticed", isCorrect: true },
-        { id: "b", text: "completely unknown to the general public" },
-        { id: "c", text: "average and not particularly noteworthy" },
-        { id: "d", text: "hidden from public view intentionally" },
-      ]},
-      { id: "70-B", options: [
-        { id: "a", text: "standing out because of importance or size", isCorrect: true },
-        { id: "b", text: "blending in due to its small size" },
-        { id: "c", text: "temporary and soon to be forgotten" },
-        { id: "d", text: "disliked by most people who know of it" },
-      ]},
-      { id: "70-C", options: [
-        { id: "a", text: "widely recognized or easily noticeable", isCorrect: true },
-        { id: "b", text: "rarely mentioned or discussed by anyone" },
-        { id: "c", text: "uncertain in terms of its importance" },
-        { id: "d", text: "limited to a very small, private group" },
-      ]},
+    corrects: [
+      "important or well-known, and easily noticed",
+      "standing out because of importance or size",
+      "widely recognized or easily noticeable",
+    ],
+    wrongs: [
+      "lasting forever, with no plan to change",
+      "completely unknown to the general public",
+      "average, and not particularly noteworthy in any way",
+      "disliked by most people who are familiar with it",
+      "temporary, and likely to be forgotten very soon",
     ],
   },
   {
@@ -525,25 +366,17 @@ export const WORDS_BATCH_02 = [
     word: "empty",
     meaning: "空の",
     difficulty: 1,
-    variations: [
-      { id: "71-A", options: [
-        { id: "a", text: "containing nothing inside", isCorrect: true },
-        { id: "b", text: "completely filled to capacity" },
-        { id: "c", text: "partially filled with a few items" },
-        { id: "d", text: "covered by a locked door" },
-      ]},
-      { id: "71-B", options: [
-        { id: "a", text: "having no contents or people inside", isCorrect: true },
-        { id: "b", text: "having far more contents than expected" },
-        { id: "c", text: "having exactly the expected number of items" },
-        { id: "d", text: "having a strong, noticeable smell" },
-      ]},
-      { id: "71-C", options: [
-        { id: "a", text: "with nothing present inside a space", isCorrect: true },
-        { id: "b", text: "with an unusual amount of clutter inside" },
-        { id: "c", text: "recently cleaned and organized" },
-        { id: "d", text: "scheduled to be filled very soon" },
-      ]},
+    corrects: [
+      "containing nothing inside",
+      "having no contents or people inside",
+      "with nothing present inside a space",
+    ],
+    wrongs: [
+      "recently cleaned out after being full for years",
+      "completely filled to its maximum capacity",
+      "covered by a locked door that cannot be opened",
+      "scheduled to be filled again very soon",
+      "having a strong, noticeable smell inside",
     ],
   },
   {
@@ -551,25 +384,17 @@ export const WORDS_BATCH_02 = [
     word: "doorway",
     meaning: "戸口、玄関",
     difficulty: 2,
-    variations: [
-      { id: "72-A", options: [
-        { id: "a", text: "the space where a door opens into a room", isCorrect: true },
-        { id: "b", text: "a large open area used for parking" },
-        { id: "c", text: "a hallway connecting two separate buildings" },
-        { id: "d", text: "a small room used for storage" },
-      ]},
-      { id: "72-B", options: [
-        { id: "a", text: "an entrance or opening where a door is located", isCorrect: true },
-        { id: "b", text: "a window that looks out onto a garden" },
-        { id: "c", text: "a staircase leading to an upper floor" },
-        { id: "d", text: "a balcony overlooking a busy street" },
-      ]},
-      { id: "72-C", options: [
-        { id: "a", text: "the opening through which one enters or exits", isCorrect: true },
-        { id: "b", text: "the ceiling of a room or hallway" },
-        { id: "c", text: "the roof of a building" },
-        { id: "d", text: "the fence surrounding a property" },
-      ]},
+    corrects: [
+      "the space where a door opens into a room",
+      "an entrance or opening where a door is located",
+      "the opening through which one enters or exits",
+    ],
+    wrongs: [
+      "a paved path leading to a house, used for vehicles",
+      "a large open area used specifically for parking",
+      "a window that looks out onto a garden",
+      "a staircase leading up to a building's second floor",
+      "a balcony that overlooks a busy street below",
     ],
   },
   {
@@ -577,25 +402,17 @@ export const WORDS_BATCH_02 = [
     word: "outstanding",
     meaning: "優れた、未払いの",
     difficulty: 3,
-    variations: [
-      { id: "73-A", options: [
-        { id: "a", text: "exceptionally good or remarkable", isCorrect: true },
-        { id: "b", text: "average and unremarkable in every way" },
-        { id: "c", text: "below the expected standard of quality" },
-        { id: "d", text: "recently completed without any issues" },
-      ]},
-      { id: "73-B", options: [
-        { id: "a", text: "not yet paid or resolved", isCorrect: true },
-        { id: "b", text: "fully paid and completely settled" },
-        { id: "c", text: "canceled and no longer relevant" },
-        { id: "d", text: "scheduled for a much later date" },
-      ]},
-      { id: "73-C", options: [
-        { id: "a", text: "remarkably excellent, standing out from others", isCorrect: true },
-        { id: "b", text: "noticeably poor compared to others" },
-        { id: "c", text: "identical in quality to most others" },
-        { id: "d", text: "temporarily unavailable for review" },
-      ]},
+    corrects: [
+      "exceptionally good or remarkable",
+      "not yet paid or resolved",
+      "remarkably excellent, standing out from others",
+    ],
+    wrongs: [
+      "average and unremarkable in almost every respect",
+      "recently completed with no issues remaining",
+      "identical in quality to most other similar items",
+      "temporarily unavailable while under review",
+      "canceled and no longer considered relevant",
     ],
   },
   {
@@ -603,25 +420,17 @@ export const WORDS_BATCH_02 = [
     word: "prompt",
     meaning: "迅速な、促す",
     difficulty: 2,
-    variations: [
-      { id: "74-A", options: [
-        { id: "a", text: "done quickly and without unnecessary delay", isCorrect: true },
-        { id: "b", text: "done slowly, taking much longer than expected" },
-        { id: "c", text: "done only after several reminders" },
-        { id: "d", text: "done without any prior planning" },
-      ]},
-      { id: "74-B", options: [
-        { id: "a", text: "to cause someone to do something", isCorrect: true },
-        { id: "b", text: "to prevent someone from doing something" },
-        { id: "c", text: "to punish someone for doing something" },
-        { id: "d", text: "to reward someone after they act" },
-      ]},
-      { id: "74-C", options: [
-        { id: "a", text: "happening or acting without delay", isCorrect: true },
-        { id: "b", text: "happening only after significant delay" },
-        { id: "c", text: "happening without any clear reason" },
-        { id: "d", text: "happening at an unpredictable time" },
-      ]},
+    corrects: [
+      "done quickly and without unnecessary delay",
+      "to cause someone to do something",
+      "happening or acting without delay",
+    ],
+    wrongs: [
+      "done only after several reminders have been sent",
+      "to prevent someone from completing a task",
+      "to punish someone for making a mistake",
+      "happening at a time that is difficult to predict",
+      "done slowly, taking far longer than expected",
     ],
   },
   {
@@ -629,25 +438,17 @@ export const WORDS_BATCH_02 = [
     word: "power",
     meaning: "力、権力、電力",
     difficulty: 1,
-    variations: [
-      { id: "75-A", options: [
-        { id: "a", text: "the ability to control or influence others", isCorrect: true },
-        { id: "b", text: "a formal document outlining company policy" },
-        { id: "c", text: "a temporary agreement between two parties" },
-        { id: "d", text: "a schedule listing daily responsibilities" },
-      ]},
-      { id: "75-B", options: [
-        { id: "a", text: "energy, especially electricity, used to operate something", isCorrect: true },
-        { id: "b", text: "a small fee charged for a basic service" },
-        { id: "c", text: "a written summary of a meeting's outcomes" },
-        { id: "d", text: "a certificate proving professional qualifications" },
-      ]},
-      { id: "75-C", options: [
-        { id: "a", text: "strength or authority to act or make decisions", isCorrect: true },
-        { id: "b", text: "a detailed record of past decisions" },
-        { id: "c", text: "an opinion shared during a discussion" },
-        { id: "d", text: "a plan created for future growth" },
-      ]},
+    corrects: [
+      "the ability to control or influence others",
+      "energy, especially electricity, used to operate something",
+      "strength or authority to act or make decisions",
+    ],
+    wrongs: [
+      "a formal document outlining a company's internal policies",
+      "a temporary agreement reached between two negotiating parties",
+      "a small fee charged for a basic subscription service",
+      "a written summary describing the outcomes of a meeting",
+      "a certificate confirming that someone completed a training program",
     ],
   },
   {
@@ -655,25 +456,17 @@ export const WORDS_BATCH_02 = [
     word: "remain",
     meaning: "残る、~のままである",
     difficulty: 1,
-    variations: [
-      { id: "76-A", options: [
-        { id: "a", text: "to continue to exist in the same state", isCorrect: true },
-        { id: "b", text: "to disappear completely without a trace" },
-        { id: "c", text: "to change dramatically within a short time" },
-        { id: "d", text: "to be replaced by something entirely new" },
-      ]},
-      { id: "76-B", options: [
-        { id: "a", text: "to stay in a particular place or condition", isCorrect: true },
-        { id: "b", text: "to leave a place or condition immediately" },
-        { id: "c", text: "to visit a place for a brief moment" },
-        { id: "d", text: "to return to a place after a long absence" },
-      ]},
-      { id: "76-C", options: [
-        { id: "a", text: "to keep being in the same state or place", isCorrect: true },
-        { id: "b", text: "to move quickly to a different state" },
-        { id: "c", text: "to be uncertain about one's current state" },
-        { id: "d", text: "to temporarily leave a place before returning" },
-      ]},
+    corrects: [
+      "to continue to exist in the same state",
+      "to stay in a particular place or condition",
+      "to keep being in the same state or place",
+    ],
+    wrongs: [
+      "to cause someone to think of something again",
+      "to disappear completely without leaving any trace",
+      "to change dramatically within a very short time",
+      "to be replaced by something entirely different",
+      "to visit a place briefly before leaving again",
     ],
   },
   {
@@ -681,25 +474,17 @@ export const WORDS_BATCH_02 = [
     word: "readily",
     meaning: "容易に、すぐに",
     difficulty: 4,
-    variations: [
-      { id: "77-A", options: [
-        { id: "a", text: "without difficulty or hesitation", isCorrect: true },
-        { id: "b", text: "only after a great deal of difficulty" },
-        { id: "c", text: "with strong reluctance and hesitation" },
-        { id: "d", text: "under strict supervision and control" },
-      ]},
-      { id: "77-B", options: [
-        { id: "a", text: "easily and without much effort", isCorrect: true },
-        { id: "b", text: "with considerable effort and struggle" },
-        { id: "c", text: "in a way that requires special permission" },
-        { id: "d", text: "only under rare and unusual circumstances" },
-      ]},
-      { id: "77-C", options: [
-        { id: "a", text: "promptly and without resistance", isCorrect: true },
-        { id: "b", text: "slowly and with significant resistance" },
-        { id: "c", text: "secretly and without anyone's knowledge" },
-        { id: "d", text: "formally and only after written approval" },
-      ]},
+    corrects: [
+      "without difficulty or hesitation",
+      "easily and without much effort",
+      "promptly and without resistance",
+    ],
+    wrongs: [
+      "easy to read and understand when written down",
+      "only after a great deal of difficulty and effort",
+      "under strict supervision and close control",
+      "only under rare and unusual circumstances",
+      "formally, and only after written approval is granted",
     ],
   },
   {
@@ -707,25 +492,17 @@ export const WORDS_BATCH_02 = [
     word: "advantage",
     meaning: "利点",
     difficulty: 1,
-    variations: [
-      { id: "78-A", options: [
-        { id: "a", text: "a favorable condition that helps achieve success", isCorrect: true },
-        { id: "b", text: "an unfavorable condition that makes success harder" },
-        { id: "c", text: "a rule that applies equally to everyone" },
-        { id: "d", text: "a cost that must be paid in advance" },
-      ]},
-      { id: "78-B", options: [
-        { id: "a", text: "a benefit that gives someone an edge over others", isCorrect: true },
-        { id: "b", text: "a drawback that puts someone at a disadvantage" },
-        { id: "c", text: "a requirement that everyone must meet" },
-        { id: "d", text: "a penalty applied for breaking a rule" },
-      ]},
-      { id: "78-C", options: [
-        { id: "a", text: "something that improves one's chances of success", isCorrect: true },
-        { id: "b", text: "something that reduces one's chances of success" },
-        { id: "c", text: "something unrelated to success or failure" },
-        { id: "d", text: "something required before success is possible" },
-      ]},
+    corrects: [
+      "a favorable condition that helps achieve success",
+      "a benefit that gives someone an edge over others",
+      "something that improves one's chances of success",
+    ],
+    wrongs: [
+      "a payment made before work has actually begun",
+      "an unfavorable condition that makes success more difficult",
+      "a rule that applies equally to absolutely everyone",
+      "a cost that must be paid before a service begins",
+      "a penalty applied for breaking an agreed rule",
     ],
   },
   {
@@ -733,25 +510,17 @@ export const WORDS_BATCH_02 = [
     word: "consultation",
     meaning: "相談、協議",
     difficulty: 3,
-    variations: [
-      { id: "79-A", options: [
-        { id: "a", text: "a meeting to discuss something with an expert", isCorrect: true },
-        { id: "b", text: "a formal announcement made to the public" },
-        { id: "c", text: "a written agreement signed by two parties" },
-        { id: "d", text: "a routine inspection conducted without notice" },
-      ]},
-      { id: "79-B", options: [
-        { id: "a", text: "a discussion held to get advice or information", isCorrect: true },
-        { id: "b", text: "a celebration held to mark an achievement" },
-        { id: "c", text: "a private diary kept by a professional" },
-        { id: "d", text: "a survey distributed to a large audience" },
-      ]},
-      { id: "79-C", options: [
-        { id: "a", text: "a session in which advice or opinions are exchanged", isCorrect: true },
-        { id: "b", text: "a session in which no discussion takes place" },
-        { id: "c", text: "a session held only once a year" },
-        { id: "d", text: "a session reserved exclusively for executives" },
-      ]},
+    corrects: [
+      "a meeting to discuss something with an expert",
+      "a discussion held to get advice or information",
+      "a session in which advice or opinions are exchanged",
+    ],
+    wrongs: [
+      "comfort given to someone after a disappointment",
+      "a formal announcement made to the general public",
+      "a written agreement signed by two separate parties",
+      "a routine inspection carried out without advance notice",
+      "a celebration held to mark a company's achievement",
     ],
   },
   {
@@ -759,25 +528,17 @@ export const WORDS_BATCH_02 = [
     word: "sample",
     meaning: "見本、サンプル",
     difficulty: 1,
-    variations: [
-      { id: "80-A", options: [
-        { id: "a", text: "a small portion used to represent a whole", isCorrect: true },
-        { id: "b", text: "a complete and final version of a product" },
-        { id: "c", text: "a written review of a finished product" },
-        { id: "d", text: "a receipt confirming a completed purchase" },
-      ]},
-      { id: "80-B", options: [
-        { id: "a", text: "a small amount given to try before buying", isCorrect: true },
-        { id: "b", text: "a large shipment sent directly to a warehouse" },
-        { id: "c", text: "a discount applied to a bulk order" },
-        { id: "d", text: "a warranty covering a product for one year" },
-      ]},
-      { id: "80-C", options: [
-        { id: "a", text: "an example item used to show quality or features", isCorrect: true },
-        { id: "b", text: "a damaged item that cannot be sold" },
-        { id: "c", text: "a rare item no longer in production" },
-        { id: "d", text: "a custom item made only for one customer" },
-      ]},
+    corrects: [
+      "a small portion used to represent a whole",
+      "a small amount given to try before buying",
+      "an example item used to show quality or features",
+    ],
+    wrongs: [
+      "easy to understand, without any complicated parts",
+      "a complete and final version of a finished product",
+      "a written review posted after a product has been used",
+      "a receipt confirming that a purchase was completed",
+      "a large shipment delivered directly to a warehouse",
     ],
   },
   {
@@ -785,25 +546,17 @@ export const WORDS_BATCH_02 = [
     word: "active",
     meaning: "活発な、活動中の",
     difficulty: 1,
-    variations: [
-      { id: "81-A", options: [
-        { id: "a", text: "engaged in constant activity or movement", isCorrect: true },
-        { id: "b", text: "completely inactive and unresponsive" },
-        { id: "c", text: "uncertain about future plans" },
-        { id: "d", text: "temporarily unavailable for use" },
-      ]},
-      { id: "81-B", options: [
-        { id: "a", text: "currently functioning or in use", isCorrect: true },
-        { id: "b", text: "permanently disabled and no longer working" },
-        { id: "c", text: "scheduled to begin at a future date" },
-        { id: "d", text: "canceled before it could begin" },
-      ]},
-      { id: "81-C", options: [
-        { id: "a", text: "full of energy and involved in doing things", isCorrect: true },
-        { id: "b", text: "lacking energy and rarely involved in anything" },
-        { id: "c", text: "uninterested in participating in any activity" },
-        { id: "d", text: "recently retired from all activities" },
-      ]},
+    corrects: [
+      "engaged in constant activity or movement",
+      "currently functioning or in use",
+      "full of energy and involved in doing things",
+    ],
+    wrongs: [
+      "the process of turning a device on for the first time",
+      "completely inactive and showing no signs of movement",
+      "uncertain about what will happen in the near future",
+      "temporarily unavailable due to scheduled maintenance",
+      "recently retired after many years of work",
     ],
   },
   {
@@ -811,25 +564,17 @@ export const WORDS_BATCH_02 = [
     word: "welcome",
     meaning: "歓迎する",
     difficulty: 1,
-    variations: [
-      { id: "82-A", options: [
-        { id: "a", text: "to greet someone in a friendly and warm way", isCorrect: true },
-        { id: "b", text: "to ignore someone entering a room" },
-        { id: "c", text: "to formally reject someone's request" },
-        { id: "d", text: "to criticize someone for arriving late" },
-      ]},
-      { id: "82-B", options: [
-        { id: "a", text: "to receive someone or something with pleasure", isCorrect: true },
-        { id: "b", text: "to refuse to accept someone or something" },
-        { id: "c", text: "to be indifferent toward someone or something" },
-        { id: "d", text: "to complain about someone or something" },
-      ]},
-      { id: "82-C", options: [
-        { id: "a", text: "to express happiness at someone's arrival", isCorrect: true },
-        { id: "b", text: "to express frustration at someone's arrival" },
-        { id: "c", text: "to express confusion about someone's arrival" },
-        { id: "d", text: "to express doubt about someone's identity" },
-      ]},
+    corrects: [
+      "to greet someone in a friendly and warm way",
+      "to receive someone or something with pleasure",
+      "to express happiness at someone's arrival",
+    ],
+    wrongs: [
+      "government support provided to people in financial need",
+      "to ignore someone who has just entered a room",
+      "to formally reject a request that was submitted",
+      "to criticize someone for arriving later than expected",
+      "to remain silent when someone else is speaking",
     ],
   },
   {
@@ -837,25 +582,17 @@ export const WORDS_BATCH_02 = [
     word: "profit",
     meaning: "利益",
     difficulty: 1,
-    variations: [
-      { id: "83-A", options: [
-        { id: "a", text: "the financial gain made after expenses are subtracted", isCorrect: true },
-        { id: "b", text: "the total amount of money spent on expenses" },
-        { id: "c", text: "a fee charged for opening a new account" },
-        { id: "d", text: "a discount offered to loyal customers" },
-      ]},
-      { id: "83-B", options: [
-        { id: "a", text: "money earned that exceeds the cost of doing business", isCorrect: true },
-        { id: "b", text: "money spent that exceeds the income received" },
-        { id: "c", text: "a fixed salary paid regardless of sales" },
-        { id: "d", text: "a tax applied to every transaction" },
-      ]},
-      { id: "83-C", options: [
-        { id: "a", text: "the positive financial result of a business activity", isCorrect: true },
-        { id: "b", text: "the negative financial result of a business activity" },
-        { id: "c", text: "a summary of a business's daily operations" },
-        { id: "d", text: "a plan for a business's future expansion" },
-      ]},
+    corrects: [
+      "the financial gain made after expenses are subtracted",
+      "money earned that exceeds the cost of doing business",
+      "the positive financial result of a business activity",
+    ],
+    wrongs: [
+      "a person believed to speak on behalf of a higher power",
+      "the total amount of money spent on expenses",
+      "a fee charged for opening a new bank account",
+      "a discount offered to customers who shop frequently",
+      "a fixed salary paid regardless of how a business performs",
     ],
   },
   {
@@ -863,25 +600,17 @@ export const WORDS_BATCH_02 = [
     word: "approve",
     meaning: "承認する",
     difficulty: 2,
-    variations: [
-      { id: "84-A", options: [
-        { id: "a", text: "to officially agree that something is acceptable", isCorrect: true },
-        { id: "b", text: "to officially reject something as unacceptable" },
-        { id: "c", text: "to postpone a decision indefinitely" },
-        { id: "d", text: "to ignore a request entirely" },
-      ]},
-      { id: "84-B", options: [
-        { id: "a", text: "to give formal permission for something to proceed", isCorrect: true },
-        { id: "b", text: "to formally cancel something that was planned" },
-        { id: "c", text: "to formally investigate something before deciding" },
-        { id: "d", text: "to formally criticize a completed project" },
-      ]},
-      { id: "84-C", options: [
-        { id: "a", text: "to confirm that a plan or request is acceptable", isCorrect: true },
-        { id: "b", text: "to argue against a plan or request" },
-        { id: "c", text: "to remain neutral about a plan or request" },
-        { id: "d", text: "to forget about a plan or request" },
-      ]},
+    corrects: [
+      "to officially agree that something is acceptable",
+      "to give formal permission for something to proceed",
+      "to confirm that a plan or request is acceptable",
+    ],
+    wrongs: [
+      "to make something better than it was before",
+      "to officially reject something as unacceptable",
+      "to postpone a decision without giving any reason",
+      "to formally investigate a claim before deciding anything",
+      "to ignore a request submitted by a coworker",
     ],
   },
   {
@@ -889,25 +618,17 @@ export const WORDS_BATCH_02 = [
     word: "avid",
     meaning: "熱心な",
     difficulty: 4,
-    variations: [
-      { id: "85-A", options: [
-        { id: "a", text: "showing great enthusiasm for an activity", isCorrect: true },
-        { id: "b", text: "showing very little interest in an activity" },
-        { id: "c", text: "showing uncertainty about an activity" },
-        { id: "d", text: "showing mild curiosity about an activity" },
-      ]},
-      { id: "85-B", options: [
-        { id: "a", text: "extremely eager or passionate about something", isCorrect: true },
-        { id: "b", text: "completely indifferent toward something" },
-        { id: "c", text: "cautiously interested in something" },
-        { id: "d", text: "occasionally interested in something" },
-      ]},
-      { id: "85-C", options: [
-        { id: "a", text: "having a strong and eager interest in something", isCorrect: true },
-        { id: "b", text: "having no interest in something at all" },
-        { id: "c", text: "having recently lost interest in something" },
-        { id: "d", text: "having a brief, temporary interest in something" },
-      ]},
+    corrects: [
+      "showing great enthusiasm for an activity",
+      "extremely eager or passionate about something",
+      "having a strong and eager interest in something",
+    ],
+    wrongs: [
+      "to stay away from an activity on purpose",
+      "showing only occasional interest in an activity",
+      "uncertain about whether to continue an activity",
+      "skilled at an activity without truly enjoying it",
+      "recently introduced to an activity for the first time",
     ],
   },
   {
@@ -915,25 +636,17 @@ export const WORDS_BATCH_02 = [
     word: "interruption",
     meaning: "中断",
     difficulty: 2,
-    variations: [
-      { id: "86-A", options: [
-        { id: "a", text: "something that stops an activity temporarily", isCorrect: true },
-        { id: "b", text: "something that helps an activity continue smoothly" },
-        { id: "c", text: "a plan made before an activity begins" },
-        { id: "d", text: "a summary written after an activity ends" },
-      ]},
-      { id: "86-B", options: [
-        { id: "a", text: "a pause caused by an unexpected event", isCorrect: true },
-        { id: "b", text: "a scheduled break planned well in advance" },
-        { id: "c", text: "a celebration held after finishing a task" },
-        { id: "d", text: "a reward given for completing a task early" },
-      ]},
-      { id: "86-C", options: [
-        { id: "a", text: "a break in the continuity of something", isCorrect: true },
-        { id: "b", text: "a continuation of something without any break" },
-        { id: "c", text: "a detailed record of something's progress" },
-        { id: "d", text: "a request to begin something new" },
-      ]},
+    corrects: [
+      "something that stops an activity temporarily",
+      "a pause caused by an unexpected event",
+      "a break in the continuity of something",
+    ],
+    wrongs: [
+      "an explanation of what something is believed to mean",
+      "a scheduled break planned well in advance",
+      "a celebration held after a task has been completed",
+      "a reward given for finishing something ahead of time",
+      "a detailed plan created before an activity begins",
     ],
   },
   {
@@ -941,25 +654,17 @@ export const WORDS_BATCH_02 = [
     word: "cabinet",
     meaning: "戸棚、内閣",
     difficulty: 2,
-    variations: [
-      { id: "87-A", options: [
-        { id: "a", text: "a piece of furniture with doors or drawers for storage", isCorrect: true },
-        { id: "b", text: "a large open room used for meetings" },
-        { id: "c", text: "a machine used for printing documents" },
-        { id: "d", text: "a device used for measuring temperature" },
-      ]},
-      { id: "87-B", options: [
-        { id: "a", text: "a storage unit found in offices, kitchens, or homes", isCorrect: true },
-        { id: "b", text: "a walkway connecting two separate buildings" },
-        { id: "c", text: "a small vehicle used for short trips" },
-        { id: "d", text: "a garden area used for growing vegetables" },
-      ]},
-      { id: "87-C", options: [
-        { id: "a", text: "a container with shelves used to store items", isCorrect: true },
-        { id: "b", text: "an open area with no walls or doors" },
-        { id: "c", text: "a vehicle used to transport heavy goods" },
-        { id: "d", text: "a machine used to clean floors automatically" },
-      ]},
+    corrects: [
+      "a piece of furniture with doors or drawers for storage",
+      "a storage unit found in offices, kitchens, or homes",
+      "a container with shelves used to store items",
+    ],
+    wrongs: [
+      "a small house, often located in a rural area",
+      "a large open room used for group meetings",
+      "a machine used for printing office documents",
+      "a device used for measuring room temperature",
+      "a walkway connecting two separate buildings",
     ],
   },
   {
@@ -967,25 +672,17 @@ export const WORDS_BATCH_02 = [
     word: "in-house",
     meaning: "社内の",
     difficulty: 3,
-    variations: [
-      { id: "88-A", options: [
-        { id: "a", text: "done by a company's own staff, not outsiders", isCorrect: true },
-        { id: "b", text: "done by a completely separate company" },
-        { id: "c", text: "done without any staff involvement at all" },
-        { id: "d", text: "done only after outside approval is given" },
-      ]},
-      { id: "88-B", options: [
-        { id: "a", text: "handled internally within an organization", isCorrect: true },
-        { id: "b", text: "handled entirely by an outside contractor" },
-        { id: "c", text: "handled without any oversight or review" },
-        { id: "d", text: "handled only during a company's off hours" },
-      ]},
-      { id: "88-C", options: [
-        { id: "a", text: "carried out using a company's internal resources", isCorrect: true },
-        { id: "b", text: "carried out using resources borrowed from a rival" },
-        { id: "c", text: "carried out without using any resources" },
-        { id: "d", text: "carried out only once a year" },
-      ]},
+    corrects: [
+      "done by a company's own staff, not outsiders",
+      "handled internally within an organization",
+      "carried out using a company's internal resources",
+    ],
+    wrongs: [
+      "covering a topic in great detail and thoroughness",
+      "done by a completely separate, outside company",
+      "handled without any staff involvement whatsoever",
+      "carried out only once a year, during a scheduled review",
+      "handled only after receiving outside approval",
     ],
   },
   {
@@ -993,25 +690,17 @@ export const WORDS_BATCH_02 = [
     word: "centerpiece",
     meaning: "目玉、中心となるもの",
     difficulty: 4,
-    variations: [
-      { id: "89-A", options: [
-        { id: "a", text: "the most important or noticeable part of something", isCorrect: true },
-        { id: "b", text: "a minor detail that most people overlook" },
-        { id: "c", text: "a rule that applies only in rare situations" },
-        { id: "d", text: "a report summarizing a project's expenses" },
-      ]},
-      { id: "89-B", options: [
-        { id: "a", text: "the main feature that attracts the most attention", isCorrect: true },
-        { id: "b", text: "a background feature that attracts little attention" },
-        { id: "c", text: "an optional feature added only upon request" },
-        { id: "d", text: "a feature removed due to low popularity" },
-      ]},
-      { id: "89-C", options: [
-        { id: "a", text: "the central and most impressive element of a display", isCorrect: true },
-        { id: "b", text: "a random element added without much thought" },
-        { id: "c", text: "an element removed just before an event" },
-        { id: "d", text: "an element shared equally with every guest" },
-      ]},
+    corrects: [
+      "the most important or noticeable part of something",
+      "the main feature that attracts the most attention",
+      "the central and most impressive element of a display",
+    ],
+    wrongs: [
+      "a small unit used to measure length",
+      "a minor detail that most people tend to overlook",
+      "a rule that applies only in very rare situations",
+      "a report summarizing a project's total expenses",
+      "an element removed from a display shortly before an event",
     ],
   },
   {
@@ -1019,25 +708,17 @@ export const WORDS_BATCH_02 = [
     word: "continent",
     meaning: "大陸",
     difficulty: 1,
-    variations: [
-      { id: "90-A", options: [
-        { id: "a", text: "one of the world's large landmasses", isCorrect: true },
-        { id: "b", text: "a small island located near a coastline" },
-        { id: "c", text: "a large body of water separating two countries" },
-        { id: "d", text: "a mountain range located within a single country" },
-      ]},
-      { id: "90-B", options: [
-        { id: "a", text: "a major division of land on Earth", isCorrect: true },
-        { id: "b", text: "a small city located within a larger country" },
-        { id: "c", text: "a region defined only by its climate" },
-        { id: "d", text: "a body of water connecting two oceans" },
-      ]},
-      { id: "90-C", options: [
-        { id: "a", text: "a huge area of land, such as Asia or Africa", isCorrect: true },
-        { id: "b", text: "a small town known for its scenery" },
-        { id: "c", text: "a narrow strip of land between two seas" },
-        { id: "d", text: "a region governed by a single company" },
-      ]},
+    corrects: [
+      "one of the world's large landmasses",
+      "a major division of land on Earth",
+      "a huge area of land, such as Asia or Africa",
+    ],
+    wrongs: [
+      "the material or information contained within something",
+      "a small island located near a coastline",
+      "a large body of water separating two countries",
+      "a mountain range located entirely within one country",
+      "a region governed by a single private company",
     ],
   },
   {
@@ -1045,25 +726,17 @@ export const WORDS_BATCH_02 = [
     word: "awning",
     meaning: "日よけ、雨よけ",
     difficulty: 4,
-    variations: [
-      { id: "91-A", options: [
-        { id: "a", text: "a covering that provides shade or shelter over an entrance", isCorrect: true },
-        { id: "b", text: "a tall structure used for storing water" },
-        { id: "c", text: "a device used to measure wind speed" },
-        { id: "d", text: "a fence built to separate two properties" },
-      ]},
-      { id: "91-B", options: [
-        { id: "a", text: "a canopy attached to a building to block sun or rain", isCorrect: true },
-        { id: "b", text: "a room built specifically for storing tools" },
-        { id: "c", text: "a walkway connecting two separate buildings" },
-        { id: "d", text: "a sign displaying a store's opening hours" },
-      ]},
-      { id: "91-C", options: [
-        { id: "a", text: "a fixed or retractable cover placed above a window or door", isCorrect: true },
-        { id: "b", text: "a portable seat used for outdoor events" },
-        { id: "c", text: "a lock used to secure a storage room" },
-        { id: "d", text: "a light used to illuminate a hallway" },
-      ]},
+    corrects: [
+      "a covering that provides shade or shelter over an entrance",
+      "a canopy attached to a building to block sun or rain",
+      "a fixed or retractable cover placed above a window or door",
+    ],
+    wrongs: [
+      "the moment someone becomes aware of something important",
+      "a tall structure used for storing water",
+      "a device used to measure the speed of the wind",
+      "a fence built to separate two neighboring properties",
+      "a sign displaying a store's hours of operation",
     ],
   },
   {
@@ -1071,25 +744,17 @@ export const WORDS_BATCH_02 = [
     word: "handout",
     meaning: "配布資料",
     difficulty: 2,
-    variations: [
-      { id: "92-A", options: [
-        { id: "a", text: "a printed document given out during a meeting or class", isCorrect: true },
-        { id: "b", text: "a formal report submitted after a project ends" },
-        { id: "c", text: "a private letter sent to a single recipient" },
-        { id: "d", text: "a certificate awarded for outstanding performance" },
-      ]},
-      { id: "92-B", options: [
-        { id: "a", text: "a paper distributed to provide information to a group", isCorrect: true },
-        { id: "b", text: "a document kept private and shared with no one" },
-        { id: "c", text: "a receipt given after a purchase is made" },
-        { id: "d", text: "a contract signed between two companies" },
-      ]},
-      { id: "92-C", options: [
-        { id: "a", text: "material given to attendees to explain or support a topic", isCorrect: true },
-        { id: "b", text: "material collected from attendees for later review" },
-        { id: "c", text: "material sold to attendees for an extra fee" },
-        { id: "d", text: "material displayed only on a screen, never printed" },
-      ]},
+    corrects: [
+      "a printed document given out during a meeting or class",
+      "a paper distributed to provide information to a group",
+      "material given to attendees to explain or support a topic",
+    ],
+    wrongs: [
+      "an item passed on after being used by someone else",
+      "a formal report submitted once a project has ended",
+      "a private letter sent to a single specific person",
+      "a certificate awarded for outstanding performance",
+      "a receipt given to confirm that a purchase was made",
     ],
   },
   {
@@ -1097,25 +762,17 @@ export const WORDS_BATCH_02 = [
     word: "comfortable",
     meaning: "快適な",
     difficulty: 1,
-    variations: [
-      { id: "93-A", options: [
-        { id: "a", text: "providing physical ease and relaxation", isCorrect: true },
-        { id: "b", text: "causing physical pain or discomfort" },
-        { id: "c", text: "requiring significant physical effort" },
-        { id: "d", text: "completely lacking in basic features" },
-      ]},
-      { id: "93-B", options: [
-        { id: "a", text: "pleasant and relaxing to use or be in", isCorrect: true },
-        { id: "b", text: "unpleasant and stressful to use or be in" },
-        { id: "c", text: "unfamiliar and confusing to use" },
-        { id: "d", text: "expensive and difficult to obtain" },
-      ]},
-      { id: "93-C", options: [
-        { id: "a", text: "free from stress, pain, or difficulty", isCorrect: true },
-        { id: "b", text: "full of stress, pain, or difficulty" },
-        { id: "c", text: "uncertain and unpredictable in nature" },
-        { id: "d", text: "temporary and soon to change" },
-      ]},
+    corrects: [
+      "providing physical ease and relaxation",
+      "pleasant and relaxing to use or be in",
+      "free from stress, pain, or difficulty",
+    ],
+    wrongs: [
+      "priced at a level most people can reasonably pay",
+      "causing noticeable physical pain or discomfort",
+      "unfamiliar and confusing for a first-time user",
+      "requiring a great deal of physical effort to use",
+      "temporary, and expected to change again soon",
     ],
   },
   {
@@ -1123,25 +780,17 @@ export const WORDS_BATCH_02 = [
     word: "depart for ~",
     meaning: "~に向けて出発する",
     difficulty: 1,
-    variations: [
-      { id: "94-A", options: [
-        { id: "a", text: "to leave a place heading toward a destination", isCorrect: true },
-        { id: "b", text: "to arrive at a destination after a journey" },
-        { id: "c", text: "to cancel a planned trip to a destination" },
-        { id: "d", text: "to return home after visiting a destination" },
-      ]},
-      { id: "94-B", options: [
-        { id: "a", text: "to begin traveling toward a specific location", isCorrect: true },
-        { id: "b", text: "to end a journey at a specific location" },
-        { id: "c", text: "to postpone travel to a specific location" },
-        { id: "d", text: "to avoid traveling to a specific location" },
-      ]},
-      { id: "94-C", options: [
-        { id: "a", text: "to set off on a journey to a place", isCorrect: true },
-        { id: "b", text: "to complete a journey upon reaching a place" },
-        { id: "c", text: "to describe a place visited long ago" },
-        { id: "d", text: "to plan a journey without any destination" },
-      ]},
+    corrects: [
+      "to leave a place heading toward a destination",
+      "to begin traveling toward a specific location",
+      "to set off on a journey to a place",
+    ],
+    wrongs: [
+      "to differ from a usual method or plan",
+      "to arrive at a destination after a long journey",
+      "to cancel a trip that had already been scheduled",
+      "to return home after visiting a destination",
+      "to describe a place that was visited long ago",
     ],
   },
   {
@@ -1149,25 +798,17 @@ export const WORDS_BATCH_02 = [
     word: "device",
     meaning: "装置、機器",
     difficulty: 1,
-    variations: [
-      { id: "95-A", options: [
-        { id: "a", text: "a tool or piece of equipment made for a specific purpose", isCorrect: true },
-        { id: "b", text: "a written plan describing a future goal" },
-        { id: "c", text: "a formal agreement between two companies" },
-        { id: "d", text: "a fee charged for using a service" },
-      ]},
-      { id: "95-B", options: [
-        { id: "a", text: "a machine or gadget designed to perform a function", isCorrect: true },
-        { id: "b", text: "a document summarizing a company's history" },
-        { id: "c", text: "a rule limiting how a service can be used" },
-        { id: "d", text: "a schedule listing upcoming deliveries" },
-      ]},
-      { id: "95-C", options: [
-        { id: "a", text: "an object built to carry out a particular task", isCorrect: true },
-        { id: "b", text: "a report describing a company's finances" },
-        { id: "c", text: "a certificate proving one's qualifications" },
-        { id: "d", text: "a list of upcoming company events" },
-      ]},
+    corrects: [
+      "a tool or piece of equipment made for a specific purpose",
+      "a machine or gadget designed to perform a function",
+      "an object built to carry out a particular task",
+    ],
+    wrongs: [
+      "a suggestion offered to help someone make a decision",
+      "a written plan describing a company's future goals",
+      "a formal agreement signed between two companies",
+      "a fee charged for using a particular service",
+      "a certificate proving that someone is qualified",
     ],
   },
   {
@@ -1175,25 +816,17 @@ export const WORDS_BATCH_02 = [
     word: "All sales are final.",
     meaning: "売却後の返品・交換はできません",
     difficulty: 3,
-    variations: [
-      { id: "96-A", options: [
-        { id: "a", text: "purchased items cannot be returned or exchanged", isCorrect: true },
-        { id: "b", text: "purchased items can be returned within a year" },
-        { id: "c", text: "purchased items are eligible for a full refund" },
-        { id: "d", text: "purchased items can be exchanged at any time" },
-      ]},
-      { id: "96-B", options: [
-        { id: "a", text: "once bought, an item may not be given back", isCorrect: true },
-        { id: "b", text: "once bought, an item may be returned for any reason" },
-        { id: "c", text: "once bought, an item is automatically insured" },
-        { id: "d", text: "once bought, an item may be exchanged for store credit" },
-      ]},
-      { id: "96-C", options: [
-        { id: "a", text: "a policy stating that purchases are non-refundable", isCorrect: true },
-        { id: "b", text: "a policy stating that purchases are always refundable" },
-        { id: "c", text: "a policy stating that purchases require a receipt" },
-        { id: "d", text: "a policy stating that purchases can be delayed" },
-      ]},
+    corrects: [
+      "purchased items cannot be returned or exchanged",
+      "once bought, an item may not be given back",
+      "a policy stating that purchases are non-refundable",
+    ],
+    wrongs: [
+      "purchased items can be returned within one full year",
+      "purchased items are automatically covered by insurance",
+      "a policy stating that all purchases require a receipt",
+      "a policy that allows purchases to be delayed indefinitely",
+      "a policy offering a discount on a customer's next purchase",
     ],
   },
   {
@@ -1201,25 +834,17 @@ export const WORDS_BATCH_02 = [
     word: "enclose",
     meaning: "同封する",
     difficulty: 2,
-    variations: [
-      { id: "97-A", options: [
-        { id: "a", text: "to place something inside an envelope or package along with other items", isCorrect: true },
-        { id: "b", text: "to remove something from an envelope or package" },
-        { id: "c", text: "to send an envelope without any contents" },
-        { id: "d", text: "to open an envelope that was already sealed" },
-      ]},
-      { id: "97-B", options: [
-        { id: "a", text: "to include an item along with a letter or document", isCorrect: true },
-        { id: "b", text: "to exclude an item from a letter or document" },
-        { id: "c", text: "to lose an item that was meant to be included" },
-        { id: "d", text: "to return an item without any explanation" },
-      ]},
-      { id: "97-C", options: [
-        { id: "a", text: "to attach or include something within a mailing", isCorrect: true },
-        { id: "b", text: "to separate something from a mailing entirely" },
-        { id: "c", text: "to delay sending a mailing until later" },
-        { id: "d", text: "to cancel a mailing before it is sent" },
-      ]},
+    corrects: [
+      "to place something inside an envelope or package along with other items",
+      "to include an item along with a letter or document",
+      "to attach or include something within a mailing",
+    ],
+    wrongs: [
+      "to reveal information that was previously secret",
+      "to remove an item from an envelope or package",
+      "to send an envelope that contains no items at all",
+      "to open a package that had already been sealed",
+      "to lose an item that was meant to be included",
     ],
   },
   {
@@ -1227,25 +852,17 @@ export const WORDS_BATCH_02 = [
     word: "dress code",
     meaning: "服装規定",
     difficulty: 2,
-    variations: [
-      { id: "98-A", options: [
-        { id: "a", text: "a set of rules about appropriate clothing for a place", isCorrect: true },
-        { id: "b", text: "a schedule listing a company's business hours" },
-        { id: "c", text: "a policy describing how employees are paid" },
-        { id: "d", text: "a list of items available in a store" },
-      ]},
-      { id: "98-B", options: [
-        { id: "a", text: "guidelines specifying what clothing is acceptable", isCorrect: true },
-        { id: "b", text: "guidelines specifying what food is acceptable" },
-        { id: "c", text: "guidelines specifying how documents should be formatted" },
-        { id: "d", text: "guidelines specifying when employees can take breaks" },
-      ]},
-      { id: "98-C", options: [
-        { id: "a", text: "rules that determine what one should wear in a setting", isCorrect: true },
-        { id: "b", text: "rules that determine how one should speak in a setting" },
-        { id: "c", text: "rules that determine who may enter a setting" },
-        { id: "d", text: "rules that determine when a setting is open" },
-      ]},
+    corrects: [
+      "a set of rules about appropriate clothing for a place",
+      "guidelines specifying what clothing is acceptable",
+      "rules that determine what one should wear in a setting",
+    ],
+    wrongs: [
+      "a full practice run of a performance before opening night",
+      "a schedule listing a company's regular business hours",
+      "a policy describing how employees are paid each month",
+      "a list of items currently available in a store",
+      "guidelines specifying how documents should be formatted",
     ],
   },
   {
@@ -1253,25 +870,17 @@ export const WORDS_BATCH_02 = [
     word: "neither",
     meaning: "どちらも~ない",
     difficulty: 2,
-    variations: [
-      { id: "99-A", options: [
-        { id: "a", text: "not one nor the other of two things", isCorrect: true },
-        { id: "b", text: "both of two things, without exception" },
-        { id: "c", text: "only one of two things, but not clear which" },
-        { id: "d", text: "an unspecified number of things" },
-      ]},
-      { id: "99-B", options: [
-        { id: "a", text: "used to say that two things are both not true or not chosen", isCorrect: true },
-        { id: "b", text: "used to say that two things are both true" },
-        { id: "c", text: "used to say that only one of two things is true" },
-        { id: "d", text: "used to say that all of several things are true" },
-      ]},
-      { id: "99-C", options: [
-        { id: "a", text: "not either of two people or things", isCorrect: true },
-        { id: "b", text: "either one of two people or things" },
-        { id: "c", text: "both people or things, together" },
-        { id: "d", text: "neither confirmed nor denied" },
-      ]},
+    corrects: [
+      "not one nor the other of two things",
+      "used to say that two things are both not true or not chosen",
+      "not either of two people or things",
+    ],
+    wrongs: [
+      "located in a lower or underground area",
+      "both of two things, without any exception",
+      "only one of two things, though it is unclear which",
+      "an unspecified number of things, more than two",
+      "all of several things, considered together as a group",
     ],
   },
   {
@@ -1279,25 +888,17 @@ export const WORDS_BATCH_02 = [
     word: "different",
     meaning: "異なる",
     difficulty: 1,
-    variations: [
-      { id: "100-A", options: [
-        { id: "a", text: "not the same as something else", isCorrect: true },
-        { id: "b", text: "exactly the same as something else" },
-        { id: "c", text: "similar in most ways to something else" },
-        { id: "d", text: "unrelated to any comparison at all" },
-      ]},
-      { id: "100-B", options: [
-        { id: "a", text: "distinct or unlike another thing", isCorrect: true },
-        { id: "b", text: "identical or exactly matching another thing" },
-        { id: "c", text: "partially similar to another thing" },
-        { id: "d", text: "impossible to compare to another thing" },
-      ]},
-      { id: "100-C", options: [
-        { id: "a", text: "having qualities that set it apart from others", isCorrect: true },
-        { id: "b", text: "having no qualities that stand out at all" },
-        { id: "c", text: "having qualities shared by absolutely everyone" },
-        { id: "d", text: "having qualities that change unpredictably" },
-      ]},
+    corrects: [
+      "not the same as something else",
+      "distinct or unlike another thing",
+      "having qualities that set it apart from others",
+    ],
+    wrongs: [
+      "hard to do or understand without a lot of effort",
+      "exactly the same as something else in every way",
+      "partially similar to something else in a few small ways",
+      "impossible to compare to anything else at all",
+      "unrelated to any comparison being made",
     ],
   },
 ];
