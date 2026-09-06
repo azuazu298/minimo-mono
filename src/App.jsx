@@ -1011,9 +1011,8 @@ const CSS = `
 
 .mm-frame {
   position: relative;
-  height: 100%;
-  aspect-ratio: 9 / 16;
-  max-width: 100%;
+  width: min(100%, calc(100vh * 9 / 16));
+  height: min(100%, calc(100vw * 16 / 9));
   container-type: size;
 
   --gap: 2.2cqmin;
