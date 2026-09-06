@@ -1196,7 +1196,7 @@ const CSS = `
 
 .mm-grid {
   flex: 1; display: grid; grid-template-columns: 1fr 1fr;
-  grid-auto-rows: minmax(0, 1fr); gap: var(--gap); min-height: 0;
+  grid-auto-rows: minmax(14cqmin, 1fr); gap: var(--gap); min-height: 0;
 }
 .mm-grid .mm-btn { gap: 1cqmin; }
 .mm-grid-label { font-size: var(--fs-md); font-weight: 600; }
