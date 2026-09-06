@@ -1184,7 +1184,7 @@ const CSS = `
 .mm-locked { background: transparent; }
 .mm-locked .mm-mode-name { color: var(--ink-40); font-weight: 500; }
 .mm-locked .mm-stat-value { color: var(--ink-15); }
-.mm-practice { flex: 1 1 auto; min-height: 0; }
+.mm-practice { flex: 0 0 auto; }
 .mm-shortcuts { flex: 0 0 auto; }
 
 .mm-stat { display: flex; flex-direction: column; align-items: flex-end; }
@@ -1195,8 +1195,8 @@ const CSS = `
 .mm-stat-value { font-family: var(--mono); font-size: var(--fs-lg); font-weight: 500; letter-spacing: -0.02em; }
 
 .mm-grid {
-  flex: 1; display: grid; grid-template-columns: 1fr 1fr;
-  grid-auto-rows: minmax(14cqmin, 1fr); gap: var(--gap); min-height: 0;
+  display: grid; grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 14cqmin; gap: var(--gap);
 }
 .mm-grid .mm-btn { gap: 1cqmin; }
 .mm-grid-label { font-size: var(--fs-md); font-weight: 600; }
