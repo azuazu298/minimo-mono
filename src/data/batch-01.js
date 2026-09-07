@@ -1,906 +1,902 @@
-// TOEIC batch 01 — words 1-50 (source list order)
-// New format: 3 corrects (paraphrases) + 5 pooled wrongs per word.
-// At runtime, 1 correct + 3 of the 5 wrongs are drawn at random and shuffled
-// (see buildOptionsFor in App.jsx).
-export const WORDS_BATCH_01 = [
+export const batch01 = [
   {
     id: 1,
-    word: "originally",
-    meaning: "もともとは、当初は",
+    word: "within walking distance",
+    meaning: "徒歩圏内で",
     difficulty: 1,
     corrects: [
-      "at first, before any changes were made",
-      "as something was in the very beginning",
-      "from the start, before it was altered",
+      "close enough to reach on foot without taking a bus",
+      "a very short trip that requires no car to travel",
+      "near enough that you can easily go there by walking"
     ],
     wrongs: [
-      "eventually, after a long series of changes",
-      "only now and then, without any regular pattern",
-      "in a specific location, rather than at a specific time",
-      "according to a rule that few people are aware of",
-      "only after several changes had already been made",
-    ],
+      "located so far away that you need an airplane",
+      "a special street where cars are completely banned",
+      "a daily exercise routine to keep your legs healthy",
+      "a store where you can buy comfortable running shoes",
+      "a long journey taken by train across the entire country"
+    ]
   },
   {
     id: 2,
-    word: "to this end",
-    meaning: "この目的のために",
-    difficulty: 4,
+    word: "outline",
+    meaning: "概要／まとめる",
+    difficulty: 2,
     corrects: [
-      "in order to achieve this specific goal",
-      "so that this particular aim can be reached",
-      "with this purpose being the main reason",
+      "a short summary of the main points in a document",
+      "to give a general explanation without all the small details",
+      "a basic plan that shows the most important parts clearly"
     ],
     wrongs: [
-      "as a final result, after everything else had happened",
-      "for a reason that had nothing to do with the speaker's own plan",
-      "according to a rule that applies only in emergencies",
-      "to a certain degree, but not completely",
-      "before any goal had been decided on",
-    ],
+      "a complete and detailed book containing every single fact",
+      "a straight line drawn directly outside a tall building",
+      "a long meeting where people talk about strict office rules",
+      "a tool used by teachers to write on a whiteboard",
+      "to read a very long novel from start to finish"
+    ]
   },
   {
     id: 3,
-    word: "on duty",
-    meaning: "勤務中で",
-    difficulty: 2,
+    word: "inclement",
+    meaning: "荒れ模様の",
+    difficulty: 4,
     corrects: [
-      "currently working and responsible for one's job",
-      "actively performing one's assigned tasks right now",
-      "present and available during a work shift",
+      "bad weather conditions such as heavy rain or strong wind",
+      "used to describe weather that is unpleasant and very cold",
+      "severe storms that make it unsafe to go outside today"
     ],
     wrongs: [
-      "not currently working, and free from any responsibility",
-      "waiting to be served as a customer, not working",
-      "officially certified to perform a specialized task",
-      "known for being very responsible and hard-working in general",
-      "located inside the building, regardless of working hours",
-    ],
+      "a beautiful day with bright sunlight and clear blue skies",
+      "a person who does not show mercy to other people",
+      "a sudden increase in the price of warm winter clothes",
+      "a comfortable room temperature that everyone in the office likes",
+      "a machine used to clean the dirty air inside buildings"
+    ]
   },
   {
     id: 4,
-    word: "protocol",
-    meaning: "正式な手順、儀礼",
-    difficulty: 3,
+    word: "observe",
+    meaning: "観察する／遵守する",
+    difficulty: 2,
     corrects: [
-      "the official rules for how something should be done",
-      "a formal procedure followed in professional situations",
-      "the accepted way of behaving in official settings",
+      "to watch something carefully in order to learn about it",
+      "to obey a rule or law and do what it says",
+      "to notice something interesting while you are looking around quietly"
     ],
     wrongs: [
-      "an early working model built to test a new idea",
-      "a personal habit that one prefers but is not required to follow",
-      "a written summary of a company's yearly earnings",
-      "a suggestion that has not yet been reviewed or approved",
-      "a private nickname used only within a small team",
-    ],
+      "to break a strict law and do whatever you want",
+      "to speak very loudly to a large group of friends",
+      "to throw away old things that you no longer need",
+      "to hide an object secretly so that no one can find it",
+      "to guess what will happen tomorrow without knowing any facts"
+    ]
   },
   {
     id: 5,
-    word: "manual",
-    meaning: "説明書／手作業の",
-    difficulty: 2,
+    word: "opportunity",
+    meaning: "機会",
+    difficulty: 1,
     corrects: [
-      "a booklet that explains how to use something",
-      "a guide with instructions for operating a device",
-      "done by a person, not by a machine",
+      "a good chance to do something that you really want",
+      "a situation that makes it possible to achieve your goal",
+      "a favorable moment for making progress in your career path"
     ],
     wrongs: [
-      "a warranty document guaranteeing free repairs for one year",
-      "a device that repairs itself without any assistance",
-      "a summary of customer complaints collected over a year",
-      "a schedule listing when a machine should be serviced",
-      "a certificate proving that someone completed a training course",
-    ],
+      "a very bad situation that causes a lot of trouble",
+      "a strict rule that you must follow at your school",
+      "a small metal object used to open locked wooden doors",
+      "a feeling of being very tired after working all night",
+      "a person whose job is to help others find work"
+    ]
   },
   {
     id: 6,
-    word: "organization",
-    meaning: "組織、団体",
-    difficulty: 1,
+    word: "incentive",
+    meaning: "動機づけ、報奨金",
+    difficulty: 3,
     corrects: [
-      "a group of people working together for a shared purpose",
-      "a formally structured company, agency, or institution",
-      "an established body with its own goals and structure",
+      "something that encourages a person to work harder and better",
+      "an extra reward given to workers who perform very well",
+      "a reason that makes you want to achieve a difficult goal"
     ],
     wrongs: [
-      "a program that introduces new employees to a company's rules",
-      "a one-time gathering held to celebrate a specific achievement",
-      "a detailed plan describing how a project should be completed",
-      "a single professional who works independently from any company",
-      "a set of skills required to perform a particular job",
-    ],
+      "a severe punishment given to someone who arrives very late",
+      "a piece of paper used to buy cheap things in a store",
+      "a loud machine that produces a sound to wake you up",
+      "a feeling of fear when you have to speak in public",
+      "a type of medicine taken to quickly stop a headache"
+    ]
   },
   {
     id: 7,
-    word: "optimistic",
-    meaning: "楽観的な",
+    word: "district",
+    meaning: "地区",
     difficulty: 2,
     corrects: [
-      "expecting good things to happen in the future",
-      "hopeful that a situation will turn out well",
-      "confident about a positive future outcome",
+      "an area of a city or country with specific borders",
+      "a region known for a particular type of business activity",
+      "a part of a town defined for official or administrative purposes"
     ],
     wrongs: [
-      "quick to take advantage of a convenient situation",
-      "satisfied with how a past event turned out",
-      "unwilling to consider any opinion other than one's own",
-      "focused on solving a problem quickly, regardless of the outcome",
-      "doubtful that a plan will succeed",
-    ],
+      "the whole world including all different countries and large oceans",
+      "a single tall building where many different families live together",
+      "a large machine used for cleaning the dirty city streets",
+      "a group of elected people who make laws for a nation",
+      "a long journey from one big city to another by train"
+    ]
   },
   {
     id: 8,
-    word: "browse",
-    meaning: "見て回る、閲覧する",
-    difficulty: 2,
+    word: "collect",
+    meaning: "集める",
+    difficulty: 1,
     corrects: [
-      "to look through items without a specific goal in mind",
-      "to casually look at things, such as products or pages",
-      "to explore something, like a website, at a relaxed pace",
+      "to bring things together from different places into one group",
+      "to gather money or useful objects from a number of people",
+      "to go and get someone or something from a certain place"
     ],
     wrongs: [
-      "to read every word of a document very carefully",
-      "to purchase several items very quickly, without comparing them",
-      "to complain about a product's quality to a store manager",
-      "to repair a broken item using basic tools",
-      "to organize items into labeled categories on a shelf",
-    ],
+      "to throw away old items that you do not want anymore",
+      "to break something into many small pieces by complete accident",
+      "to sell old reading books to a local store for cash",
+      "to run away from sudden danger as quickly as possible",
+      "to forget where you put your house keys in the morning"
+    ]
   },
   {
     id: 9,
-    word: "intensive",
-    meaning: "集中的な、徹底的な",
-    difficulty: 3,
+    word: "skilled",
+    meaning: "熟練した",
+    difficulty: 2,
     corrects: [
-      "involving a large amount of effort in a short time",
-      "extremely thorough and demanding a lot of focus",
-      "concentrated heavily on one particular subject or task",
+      "having the training and experience needed to do a job well",
+      "very good at doing something because of a lot of practice",
+      "possessing a high level of ability in a specific difficult task"
     ],
     wrongs: [
-      "covering a very wide range of topics, but only briefly",
-      "spread out casually over many separate months",
-      "open to the public without any registration required",
-      "designed specifically for complete beginners with no experience",
-      "canceled due to a lack of available instructors",
-    ],
+      "knowing absolutely nothing about how to perform a simple task",
+      "feeling very tired after carrying heavy wooden boxes all day",
+      "an expensive metal tool used for cutting thick wood easily",
+      "a young person who just started learning a foreign language",
+      "being too afraid of working together with other team members"
+    ]
   },
   {
     id: 10,
-    word: "employee benefit",
-    meaning: "従業員への福利厚生",
-    difficulty: 3,
+    word: "tasty",
+    meaning: "おいしい",
+    difficulty: 1,
     corrects: [
-      "an extra advantage a company provides to its workers",
-      "something offered by an employer beyond regular pay",
-      "a perk, such as insurance or paid leave, given to staff",
+      "having a very pleasant flavor when you eat a meal",
+      "food that is delicious and highly enjoyable to consume everyday",
+      "having a good and strong flavor that most people like"
     ],
     wrongs: [
-      "a formal review of an employee's performance over the year",
-      "a fee automatically deducted from an employee's paycheck",
-      "a rule describing how vacation requests must be submitted",
-      "a target that employees are expected to reach each quarter",
-      "a document listing a company's official holidays",
-    ],
+      "food that has no flavor at all and is quite boring",
+      "a hot drink that is too dangerous to hold in your hand",
+      "a clean plate made of glass that can break very easily",
+      "a sharp tool used for cutting raw meat into small pieces",
+      "a large animal that lives in the ocean and swims fast"
+    ]
   },
   {
     id: 11,
-    word: "shoreline",
-    meaning: "海岸線",
-    difficulty: 3,
+    word: "trim",
+    meaning: "刈り込む、削減する",
+    difficulty: 2,
     corrects: [
-      "the line where the land meets the sea or a lake",
-      "the edge of a body of water along the land",
-      "the coastal area where water and land meet",
+      "to make something look neat by cutting a small amount off",
+      "to reduce the total size or extra cost of something slightly",
+      "to carefully remove the messy edges of a picture or paper"
     ],
     wrongs: [
-      "the outline of tall buildings seen against the sky",
-      "the boundary marking where one country ends and another begins",
-      "a path built specifically for hikers in the mountains",
-      "an area of a park reserved for children's play equipment",
-      "a road that curves along the edge of a forest",
-    ],
+      "to let your hair grow very long over many long years",
+      "to add more sweet decorations to the top of a large cake",
+      "a heavy tool used to build a tall wooden garden fence",
+      "to push a heavy box across the living room floor slowly",
+      "to completely destroy an old building using very large machines"
+    ]
   },
   {
     id: 12,
-    word: "lane",
-    meaning: "車線、小道",
-    difficulty: 1,
+    word: "rather",
+    meaning: "かなり、むしろ",
+    difficulty: 2,
     corrects: [
-      "a marked strip of road for a single line of traffic",
-      "a narrow path or road, often for a specific purpose",
-      "one of several parallel paths on a road or track",
+      "used to mean quite or to a fairly high degree",
+      "more accurately or more truly speaking about a specific situation",
+      "used to express a clear preference for one thing over another"
     ],
     wrongs: [
-      "an area of grass kept short and neatly maintained",
-      "a large area designated for parking vehicles",
-      "a sign that displays the current speed limit",
-      "a bridge built specifically for pedestrians to cross a river",
-      "a tunnel that allows vehicles to pass under a hill",
-    ],
+      "used to say that something is completely impossible to do ever",
+      "a polite word used only when you want to ask a question",
+      "an action that happens very rarely or almost never at all",
+      "a friendly way to say hello to someone in the early morning",
+      "used to describe a public place that is extremely loud and noisy"
+    ]
   },
   {
     id: 13,
-    word: "simplify",
-    meaning: "簡略化する",
-    difficulty: 2,
+    word: "mail carrier",
+    meaning: "郵便配達員",
+    difficulty: 1,
     corrects: [
-      "to make something easier to understand or do",
-      "to reduce the complexity of a process or idea",
-      "to remove unnecessary steps so something is clearer",
+      "a person whose job is to deliver letters and small packages",
+      "someone who brings the daily post to local houses and offices",
+      "a worker responsible for taking envelopes directly to your home mailbox"
     ],
     wrongs: [
-      "to represent or stand for a particular idea",
-      "to translate a document into a different language",
-      "to combine two unrelated projects into a single proposal",
-      "to postpone a task until more information becomes available",
-      "to make something more detailed and complex",
-    ],
+      "a large truck that transports fresh food to a big supermarket",
+      "a person who makes phone calls to sell new products online",
+      "a large strong bag used for carrying heavy books to school",
+      "someone who fixes broken computer screens in a busy office",
+      "an airplane used only for carrying happy passengers on summer holiday"
+    ]
   },
   {
     id: 14,
-    word: "restart",
-    meaning: "再開する、再起動する",
-    difficulty: 1,
+    word: "workstation",
+    meaning: "作業机、ワークステーション",
+    difficulty: 2,
     corrects: [
-      "to begin something again after it has stopped",
-      "to start a process over from the beginning",
-      "to turn something back on after stopping it",
+      "a desk and computer where one person does their daily job",
+      "an area in a large office set up for a specific task",
+      "a particular place equipped with tools for a single worker to use"
     ],
     wrongs: [
-      "to return something to an earlier, undamaged condition",
-      "to end an activity so that it can never happen again",
-      "to review the results of a finished project",
-      "to slow down the pace of an activity that is already running",
-      "to sell a piece of equipment that is no longer needed",
-    ],
+      "a huge empty room where many people eat their lunch together",
+      "a busy train stop located in the middle of a big city",
+      "a person who manages a large team of tired factory workers",
+      "a loud machine used to make hot coffee in the early morning",
+      "a completely empty office building waiting to be rented by a company"
+    ]
   },
   {
     id: 15,
-    word: "hub",
-    meaning: "中心地、拠点",
-    difficulty: 3,
+    word: "late",
+    meaning: "遅れた、故～",
+    difficulty: 1,
     corrects: [
-      "a central place where activity is focused",
-      "a central point that connects many other places or things",
-      "a main center of activity or transportation",
+      "arriving after the planned or expected time has already passed",
+      "happening near the end of a given period or a busy day",
+      "used to describe a person who has unfortunately died recently"
     ],
     wrongs: [
-      "a small, simple shelter used for temporary stays",
-      "a quiet area located far from the main activity",
-      "a document summarizing a company's quarterly results",
-      "a small tool used for minor household repairs",
-      "a rule that limits who may enter a certain building",
-    ],
+      "arriving much earlier than you were originally supposed to be there",
+      "a popular type of morning drink made with hot fresh milk",
+      "moving very fast down the street to catch a departing bus",
+      "a trustworthy person who always tells the complete truth to everyone",
+      "an event happening right now in the present moment without delay"
+    ]
   },
   {
     id: 16,
-    word: "equipment",
-    meaning: "機器、備品",
-    difficulty: 1,
+    word: "resistant",
+    meaning: "抵抗力のある、耐性のある",
+    difficulty: 3,
     corrects: [
-      "the tools or machines needed for a particular activity",
-      "items such as machines or tools used for a task",
-      "the physical items required to perform a job",
+      "not easily damaged or completely affected by something harmful or bad",
+      "not wanting to accept sudden changes or new ideas from others",
+      "able to stop a bad condition from entering or causing serious harm"
     ],
     wrongs: [
-      "a share of ownership in a company",
-      "a written plan describing a project's future goals",
-      "a certificate proving one's professional qualifications",
-      "a fee paid for the use of a shared meeting room",
-      "a schedule outlining a company's upcoming holidays",
-    ],
+      "welcoming new office rules and big changes with great joy and happiness",
+      "breaking very easily when you accidentally drop it on the hard floor",
+      "always agreeing with whatever other older people tell you to do",
+      "a thick piece of clothing designed to keep you warm in winter",
+      "feeling very tired and weak after exercising for a long time"
+    ]
   },
   {
     id: 17,
-    word: "highlight",
-    meaning: "強調する、目玉",
-    difficulty: 2,
+    word: "innovative",
+    meaning: "革新的な",
+    difficulty: 3,
     corrects: [
-      "to draw special attention to something important",
-      "the most notable or memorable part of something",
-      "to emphasize a key point so it stands out",
+      "using new and creative ideas to solve a very difficult problem",
+      "introducing a fresh and much better way of doing everyday things",
+      "designed in a completely original and highly modern smart way"
     ],
     wrongs: [
-      "an understanding of a situation only after it has already happened",
-      "to quietly remove something from a printed document",
-      "a minor detail easily overlooked by most readers",
-      "a routine task performed the same way every single day",
-      "a rule that applies only in very rare situations",
-    ],
+      "using old traditional methods that have been used for many long years",
+      "a simple idea that copies exactly what someone else did before",
+      "a nervous person who is deeply afraid of trying anything new",
+      "a cheap and bad product that easily breaks after just one use",
+      "a broken machine that needs to be fixed every single day"
+    ]
   },
   {
     id: 18,
-    word: "tailored",
-    meaning: "特別に調整された、あつらえの",
+    word: "distinctive",
+    meaning: "独特の",
     difficulty: 3,
     corrects: [
-      "made or adjusted to fit specific needs",
-      "customized to suit a particular person or purpose",
-      "specifically designed to match certain requirements",
+      "having a special quality that makes it very easy to recognize",
+      "different from others of the same kind in a very clear way",
+      "a unique physical feature that strongly stands out from the rest"
     ],
     wrongs: [
-      "being followed closely by someone without permission",
-      "produced in large quantities using a single standard design",
-      "offered only for a very limited period of time",
-      "chosen randomly without much thought or preparation",
-      "discounted because of a small defect in manufacturing",
-    ],
+      "looking exactly the same as everything else around it in the room",
+      "a very boring story that quickly puts most people to deep sleep",
+      "a large group of wild animals that travel together in cold winter",
+      "a simple cheap tool used for cleaning dirty windows in a house",
+      "moving forward at a very slow and steady comfortable speed"
+    ]
   },
   {
     id: 19,
-    word: "readership",
-    meaning: "読者数、読者層",
-    difficulty: 4,
+    word: "chemical",
+    meaning: "化学の、化学物質",
+    difficulty: 2,
     corrects: [
-      "the total number of people who read a publication",
-      "the group of people who regularly read something",
-      "the audience that follows a particular publication",
+      "a substance made by a reaction between different basic elements",
+      "relating to the study of substances and how they change form",
+      "artificial materials often used in modern farming or making new products"
     ],
     wrongs: [
-      "the group of people responsible for guiding an organization",
-      "the staff responsible for editing a newspaper's content",
-      "the price charged for a magazine subscription",
-      "the schedule used for publishing new issues of a magazine",
-      "the software used to format a printed document",
-    ],
+      "a completely natural food grown without using any extra artificial materials",
+      "a long interesting story written about people traveling to the distant moon",
+      "a traditional type of dance performed at a large town festival party",
+      "a warm feeling of deep happiness when you meet old school friends",
+      "a chair completely made of natural wood taken from a local green forest"
+    ]
   },
   {
     id: 20,
-    word: "goods",
-    meaning: "商品、品物",
-    difficulty: 1,
+    word: "usage",
+    meaning: "使用法、使用量",
+    difficulty: 2,
     corrects: [
-      "items that are made to be sold or used",
-      "physical products, especially ones bought or transported",
-      "merchandise or items intended for trade",
+      "the specific way in which a particular word or tool is used",
+      "the total amount of something like electricity or water that people use",
+      "the simple act of using something for a specific daily purpose"
     ],
     wrongs: [
-      "a company's positive reputation among its customers",
-      "a service offered instead of a physical item",
-      "the money earned from a completed sale",
-      "a written agreement between a buyer and a seller",
-      "the space used to display items inside a store",
-    ],
+      "the careful process of keeping something hidden from other curious people",
+      "the high total cost of buying a brand new fast car in cash",
+      "a stubborn person who refuses to use modern technology at all times",
+      "a strict situation where absolutely nothing is allowed to be touched",
+      "completely stopping a broken machine from ever working again in the factory"
+    ]
   },
   {
     id: 21,
-    word: "narrow",
-    meaning: "狭い",
-    difficulty: 1,
+    word: "novice",
+    meaning: "初心者",
+    difficulty: 3,
     corrects: [
-      "not wide, having a small distance from side to side",
-      "limited in range or extent",
-      "having very little space between two edges",
+      "a person who has just started learning how to do something new",
+      "someone with very little actual experience in a particular useful skill",
+      "a beginner who does not know much about a new difficult task"
     ],
     wrongs: [
-      "to tell a story or describe events in detail",
-      "open to a wide variety of opinions and approaches",
-      "covered with a soft, thick layer of material",
-      "designed to hold an unusually large amount of liquid",
-      "painted in a bright color to attract attention",
-    ],
+      "an expert who has done a professional job perfectly for many years",
+      "a highly trained teacher who helps other young people pass their exams",
+      "a small smart machine used to make reading easier late at night",
+      "a very thick heavy book containing only difficult foreign language words",
+      "a dark quiet room where people go to watch brand new movies"
+    ]
   },
   {
     id: 22,
-    word: "excel",
-    meaning: "秀でる、優れる",
-    difficulty: 3,
+    word: "inn",
+    meaning: "宿屋、小さなホテル",
+    difficulty: 2,
     corrects: [
-      "to perform extremely well at something",
-      "to be outstanding in a particular skill or subject",
-      "to achieve a high level of success in an activity",
+      "a small hotel usually found in the country where you can sleep safely",
+      "a cozy place that provides a warm room and hot food for travelers",
+      "a traditional old building offering clean beds for people on a long journey"
     ],
     wrongs: [
-      "to make a reason for not doing something",
-      "to fail repeatedly despite putting in a lot of effort",
-      "to avoid a difficult task altogether",
-      "to copy exactly how someone else already performs a task",
-      "to finish an assignment much later than the deadline",
-    ],
+      "a huge modern tall building in the city with a thousand expensive rooms",
+      "a small busy store where you can only buy fresh green vegetables",
+      "a very fast safe vehicle used to travel on deep white snow",
+      "a kind medical professional who takes care of sick farm animals",
+      "a small leather bag used to carefully carry paper money and keys"
+    ]
   },
   {
     id: 23,
-    word: "practice",
-    meaning: "練習、慣行",
+    word: "perhaps",
+    meaning: "もしかすると",
     difficulty: 1,
     corrects: [
-      "repeated activity done to improve a skill",
-      "a habitual way of doing something, especially in business",
-      "to repeat an activity in order to get better at it",
+      "used to say that something may be true but you are not completely sure",
+      "a word used when you guess something might happen in the near future",
+      "possibly, but not certainly, depending on the current situation"
     ],
     wrongs: [
-      "useful and effective for real, everyday situations",
-      "a single attempt made without any prior preparation",
-      "a formal agreement signed by two separate parties",
-      "an unusual event that happens only one time",
-      "a summary describing achievements from the past",
-    ],
+      "used to clearly say that you are one hundred percent sure about it",
+      "a strong word meaning that something will never happen in your life",
+      "a clear scientific fact that absolutely everyone already knows is totally true",
+      "a daily action that occurs exactly at the same time everyday without fail",
+      "used to politely but firmly refuse a request from a good friend"
+    ]
   },
   {
     id: 24,
-    word: "virtually",
-    meaning: "ほとんど、事実上",
-    difficulty: 3,
+    word: "leave for ~",
+    meaning: "～へ出発する",
+    difficulty: 1,
     corrects: [
-      "almost completely, though not exactly",
-      "for all practical purposes, even if not literally true",
-      "in effect, though not in a strict or literal sense",
+      "to start a journey in order to go to a particular place",
+      "to go away from here so that you can travel somewhere else",
+      "to pack your bags and begin traveling to your chosen destination"
     ],
     wrongs: [
-      "in a way that shows strong moral character",
-      "only in a very small and limited way",
-      "according to an official written rule",
-      "after a long delay caused by unexpected problems",
-      "in a way that is publicly announced to everyone",
-    ],
+      "to finally arrive at your warm home after a very long trip",
+      "to safely stay in the exact same quiet room all day long",
+      "to accidentally forget to bring your important ticket to the busy airport",
+      "to ask someone nicely for clear directions to the nearest train station",
+      "to patiently wait for a close friend who is running very late"
+    ]
   },
   {
     id: 25,
-    word: "realize",
-    meaning: "気づく、実現する",
-    difficulty: 1,
+    word: "suitable",
+    meaning: "ふさわしい、適切な",
+    difficulty: 2,
     corrects: [
-      "to become aware of something not noticed before",
-      "to achieve or make something happen, such as a goal",
-      "to suddenly understand a fact or situation clearly",
+      "right or highly acceptable for a particular important purpose or situation",
+      "having the right good qualities for a specific person or special event",
+      "fitting perfectly into what is greatly needed right now at this moment"
     ],
     wrongs: [
-      "to adjust the position of something so it lines up correctly",
-      "to forget something that was once known very well",
-      "to explain a plan clearly to a group of people",
-      "to postpone a decision until more data becomes available",
-      "to criticize a decision that someone else already made",
-    ],
+      "completely wrong and highly inappropriate for a very formal business meeting",
+      "a piece of beautiful clothing that is much too large to wear outside",
+      "an empty boring event that nobody wants to attend this year",
+      "an expensive beautiful gift that sadly breaks as soon as you open it",
+      "a bad dangerous situation that makes everyone feel very angry and upset"
+    ]
   },
   {
     id: 26,
-    word: "in effect",
-    meaning: "実質的に、効力を持って",
+    word: "plot",
+    meaning: "筋書き、陰謀、区画",
     difficulty: 3,
     corrects: [
-      "currently valid and being enforced",
-      "essentially, even if not stated in exact words",
-      "actually in operation or use at this time",
+      "the series of main events that form the story of a book or movie",
+      "a secret bad plan made by a group of people to do something wrong",
+      "a small measured piece of land marked out for building or growing vegetables"
     ],
     wrongs: [
-      "influenced or changed by an outside factor",
-      "planned for a future date, but not yet active",
-      "limited to a single specific department within a company",
-      "discussed at length but ultimately rejected",
-      "permanently canceled and no longer referenced",
-    ],
+      "an open honest plan where everyone shares their good ideas freely and loudly",
+      "a funny main character in a comic book who is always very happy",
+      "a very loud annoying noise made by a broken machine in a factory",
+      "a very large deep ocean with absolutely no islands in it anywhere",
+      "the slow traditional process of making warm clothes from soft white cotton"
+    ]
   },
   {
     id: 27,
-    word: "conceal",
-    meaning: "隠す",
-    difficulty: 4,
+    word: "sort",
+    meaning: "種類、分類する",
+    difficulty: 2,
     corrects: [
-      "to keep something from being seen or known",
-      "to hide something intentionally, often to prevent discovery",
-      "to prevent information from becoming known to others",
+      "a group of things or people that share similar features or qualities",
+      "to carefully arrange different items into groups based on their specific type",
+      "a particular kind or basic class of people or objects in the world"
     ],
     wrongs: [
-      "to comfort someone who is upset or disappointed",
-      "to describe something in a great amount of detail",
-      "to distribute something to as wide an audience as possible",
-      "to exaggerate how important something actually is",
-      "to translate a document into a different language",
-    ],
+      "to mix absolutely everything together in a completely messy and bad way",
+      "a single unique old item that is completely unlike anything else",
+      "a small wooden type of boat used for catching small fish in rivers",
+      "a very long boring speech given by a president on late television",
+      "to accidentally break a glass window by throwing a heavy ball hard"
+    ]
   },
   {
     id: 28,
-    word: "at one's earliest convenience",
-    meaning: "都合のつき次第、できるだけ早く",
-    difficulty: 4,
+    word: "satellite",
+    meaning: "人工衛星、衛星",
+    difficulty: 3,
     corrects: [
-      "as soon as one is reasonably able to",
-      "at a time that works well, but without unnecessary delay",
-      "promptly, but at a time that suits the person",
+      "a machine sent deep into space to orbit the earth and send signals",
+      "a natural round moon that moves around a much larger planet",
+      "an object in space used for collecting information and taking weather pictures"
     ],
     wrongs: [
-      "without any additional charge being applied",
-      "only after a formal request has been officially approved",
-      "once every other pending task has been completed first",
-      "exactly at the same time every single day",
-      "after waiting for further written instructions",
-    ],
+      "a deep dark hole in the ground used for finding fresh drinking water",
+      "a fast long train that travels underground in a very big noisy city",
+      "a smart person who studies old rocks found high in the cold mountains",
+      "a small flat screen used to watch movies comfortably at your home",
+      "a fast jet airplane that flies very close to the ground during shows"
+    ]
   },
   {
     id: 29,
-    word: "decrease",
-    meaning: "減少する",
-    difficulty: 1,
+    word: "analysis",
+    meaning: "分析",
+    difficulty: 3,
     corrects: [
-      "to become smaller in amount or number",
-      "to reduce something in size, amount, or degree",
-      "a decline in the level or quantity of something",
+      "the careful deep study of something to understand its different parts",
+      "looking closely at numbers and data to find out what it means",
+      "a detailed close examination of how a complex system works perfectly"
     ],
     wrongs: [
-      "existing as a separate and distinct unit",
-      "to increase sharply within a very short period",
-      "to be measured accurately for the very first time",
-      "to remain exactly the same over a long period",
-      "to replace something with a completely different version",
-    ],
+      "a very quick simple guess made without looking at any real facts",
+      "a daily physical exercise that makes your body much stronger and healthier",
+      "the bad act of ignoring important information on purpose during a meeting",
+      "a beautiful colorful picture drawn by a young happy child at school",
+      "a sudden strong feeling of being very scared in the dark"
+    ]
   },
   {
     id: 30,
-    word: "appeal to ~",
-    meaning: "~の心を引く、~に訴えかける",
-    difficulty: 3,
+    word: "vote on ~",
+    meaning: "～について投票する",
+    difficulty: 1,
     corrects: [
-      "to be attractive or interesting to someone",
-      "to formally request that a decision be reconsidered",
-      "to attract or interest a particular group of people",
+      "to make an official final choice about a plan or a new rule",
+      "to express your own opinion formally in an election or a big meeting",
+      "to raise your hand or use a paper to formally choose an option"
     ],
     wrongs: [
-      "to be completely ignored by the people it was intended for",
-      "to be prohibited from being sold in a certain location",
-      "to accept a decision without raising any objection",
-      "to postpone a decision indefinitely without any explanation",
-      "to be significantly more expensive than similar alternatives",
-    ],
+      "to completely refuse to participate in any group decisions at the office",
+      "to aggressively force someone else to do what you want them to do",
+      "to carefully write a long interesting story about your own early life",
+      "to happily travel to a different hot country for a summer holiday",
+      "to calmly eat a delicious dinner with your family at a quiet restaurant"
+    ]
   },
   {
     id: 31,
-    word: "indicate",
-    meaning: "示す",
-    difficulty: 2,
+    word: "allow",
+    meaning: "許可する",
+    difficulty: 1,
     corrects: [
-      "to show or point out that something is true",
-      "to give a sign or signal about something",
-      "to make something clear or noticeable through a sign",
+      "to give someone official permission to do something they really want to do",
+      "to happily let something happen without trying to stop it at all",
+      "to make it easily possible for a person to enter a restricted place"
     ],
     wrongs: [
-      "to formally accuse someone of committing a crime",
-      "to hide the true reason behind a decision",
-      "to argue against a fact that seems obvious",
-      "to forget an important detail entirely",
-      "to celebrate an achievement in a public ceremony",
-    ],
+      "to completely strictly forbid people from talking in a quiet library room",
+      "to aggressively force someone to stay outside in the very cold rain",
+      "to badly break a serious promise that you made to a good friend",
+      "to carefully hide an important paper document in a secret wooden box",
+      "to angrily shout loudly at someone who made a very small mistake"
+    ]
   },
   {
     id: 32,
-    word: "apparently",
-    meaning: "見たところ、どうやら",
+    word: "proven",
+    meaning: "証明された",
     difficulty: 2,
     corrects: [
-      "based on what seems to be true, though not confirmed",
-      "as far as one can tell from available information",
-      "it seems that something is the case, from what is known",
+      "shown clearly to be true or highly effective by evidence and past facts",
+      "well known to work perfectly because it has been tested many times",
+      "firmly established beyond any doubt through careful and strict scientific testing"
     ],
     wrongs: [
-      "able to be seen through clearly, with nothing hidden",
-      "according to an official legal document",
-      "despite strong evidence that points to the contrary",
-      "after a lengthy and thorough investigation was completed",
-      "with complete certainty and no room for doubt",
-    ],
+      "completely untested and totally unknown if it will actually work at all",
+      "an old crazy theory that everyone knows is totally false and wrong",
+      "a hopeful person who is currently looking for a new better job",
+      "a sudden completely new idea that just came to someone's mind today",
+      "a bad old machine that often breaks down for absolutely no reason"
+    ]
   },
   {
     id: 33,
-    word: "label",
-    meaning: "ラベル、名札",
-    difficulty: 1,
+    word: "real estate",
+    meaning: "不動産",
+    difficulty: 2,
     corrects: [
-      "a small piece of paper or fabric giving information about an item",
-      "a tag attached to a product showing details like price or contents",
-      "to attach a tag with information to something",
+      "property mainly consisting of valuable land and the buildings on it",
+      "the big business of buying and selling houses and large office spaces",
+      "physical solid land and structures that can be legally owned or rented"
     ],
     wrongs: [
-      "a tool used for climbing to a higher level",
-      "a written contract signed between two businesses",
-      "a formal complaint filed by a dissatisfied customer",
-      "a large sign placed above a store's main entrance",
-      "a certificate awarded for outstanding performance",
-    ],
+      "paper money that is kept safely in a secure local bank account",
+      "a small beautiful piece of expensive jewelry made of solid shiny gold",
+      "a bright red car that is driven very fast in professional races",
+      "a friendly person who sells fresh green vegetables at a local street market",
+      "a warm happy feeling of being very rich and comfortable in life"
+    ]
   },
   {
     id: 34,
-    word: "hammer",
-    meaning: "金づち、打ちつける",
+    word: "handle",
+    meaning: "対処する、扱う、取っ手",
     difficulty: 2,
     corrects: [
-      "a tool used for hitting nails into place",
-      "to strike something repeatedly with force",
-      "a heavy tool with a handle, used for striking objects",
+      "to successfully deal with a difficult situation or manage a complex problem",
+      "to touch, hold, or carefully move something important with your own hands",
+      "the small projecting part of a door or cup that you hold firmly"
     ],
     wrongs: [
-      "a container used for holding laundry or picnic items",
-      "to gently place an object into its correct position",
-      "a device used to measure distance with precision",
-      "a machine used for printing large quantities of paper",
-      "a soft tool used for polishing delicate surfaces",
-    ],
+      "to completely ignore a huge problem and just hope it goes away",
+      "a round black rubber part of a car that touches the hard road",
+      "a strong bad feeling of anger when you are very busy and tired",
+      "to quietly watch a long boring movie on a very large screen",
+      "a mean selfish person who strongly refuses to help anyone else ever"
+    ]
   },
   {
     id: 35,
-    word: "invent",
-    meaning: "発明する",
+    word: "pickup",
+    meaning: "受け取り、迎え",
     difficulty: 2,
     corrects: [
-      "to create something that did not exist before",
-      "to design and produce a completely new device or method",
-      "to come up with a new idea, process, or device",
+      "the simple act of collecting a person or goods from a specific place",
+      "briefly stopping a vehicle to kindly let someone get inside the car",
+      "taking a waiting package from a store or a busy delivery person"
     ],
     wrongs: [
-      "a detailed list of items currently in stock",
-      "to copy an existing design without making any changes",
-      "to repair a machine that has stopped working",
-      "to discontinue a product because of low sales",
-      "to advertise a product using a catchy new slogan",
-    ],
+      "accidentally leaving your heavy luggage at home by mistake before a trip",
+      "a beautiful type of bird that flies very high in the blue sky",
+      "quickly sending an electronic email to a friend in another distant country",
+      "throwing away dirty garbage into a large green bin placed outside",
+      "walking for many long hours without taking a short break to rest"
+    ]
   },
   {
     id: 36,
-    word: "surprisingly",
-    meaning: "驚くほど、意外にも",
-    difficulty: 2,
+    word: "breakdown",
+    meaning: "故障、内訳",
+    difficulty: 3,
     corrects: [
-      "in a way that causes surprise, unexpected",
-      "unexpectedly, in a way that differs from what was assumed",
-      "in a manner that is unexpected given the circumstances",
+      "a sudden mechanical failure of a machine to work properly as it should",
+      "a detailed written list that shows exactly how a total amount is divided",
+      "a sad situation where a complex system or a relationship completely fails"
     ],
     wrongs: [
-      "according to what people assume, though it may not be true",
-      "exactly as everyone had already predicted",
-      "after a long period of careful and detailed planning",
-      "following a pattern that repeats on a regular schedule",
-      "in a way that strictly follows official rules",
-    ],
+      "a brand new shiny car that runs perfectly smoothly without any problems",
+      "a sudden large increase in the daily price of fresh healthy food",
+      "a warm wonderful feeling of great happiness and joy in your heart",
+      "a heavy metal tool used for quickly fixing broken glass windows safely",
+      "a very short relaxing holiday spent happily sleeping on a quiet beach"
+    ]
   },
   {
     id: 37,
-    word: "business",
-    meaning: "仕事、事業",
-    difficulty: 1,
+    word: "outlet",
+    meaning: "店舗、コンセント、はけ口",
+    difficulty: 3,
     corrects: [
-      "an organization that sells goods or services",
-      "commercial activity involving buying, selling, or providing services",
-      "a company or commercial enterprise",
+      "a retail store that sells various goods directly to the general public",
+      "a place on a wall where you can plug in electrical things safely",
+      "a healthy active way to express your strong deep feelings or extra energy"
     ],
     wrongs: [
-      "the state of having a great deal to do",
-      "a government department responsible for enforcing laws",
-      "a public park maintained by the local city government",
-      "a school that provides professional training courses",
-      "a private collection of historical documents",
-    ],
+      "a rich person who buys many expensive clothes online every single day",
+      "a very deep fast river that flows directly into the vast blue ocean",
+      "a tight small wooden box used for storing heavy winter clothes away",
+      "a sudden very loud noise that quickly wakes you up at night",
+      "a thick heavy book that explains how to fix a broken car engine"
+    ]
   },
   {
     id: 38,
-    word: "assistance",
-    meaning: "援助、支援",
-    difficulty: 1,
+    word: "duplicate",
+    meaning: "複製の、複製する",
+    difficulty: 3,
     corrects: [
-      "help or support given to someone",
-      "aid provided to help someone complete a task",
-      "support offered, especially in a difficult situation",
+      "exactly the same as something else that already exists in the world",
+      "to carefully make an exact perfect copy of a document or file",
+      "a second exact copy of an item kept safely in case it gets lost"
     ],
     wrongs: [
-      "a promise that something is definitely true or will happen",
-      "a formal complaint made against a company's service",
-      "a fee charged for a delayed shipment",
-      "a rule limiting how a product may be used",
-      "a bonus awarded for exceeding a sales target",
-    ],
+      "completely unique and entirely different from absolutely anything else you have seen",
+      "a rare single precious item that can never ever be copied by anyone",
+      "a small bad mistake made when writing a quick letter to a friend",
+      "to angrily destroy a piece of important paper by tearing it into pieces",
+      "a strong bad feeling of being totally confused about a math problem"
+    ]
   },
   {
     id: 39,
-    word: "replacement",
-    meaning: "交換品、後任",
+    word: "participate in ~",
+    meaning: "～に参加する",
     difficulty: 2,
     corrects: [
-      "a person or thing that takes the place of another",
-      "something used to substitute for a damaged or missing item",
-      "a new version of a person or item that replaces the old one",
+      "to take an active part in an activity or event with other people",
+      "to be fully involved in doing something alongside a large group",
+      "to formally join a meeting or a game and share the experience together"
     ],
     wrongs: [
-      "the act of refilling a supply that has run low",
-      "a document that records the details of a past transaction",
-      "a fee charged for canceling an order early",
-      "a warning issued before a rule is strictly enforced",
-      "a prototype tested before a product goes into full production",
-    ],
+      "to silently watch other people play without doing anything yourself at all",
+      "to stay safely at home completely alone and read a quiet book",
+      "to sleep very deeply while other team members are working very hard",
+      "to leave a crowded room secretly without saying a polite goodbye to anyone",
+      "to foolishly forget to bring your sports clothes to a big important game"
+    ]
   },
   {
     id: 40,
-    word: "projection",
-    meaning: "予測、見積もり",
-    difficulty: 3,
+    word: "insist on",
+    meaning: "～を強く主張する",
+    difficulty: 2,
     corrects: [
-      "an estimate of what will happen in the future, especially in numbers",
-      "a forecast, especially one based on current data or trends",
-      "a prediction about future results, often financial",
+      "to demand something firmly and completely refuse to accept no for an answer",
+      "to say very strongly that you must do something in a certain exact way",
+      "to firmly state that something is definitely true despite what others think"
     ],
     wrongs: [
-      "a type of work that requires special training or qualification",
-      "a written record of sales figures from a previous year",
-      "a formal apology issued after a company's mistake",
-      "a photograph used to advertise a new product",
-      "a certificate proving that a product meets safety standards",
-    ],
+      "to easily and happily agree with whatever other people suggest to you immediately",
+      "to very quickly give up on your own good ideas without even trying",
+      "to gently and politely ask a simple question to a complete stranger",
+      "to quietly and patiently wait alone in a dark corner of a room",
+      "to completely and utterly forget what you really wanted to say today"
+    ]
   },
   {
     id: 41,
-    word: "nursery",
-    meaning: "保育園、育苗場",
+    word: "outstanding",
+    meaning: "傑出した、未払いの",
     difficulty: 3,
     corrects: [
-      "a place where young children are cared for",
-      "a facility where plants are grown for later sale or use",
-      "a room or place designed for young children or young plants",
+      "clearly very much better than what is usual or normally expected",
+      "an exact amount of owed money that has not yet been paid back",
+      "excellent high quality work that deeply impresses everyone who sees it"
     ],
     wrongs: [
-      "a place where legal documents are officially filed and stored",
-      "a facility where vehicles are inspected and repaired",
-      "a large event space rented out for public gatherings",
-      "a room used exclusively for storing old furniture",
-      "a warehouse where packaged food is kept before shipping",
-    ],
+      "very average and totally boring, not being special in any way at all",
+      "a normal electric bill that was already fully paid early last month",
+      "a quiet shy person who stays inside the dark house all day long",
+      "a quick short walk taken outside to get some healthy fresh air",
+      "a terrible bad mistake that unfortunately causes a whole project to fail completely"
+    ]
   },
   {
     id: 42,
-    word: "intermission",
-    meaning: "(催しの)休憩時間",
-    difficulty: 3,
+    word: "bureau",
+    meaning: "局、案内所、整理ダンス",
+    difficulty: 4,
     corrects: [
-      "a short break during a performance or event",
-      "a pause between parts of a show, allowing the audience to rest",
-      "a period when an event is temporarily paused",
+      "an office or formal organization that provides information or a specific public service",
+      "a large government department strictly responsible for a specific important national task",
+      "a large heavy piece of wooden furniture with drawers for keeping clothes inside"
     ],
     wrongs: [
-      "the fee charged to enter a venue or event",
-      "a formal announcement made before an event begins",
-      "a rule limiting how long an event may last overall",
-      "a discount offered only to the very first attendees",
-      "a schedule listing every performer appearing at an event",
-    ],
+      "a very large wild green forest with tall old trees and dangerous animals",
+      "a fast modern machine specially used for flying very high in the sky",
+      "a beautiful small white cup mainly used for drinking hot green tea",
+      "a strong skilled person who builds large houses using heavy natural wood",
+      "a sad terrible feeling of being very bored and tired at school"
+    ]
   },
   {
     id: 43,
-    word: "lumber",
-    meaning: "材木",
-    difficulty: 3,
+    word: "essential",
+    meaning: "不可欠な",
+    difficulty: 2,
     corrects: [
-      "wood that has been cut and prepared for building",
-      "timber used in construction or carpentry",
-      "wood material used to build houses or furniture",
+      "completely necessary for something to succeed or to work properly as planned",
+      "a very basic and highly important main part of a plan or system",
+      "something vital that you absolutely must have and simply cannot do without"
     ],
     wrongs: [
-      "a quantity used to represent an exact amount",
-      "metal that has been shaped for use in construction",
-      "a chemical used to clean industrial machinery",
-      "fabric that has been dyed for use in manufacturing",
-      "a tool used to measure the length of a room",
-    ],
+      "a useless extra item that you really do not need at all ever",
+      "a lazy person who never helps with any of the hard office work",
+      "a tiny minor detail that absolutely everyone quickly forgets about the next day",
+      "a very simple soft toy played with happily by a small young child",
+      "something cheap and dirty that is very easy to throw away quickly"
+    ]
   },
   {
     id: 44,
-    word: "commission",
-    meaning: "委員会、歩合、依頼する",
+    word: "interfere",
+    meaning: "邪魔をする、干渉する",
     difficulty: 3,
     corrects: [
-      "a percentage of sales paid to the person who made the sale",
-      "an official group given the authority to perform a specific task",
-      "to formally request that a piece of work be created",
+      "to get badly involved in a situation where you are absolutely not wanted",
+      "to stop something from smoothly happening or working as it should naturally do",
+      "to carelessly step into a process and cause annoying trouble or a delay"
     ],
     wrongs: [
-      "a fixed annual salary that does not change based on performance",
-      "an informal group of coworkers who meet casually for lunch",
-      "a bonus given to every employee once a year, regardless of sales",
-      "to formally cancel a project that was already underway",
-      "a list of tasks assigned to a newly hired employee",
-    ],
+      "to quietly and politely help someone finish their hard work much faster today",
+      "to stay far away and safely let people handle their own private problems",
+      "to kindly give a polite useful suggestion when someone asks for it nicely",
+      "to calmly stand perfectly still without making any noise in the quiet room",
+      "to happily buy a very useful heavy tool for a good close friend"
+    ]
   },
   {
     id: 45,
-    word: "dispose of ~",
-    meaning: "~を処分する",
-    difficulty: 4,
+    word: "management",
+    meaning: "経営、管理",
+    difficulty: 2,
     corrects: [
-      "to get rid of something no longer needed",
-      "to throw away or eliminate something properly",
-      "to remove something, often following proper procedure",
+      "the important group of people who control and direct a large busy business",
+      "the complex act of organizing and smoothly running a busy office or project",
+      "the strict process of dealing with or carefully controlling things or many people"
     ],
     wrongs: [
-      "to formally disagree with a decision or claim",
-      "to carefully repair something that is broken",
-      "to store something safely for use at a later time",
-      "to sell something for a significantly higher price than usual",
-      "to lend something to a coworker on a temporary basis",
-    ],
+      "a young entry-level worker who just started their very first job today morning",
+      "a modern smart machine that automatically prints documents without needing any human help",
+      "the sad process of rapidly losing all your money in a very bad bet",
+      "a scary terrible feeling of being completely out of control in your life",
+      "a normal happy customer who is quietly buying goods at a local shop"
+    ]
   },
   {
     id: 46,
-    word: "automatically",
-    meaning: "自動的に",
+    word: "solve",
+    meaning: "解決する",
     difficulty: 1,
     corrects: [
-      "happening without direct human control",
-      "occurring by itself, without a person needing to act",
-      "done by a machine or system without a person's help",
+      "to finally find a clear answer to a problem or a difficult puzzle",
+      "to successfully figure out a smart way to deal with a bad situation",
+      "to carefully discover the hidden truth about a mystery or a bad crime"
     ],
     wrongs: [
-      "relating to vehicles used for personal transportation",
-      "only after written approval has been formally given",
-      "at the same time every single year, without exception",
-      "as a direct result of a customer's complaint",
-      "only under the close supervision of a specialist",
-    ],
+      "to foolishly make a small problem much worse than it originally was before",
+      "to completely ignore a very difficult question in a hard math school exam",
+      "to intentionally break a useful machine so that it totally stops working forever",
+      "to safely hide an important clue from the police in a secret place",
+      "to angrily complain loudly about something without actually trying to fix it yourself"
+    ]
   },
   {
     id: 47,
-    word: "sponsorship",
-    meaning: "後援、スポンサー活動",
-    difficulty: 4,
+    word: "specialize",
+    meaning: "専門にする",
+    difficulty: 2,
     corrects: [
-      "financial support given to an event or person in exchange for promotion",
-      "the act of providing funds to support an activity, often for publicity",
-      "financial backing provided in return for public recognition",
+      "to spend most of your time deeply studying one particular narrow difficult subject",
+      "to strongly focus a business on a very specific type of product or service",
+      "to successfully become an expert in a very narrow and specific field of work"
     ],
     wrongs: [
-      "the act of restricting or controlling public information",
-      "a formal complaint made about a company's advertisement",
-      "a fee charged for attending a private event",
-      "a legal document outlining a company's internal structure",
-      "a survey used to measure customer satisfaction",
-    ],
+      "to only know a tiny little bit about a thousand different random things",
+      "to lazily work at a very simple job that requires absolutely no skills at all",
+      "to stubbornly refuse to learn anything new after leaving high school long ago",
+      "to constantly change your mind about what you want to do every single day",
+      "to happily travel all over the big world without any clear plan or map"
+    ]
   },
   {
     id: 48,
-    word: "sizable",
-    meaning: "かなり大きな",
-    difficulty: 3,
+    word: "gala",
+    meaning: "祝祭、特別なお祝い",
+    difficulty: 4,
     corrects: [
-      "fairly large in amount or size",
-      "considerably large, more than what might be expected",
-      "large enough to be considered significant",
+      "a very special public occasion or a large party with fun live entertainment",
+      "a large formal happy event held to celebrate something very important and special",
+      "a fancy formal evening dinner often held to raise a lot of money for charity"
     ],
     wrongs: [
-      "friendly and enjoying the company of others",
-      "extremely small and barely noticeable",
-      "temporarily unavailable due to high demand",
-      "identical in size to a previous version",
-      "designed specifically to be compact and portable",
-    ],
+      "a very sad serious meeting where many crying people say their final goodbye",
+      "a completely normal boring day at the quiet office doing regular slow paperwork",
+      "a small warm cup of black coffee drank completely alone in the early morning",
+      "a comfortable loose piece of clothing usually worn for a daily tough workout",
+      "a totally quiet small room where nervous students go to study for hard exams"
+    ]
   },
   {
     id: 49,
-    word: "quote",
-    meaning: "見積もり、引用する",
-    difficulty: 2,
+    word: "client",
+    meaning: "顧客、依頼人",
+    difficulty: 1,
     corrects: [
-      "a stated price for a product or service",
-      "to state the estimated cost of a job or service",
-      "to repeat someone's exact words, often in writing",
+      "a person who formally pays a professional for a specific service or expert advice",
+      "someone who formally uses the services of a professional lawyer or a company",
+      "a valued customer who regularly does formal business with an agency or a firm"
     ],
     wrongs: [
-      "a complaint filed about the quality of a service",
-      "a schedule listing the available appointment times",
-      "a warranty that covers repairs for a fixed period",
-      "to summarize an idea using completely different wording",
-      "to refuse to provide any information about a price",
-    ],
+      "a friendly person who sells fresh vegetables at the side of the country road",
+      "the rich powerful owner of a very large factory that makes fast cars",
+      "a loud heavy machine used for quickly printing hundreds of large white papers",
+      "a small cute animal kept safely at home as a friendly loyal companion",
+      "a tired young worker who strictly follows direct orders from their angry boss"
+    ]
   },
   {
     id: 50,
-    word: "compliance",
-    meaning: "(規則などへの)順守",
-    difficulty: 4,
+    word: "customize",
+    meaning: "特注で作る、カスタマイズする",
+    difficulty: 2,
     corrects: [
-      "the act of following rules, laws, or standards",
-      "acting in accordance with an official requirement",
-      "adherence to laws, regulations, or agreed standards",
+      "to carefully change the way something looks or works to fit a specific user",
+      "to cleverly alter a product so that it meets a buyer's exact unique needs",
+      "to skillfully build something specially designed for one particular demanding person"
     ],
     wrongs: [
-      "a polite remark expressing admiration for someone",
-      "the act of ignoring official rules and regulations",
-      "the act of creating brand-new company policies",
-      "an exception granted to a specific rule under special conditions",
-      "a proposal suggesting a change to an existing law",
-    ],
-  },
+      "to stubbornly force absolutely everyone to use the exact same standard boring product",
+      "to carelessly buy something very quickly without looking at the small important details",
+      "to completely destroy a beautiful object until it can never be used again safely",
+      "to totally forget how a very simple machine is actually supposed to work properly",
+      "to angrily return a broken item to a busy store because it is useless"
+    ]
+  }
 ];
