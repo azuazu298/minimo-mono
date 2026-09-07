@@ -1181,6 +1181,7 @@ const CSS = `
   background: transparent;
   cursor: pointer;
   animation: mmFade .7s ease both;
+  -webkit-tap-highlight-color: transparent;
 }
 .mm-start-mark { display: flex; align-items: center; gap: 24px; }
 .mm-start-title { font-size: var(--fs-xl); font-weight: 600; letter-spacing: -0.03em; color: var(--ink); }
