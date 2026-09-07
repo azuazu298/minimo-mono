@@ -1,21 +1,24 @@
-export const batch01 = [
+// TOEIC batch 01 — new 1800-word source list, words 1-50 (source order)
+// New format: 3 corrects (paraphrases) + 5 pooled wrongs per word.
+// Wording in corrects/wrongs is kept simpler than the headword itself.
+export const WORDS_BATCH_01 = [
   {
     id: 1,
     word: "within walking distance",
     meaning: "徒歩圏内で",
     difficulty: 1,
     corrects: [
-      "close enough to reach on foot without taking a bus",
-      "a very short trip that requires no car to travel",
-      "near enough that you can easily go there by walking"
+      "close enough to walk to in a short time",
+      "near enough to reach on foot, not by car",
+      "a short distance you can walk to easily",
     ],
     wrongs: [
-      "located so far away that you need an airplane",
-      "a special street where cars are completely banned",
-      "a daily exercise routine to keep your legs healthy",
-      "a store where you can buy comfortable running shoes",
-      "a long journey taken by train across the entire country"
-    ]
+      "too far away to reach without a car",
+      "a place where cars cannot drive at all",
+      "a plan to walk every day for exercise",
+      "a shop that sells shoes for walking",
+      "a long trip taken by train or plane",
+    ],
   },
   {
     id: 2,
@@ -23,17 +26,17 @@ export const batch01 = [
     meaning: "概要／まとめる",
     difficulty: 2,
     corrects: [
-      "a short summary of the main points in a document",
-      "to give a general explanation without all the small details",
-      "a basic plan that shows the most important parts clearly"
+      "a short summary of the main points",
+      "to explain something in simple general terms",
+      "the basic plan showing only the key parts",
     ],
     wrongs: [
-      "a complete and detailed book containing every single fact",
-      "a straight line drawn directly outside a tall building",
-      "a long meeting where people talk about strict office rules",
-      "a tool used by teachers to write on a whiteboard",
-      "to read a very long novel from start to finish"
-    ]
+      "a full and very detailed report with every fact",
+      "a straight line drawn around a building",
+      "a long meeting about strict office rules",
+      "a tool used to write on a board",
+      "a full book read from start to end",
+    ],
   },
   {
     id: 3,
@@ -41,17 +44,17 @@ export const batch01 = [
     meaning: "荒れ模様の",
     difficulty: 4,
     corrects: [
-      "bad weather conditions such as heavy rain or strong wind",
-      "used to describe weather that is unpleasant and very cold",
-      "severe storms that make it unsafe to go outside today"
+      "used to describe bad weather, like rain or wind",
+      "very unpleasant weather, often cold and wet",
+      "weather that is too rough to go outside in",
     ],
     wrongs: [
-      "a beautiful day with bright sunlight and clear blue skies",
-      "a person who does not show mercy to other people",
-      "a sudden increase in the price of warm winter clothes",
-      "a comfortable room temperature that everyone in the office likes",
-      "a machine used to clean the dirty air inside buildings"
-    ]
+      "a sunny day with clear blue skies",
+      "a person who is not kind to others",
+      "a sudden rise in the price of clothes",
+      "a nice warm room that everyone likes",
+      "a machine used to clean the air indoors",
+    ],
   },
   {
     id: 4,
@@ -59,17 +62,17 @@ export const batch01 = [
     meaning: "観察する／遵守する",
     difficulty: 2,
     corrects: [
-      "to watch something carefully in order to learn about it",
-      "to obey a rule or law and do what it says",
-      "to notice something interesting while you are looking around quietly"
+      "to watch something closely to learn about it",
+      "to follow a rule or law carefully",
+      "to notice something while looking around",
     ],
     wrongs: [
-      "to break a strict law and do whatever you want",
-      "to speak very loudly to a large group of friends",
-      "to throw away old things that you no longer need",
-      "to hide an object secretly so that no one can find it",
-      "to guess what will happen tomorrow without knowing any facts"
-    ]
+      "to break a rule on purpose",
+      "to speak loudly to a large group",
+      "to throw away things you do not need",
+      "to hide something so no one finds it",
+      "to guess without knowing any facts",
+    ],
   },
   {
     id: 5,
@@ -77,17 +80,17 @@ export const batch01 = [
     meaning: "機会",
     difficulty: 1,
     corrects: [
-      "a good chance to do something that you really want",
-      "a situation that makes it possible to achieve your goal",
-      "a favorable moment for making progress in your career path"
+      "a good chance to do something you want",
+      "a moment when something good becomes possible",
+      "a chance to make progress in your life",
     ],
     wrongs: [
-      "a very bad situation that causes a lot of trouble",
-      "a strict rule that you must follow at your school",
-      "a small metal object used to open locked wooden doors",
-      "a feeling of being very tired after working all night",
-      "a person whose job is to help others find work"
-    ]
+      "a bad situation that causes a lot of trouble",
+      "a strict rule you must follow at school",
+      "a small tool used to open a locked door",
+      "a tired feeling after working all night",
+      "a person whose job is to help others find work",
+    ],
   },
   {
     id: 6,
@@ -95,17 +98,17 @@ export const batch01 = [
     meaning: "動機づけ、報奨金",
     difficulty: 3,
     corrects: [
-      "something that encourages a person to work harder and better",
-      "an extra reward given to workers who perform very well",
-      "a reason that makes you want to achieve a difficult goal"
+      "something that makes a person want to work harder",
+      "a reward given for doing something well",
+      "a reason that pushes you to reach a goal",
     ],
     wrongs: [
-      "a severe punishment given to someone who arrives very late",
-      "a piece of paper used to buy cheap things in a store",
-      "a loud machine that produces a sound to wake you up",
-      "a feeling of fear when you have to speak in public",
-      "a type of medicine taken to quickly stop a headache"
-    ]
+      "a punishment given for arriving late",
+      "a piece of paper used to buy cheap things",
+      "a loud machine that makes a sound to wake you",
+      "a fear of speaking in front of people",
+      "a medicine taken to stop a headache",
+    ],
   },
   {
     id: 7,
@@ -113,17 +116,17 @@ export const batch01 = [
     meaning: "地区",
     difficulty: 2,
     corrects: [
-      "an area of a city or country with specific borders",
-      "a region known for a particular type of business activity",
-      "a part of a town defined for official or administrative purposes"
+      "an area of a city with clear borders",
+      "a part of a place known for one kind of business",
+      "a section of a town used for official purposes",
     ],
     wrongs: [
-      "the whole world including all different countries and large oceans",
-      "a single tall building where many different families live together",
-      "a large machine used for cleaning the dirty city streets",
-      "a group of elected people who make laws for a nation",
-      "a long journey from one big city to another by train"
-    ]
+      "the whole world, including every country",
+      "one tall building where many families live",
+      "a big machine that cleans the streets",
+      "a group of people who make laws for a country",
+      "a long trip from one city to another",
+    ],
   },
   {
     id: 8,
@@ -131,17 +134,17 @@ export const batch01 = [
     meaning: "集める",
     difficulty: 1,
     corrects: [
-      "to bring things together from different places into one group",
-      "to gather money or useful objects from a number of people",
-      "to go and get someone or something from a certain place"
+      "to bring things together into one group",
+      "to gather money or items from many people",
+      "to go and get something from a place",
     ],
     wrongs: [
-      "to throw away old items that you do not want anymore",
-      "to break something into many small pieces by complete accident",
-      "to sell old reading books to a local store for cash",
-      "to run away from sudden danger as quickly as possible",
-      "to forget where you put your house keys in the morning"
-    ]
+      "to throw away things you do not want",
+      "to break something into small pieces by accident",
+      "to sell old books to a local shop",
+      "to run away from sudden danger",
+      "to forget where you put your keys",
+    ],
   },
   {
     id: 9,
@@ -149,17 +152,17 @@ export const batch01 = [
     meaning: "熟練した",
     difficulty: 2,
     corrects: [
-      "having the training and experience needed to do a job well",
-      "very good at doing something because of a lot of practice",
-      "possessing a high level of ability in a specific difficult task"
+      "having the training needed to do a job well",
+      "very good at something because of a lot of practice",
+      "having a high level of ability in one task",
     ],
     wrongs: [
-      "knowing absolutely nothing about how to perform a simple task",
-      "feeling very tired after carrying heavy wooden boxes all day",
-      "an expensive metal tool used for cutting thick wood easily",
-      "a young person who just started learning a foreign language",
-      "being too afraid of working together with other team members"
-    ]
+      "knowing nothing about how to do a simple task",
+      "feeling tired after carrying heavy boxes",
+      "an expensive tool used for cutting wood",
+      "a person who just started learning a language",
+      "too afraid to work with other team members",
+    ],
   },
   {
     id: 10,
@@ -167,17 +170,17 @@ export const batch01 = [
     meaning: "おいしい",
     difficulty: 1,
     corrects: [
-      "having a very pleasant flavor when you eat a meal",
-      "food that is delicious and highly enjoyable to consume everyday",
-      "having a good and strong flavor that most people like"
+      "having a pleasant flavor when you eat it",
+      "food that is delicious and enjoyable to eat",
+      "having a good, strong flavor most people like",
     ],
     wrongs: [
-      "food that has no flavor at all and is quite boring",
-      "a hot drink that is too dangerous to hold in your hand",
-      "a clean plate made of glass that can break very easily",
-      "a sharp tool used for cutting raw meat into small pieces",
-      "a large animal that lives in the ocean and swims fast"
-    ]
+      "food that has no flavor at all",
+      "a hot drink that is too dangerous to hold",
+      "a glass plate that breaks very easily",
+      "a sharp tool used to cut raw meat",
+      "a large animal that lives in the ocean",
+    ],
   },
   {
     id: 11,
@@ -185,17 +188,17 @@ export const batch01 = [
     meaning: "刈り込む、削減する",
     difficulty: 2,
     corrects: [
-      "to make something look neat by cutting a small amount off",
-      "to reduce the total size or extra cost of something slightly",
-      "to carefully remove the messy edges of a picture or paper"
+      "to cut a small amount off to make it neat",
+      "to slightly reduce the size or cost of something",
+      "to carefully remove the messy edges of something",
     ],
     wrongs: [
-      "to let your hair grow very long over many long years",
-      "to add more sweet decorations to the top of a large cake",
-      "a heavy tool used to build a tall wooden garden fence",
-      "to push a heavy box across the living room floor slowly",
-      "to completely destroy an old building using very large machines"
-    ]
+      "to let your hair grow very long for years",
+      "to add more decoration to the top of a cake",
+      "a tool used to build a tall garden fence",
+      "to push a heavy box across the floor",
+      "to fully destroy an old building with machines",
+    ],
   },
   {
     id: 12,
@@ -203,17 +206,17 @@ export const batch01 = [
     meaning: "かなり、むしろ",
     difficulty: 2,
     corrects: [
-      "used to mean quite or to a fairly high degree",
-      "more accurately or more truly speaking about a specific situation",
-      "used to express a clear preference for one thing over another"
+      "used to mean quite a lot, or fairly much",
+      "more truly speaking, in a certain situation",
+      "used to show you prefer one thing over another",
     ],
     wrongs: [
-      "used to say that something is completely impossible to do ever",
-      "a polite word used only when you want to ask a question",
-      "an action that happens very rarely or almost never at all",
-      "a friendly way to say hello to someone in the early morning",
-      "used to describe a public place that is extremely loud and noisy"
-    ]
+      "used to say something is completely impossible",
+      "a polite word used only when asking a question",
+      "something that happens very rarely, almost never",
+      "a friendly way to say hello in the morning",
+      "a place that is extremely loud and noisy",
+    ],
   },
   {
     id: 13,
@@ -221,17 +224,17 @@ export const batch01 = [
     meaning: "郵便配達員",
     difficulty: 1,
     corrects: [
-      "a person whose job is to deliver letters and small packages",
-      "someone who brings the daily post to local houses and offices",
-      "a worker responsible for taking envelopes directly to your home mailbox"
+      "a person who delivers letters and small packages",
+      "someone who brings the mail to houses and offices",
+      "a worker who brings letters to your mailbox",
     ],
     wrongs: [
-      "a large truck that transports fresh food to a big supermarket",
-      "a person who makes phone calls to sell new products online",
-      "a large strong bag used for carrying heavy books to school",
-      "someone who fixes broken computer screens in a busy office",
-      "an airplane used only for carrying happy passengers on summer holiday"
-    ]
+      "a truck that brings fresh food to a supermarket",
+      "a person who calls people to sell things",
+      "a strong bag used to carry books to school",
+      "someone who fixes broken computers in an office",
+      "a plane used to carry people on holiday",
+    ],
   },
   {
     id: 14,
@@ -239,17 +242,17 @@ export const batch01 = [
     meaning: "作業机、ワークステーション",
     difficulty: 2,
     corrects: [
-      "a desk and computer where one person does their daily job",
-      "an area in a large office set up for a specific task",
-      "a particular place equipped with tools for a single worker to use"
+      "a desk and computer where one person works",
+      "an area in an office set up for one task",
+      "a place with tools for a single worker to use",
     ],
     wrongs: [
-      "a huge empty room where many people eat their lunch together",
-      "a busy train stop located in the middle of a big city",
-      "a person who manages a large team of tired factory workers",
-      "a loud machine used to make hot coffee in the early morning",
-      "a completely empty office building waiting to be rented by a company"
-    ]
+      "a big empty room where people eat lunch",
+      "a busy train stop in the middle of a city",
+      "a person who manages a large group of workers",
+      "a loud machine that makes coffee in the morning",
+      "an empty building waiting to be rented",
+    ],
   },
   {
     id: 15,
@@ -257,17 +260,17 @@ export const batch01 = [
     meaning: "遅れた、故～",
     difficulty: 1,
     corrects: [
-      "arriving after the planned or expected time has already passed",
-      "happening near the end of a given period or a busy day",
-      "used to describe a person who has unfortunately died recently"
+      "arriving after the time you were expected",
+      "happening near the end of a period or day",
+      "used to talk about a person who has died",
     ],
     wrongs: [
-      "arriving much earlier than you were originally supposed to be there",
-      "a popular type of morning drink made with hot fresh milk",
-      "moving very fast down the street to catch a departing bus",
-      "a trustworthy person who always tells the complete truth to everyone",
-      "an event happening right now in the present moment without delay"
-    ]
+      "arriving much earlier than expected",
+      "a warm drink made with hot milk",
+      "moving fast down the street to catch a bus",
+      "a person who always tells the truth",
+      "something happening right now, without any delay",
+    ],
   },
   {
     id: 16,
@@ -275,17 +278,17 @@ export const batch01 = [
     meaning: "抵抗力のある、耐性のある",
     difficulty: 3,
     corrects: [
-      "not easily damaged or completely affected by something harmful or bad",
-      "not wanting to accept sudden changes or new ideas from others",
-      "able to stop a bad condition from entering or causing serious harm"
+      "not easily damaged or harmed by something bad",
+      "not willing to accept new ideas or changes",
+      "able to stop something bad from causing harm",
     ],
     wrongs: [
-      "welcoming new office rules and big changes with great joy and happiness",
-      "breaking very easily when you accidentally drop it on the hard floor",
-      "always agreeing with whatever other older people tell you to do",
-      "a thick piece of clothing designed to keep you warm in winter",
-      "feeling very tired and weak after exercising for a long time"
-    ]
+      "happy to accept new office rules right away",
+      "breaking easily when dropped on the floor",
+      "always agreeing with what older people say",
+      "a thick piece of clothing to keep you warm",
+      "feeling weak after exercising for a long time",
+    ],
   },
   {
     id: 17,
@@ -293,17 +296,17 @@ export const batch01 = [
     meaning: "革新的な",
     difficulty: 3,
     corrects: [
-      "using new and creative ideas to solve a very difficult problem",
-      "introducing a fresh and much better way of doing everyday things",
-      "designed in a completely original and highly modern smart way"
+      "using new and creative ideas to solve problems",
+      "introducing a fresh and much better way of doing things",
+      "designed in a very original and modern way",
     ],
     wrongs: [
-      "using old traditional methods that have been used for many long years",
-      "a simple idea that copies exactly what someone else did before",
-      "a nervous person who is deeply afraid of trying anything new",
-      "a cheap and bad product that easily breaks after just one use",
-      "a broken machine that needs to be fixed every single day"
-    ]
+      "using old methods that have been used for years",
+      "an idea that simply copies what someone else did",
+      "a person who is afraid to try anything new",
+      "a cheap product that breaks after one use",
+      "a machine that needs to be fixed every day",
+    ],
   },
   {
     id: 18,
@@ -311,17 +314,17 @@ export const batch01 = [
     meaning: "独特の",
     difficulty: 3,
     corrects: [
-      "having a special quality that makes it very easy to recognize",
-      "different from others of the same kind in a very clear way",
-      "a unique physical feature that strongly stands out from the rest"
+      "having a special quality that is easy to notice",
+      "different from others in a very clear way",
+      "a feature that clearly stands out from the rest",
     ],
     wrongs: [
-      "looking exactly the same as everything else around it in the room",
-      "a very boring story that quickly puts most people to deep sleep",
-      "a large group of wild animals that travel together in cold winter",
-      "a simple cheap tool used for cleaning dirty windows in a house",
-      "moving forward at a very slow and steady comfortable speed"
-    ]
+      "looking exactly the same as everything else",
+      "a boring story that makes people fall asleep",
+      "a group of animals that travel together in winter",
+      "a cheap tool used to clean windows",
+      "moving forward at a slow, steady speed",
+    ],
   },
   {
     id: 19,
@@ -329,17 +332,17 @@ export const batch01 = [
     meaning: "化学の、化学物質",
     difficulty: 2,
     corrects: [
-      "a substance made by a reaction between different basic elements",
-      "relating to the study of substances and how they change form",
-      "artificial materials often used in modern farming or making new products"
+      "a substance made when different materials react",
+      "related to the study of how substances change",
+      "artificial material often used in farming or products",
     ],
     wrongs: [
-      "a completely natural food grown without using any extra artificial materials",
-      "a long interesting story written about people traveling to the distant moon",
-      "a traditional type of dance performed at a large town festival party",
-      "a warm feeling of deep happiness when you meet old school friends",
-      "a chair completely made of natural wood taken from a local green forest"
-    ]
+      "a natural food grown without artificial materials",
+      "a story about people traveling to the moon",
+      "a dance performed at a town festival",
+      "a happy feeling when you meet old friends",
+      "a chair made completely of natural wood",
+    ],
   },
   {
     id: 20,
@@ -347,17 +350,17 @@ export const batch01 = [
     meaning: "使用法、使用量",
     difficulty: 2,
     corrects: [
-      "the specific way in which a particular word or tool is used",
-      "the total amount of something like electricity or water that people use",
-      "the simple act of using something for a specific daily purpose"
+      "the way in which a word or tool is used",
+      "the total amount of something people use, like water",
+      "the act of using something for a purpose",
     ],
     wrongs: [
-      "the careful process of keeping something hidden from other curious people",
-      "the high total cost of buying a brand new fast car in cash",
-      "a stubborn person who refuses to use modern technology at all times",
-      "a strict situation where absolutely nothing is allowed to be touched",
-      "completely stopping a broken machine from ever working again in the factory"
-    ]
+      "the process of hiding something from other people",
+      "the high cost of buying a new car",
+      "a person who refuses to use new technology",
+      "a situation where nothing is allowed to be touched",
+      "completely stopping a machine from working again",
+    ],
   },
   {
     id: 21,
@@ -365,17 +368,17 @@ export const batch01 = [
     meaning: "初心者",
     difficulty: 3,
     corrects: [
-      "a person who has just started learning how to do something new",
-      "someone with very little actual experience in a particular useful skill",
-      "a beginner who does not know much about a new difficult task"
+      "a person who has just started learning something",
+      "someone with very little experience in a skill",
+      "a beginner who does not know much about a task",
     ],
     wrongs: [
-      "an expert who has done a professional job perfectly for many years",
-      "a highly trained teacher who helps other young people pass their exams",
-      "a small smart machine used to make reading easier late at night",
-      "a very thick heavy book containing only difficult foreign language words",
-      "a dark quiet room where people go to watch brand new movies"
-    ]
+      "an expert who has done a job well for years",
+      "a teacher who helps students pass exams",
+      "a small machine used for reading at night",
+      "a thick book full of difficult foreign words",
+      "a dark room where people watch new movies",
+    ],
   },
   {
     id: 22,
@@ -383,17 +386,17 @@ export const batch01 = [
     meaning: "宿屋、小さなホテル",
     difficulty: 2,
     corrects: [
-      "a small hotel usually found in the country where you can sleep safely",
-      "a cozy place that provides a warm room and hot food for travelers",
-      "a traditional old building offering clean beds for people on a long journey"
+      "a small hotel, often found in the countryside",
+      "a place that gives travelers a room and food",
+      "an old building offering beds for travelers",
     ],
     wrongs: [
-      "a huge modern tall building in the city with a thousand expensive rooms",
-      "a small busy store where you can only buy fresh green vegetables",
-      "a very fast safe vehicle used to travel on deep white snow",
-      "a kind medical professional who takes care of sick farm animals",
-      "a small leather bag used to carefully carry paper money and keys"
-    ]
+      "a huge modern building with a thousand rooms",
+      "a small shop that sells only vegetables",
+      "a fast vehicle used to travel on snow",
+      "a person who takes care of sick animals",
+      "a small bag used to carry money and keys",
+    ],
   },
   {
     id: 23,
@@ -401,17 +404,17 @@ export const batch01 = [
     meaning: "もしかすると",
     difficulty: 1,
     corrects: [
-      "used to say that something may be true but you are not completely sure",
-      "a word used when you guess something might happen in the near future",
-      "possibly, but not certainly, depending on the current situation"
+      "used to say something may be true, but not sure",
+      "used when you guess something might happen",
+      "possibly true, but not certain",
     ],
     wrongs: [
-      "used to clearly say that you are one hundred percent sure about it",
-      "a strong word meaning that something will never happen in your life",
-      "a clear scientific fact that absolutely everyone already knows is totally true",
-      "a daily action that occurs exactly at the same time everyday without fail",
-      "used to politely but firmly refuse a request from a good friend"
-    ]
+      "used to say you are completely sure",
+      "a word meaning something will never happen",
+      "a fact that everyone already knows is true",
+      "something that happens at the same time every day",
+      "a polite way to firmly refuse a request",
+    ],
   },
   {
     id: 24,
@@ -419,17 +422,17 @@ export const batch01 = [
     meaning: "～へ出発する",
     difficulty: 1,
     corrects: [
-      "to start a journey in order to go to a particular place",
-      "to go away from here so that you can travel somewhere else",
-      "to pack your bags and begin traveling to your chosen destination"
+      "to start a trip in order to go somewhere",
+      "to go away from here to travel elsewhere",
+      "to begin traveling to a place you chose",
     ],
     wrongs: [
-      "to finally arrive at your warm home after a very long trip",
-      "to safely stay in the exact same quiet room all day long",
-      "to accidentally forget to bring your important ticket to the busy airport",
-      "to ask someone nicely for clear directions to the nearest train station",
-      "to patiently wait for a close friend who is running very late"
-    ]
+      "to finally arrive home after a long trip",
+      "to stay in the same room all day",
+      "to forget to bring your ticket to the airport",
+      "to ask someone for directions to a station",
+      "to wait for a friend who is running late",
+    ],
   },
   {
     id: 25,
@@ -437,35 +440,35 @@ export const batch01 = [
     meaning: "ふさわしい、適切な",
     difficulty: 2,
     corrects: [
-      "right or highly acceptable for a particular important purpose or situation",
-      "having the right good qualities for a specific person or special event",
-      "fitting perfectly into what is greatly needed right now at this moment"
+      "right for a certain purpose or situation",
+      "having the right qualities for a specific event",
+      "fitting well with what is needed right now",
     ],
     wrongs: [
-      "completely wrong and highly inappropriate for a very formal business meeting",
-      "a piece of beautiful clothing that is much too large to wear outside",
-      "an empty boring event that nobody wants to attend this year",
-      "an expensive beautiful gift that sadly breaks as soon as you open it",
-      "a bad dangerous situation that makes everyone feel very angry and upset"
-    ]
+      "completely wrong for a formal business meeting",
+      "clothing that is much too large to wear",
+      "a boring event that nobody wants to attend",
+      "a gift that breaks as soon as you open it",
+      "a situation that makes everyone feel angry",
+    ],
   },
   {
     id: 26,
     word: "plot",
-    meaning: "筋書き、陰謀、区画",
+    meaning: "筋書き、区画",
     difficulty: 3,
     corrects: [
-      "the series of main events that form the story of a book or movie",
-      "a secret bad plan made by a group of people to do something wrong",
-      "a small measured piece of land marked out for building or growing vegetables"
+      "the main events that make up a story",
+      "a small piece of land marked for building or growing plants",
+      "the plan of events in a book or movie",
     ],
     wrongs: [
-      "an open honest plan where everyone shares their good ideas freely and loudly",
-      "a funny main character in a comic book who is always very happy",
-      "a very loud annoying noise made by a broken machine in a factory",
-      "a very large deep ocean with absolutely no islands in it anywhere",
-      "the slow traditional process of making warm clothes from soft white cotton"
-    ]
+      "an honest plan shared openly with everyone",
+      "a funny character in a comic book",
+      "a loud noise made by a broken machine",
+      "a deep ocean with no islands in it",
+      "the process of making clothes from cotton",
+    ],
   },
   {
     id: 27,
@@ -473,17 +476,17 @@ export const batch01 = [
     meaning: "種類、分類する",
     difficulty: 2,
     corrects: [
-      "a group of things or people that share similar features or qualities",
-      "to carefully arrange different items into groups based on their specific type",
-      "a particular kind or basic class of people or objects in the world"
+      "a group of things that share similar features",
+      "to arrange things into groups by type",
+      "a certain kind or class of people or things",
     ],
     wrongs: [
-      "to mix absolutely everything together in a completely messy and bad way",
-      "a single unique old item that is completely unlike anything else",
-      "a small wooden type of boat used for catching small fish in rivers",
-      "a very long boring speech given by a president on late television",
-      "to accidentally break a glass window by throwing a heavy ball hard"
-    ]
+      "to mix everything together in a messy way",
+      "a rare item that is unlike anything else",
+      "a small boat used to catch fish in a river",
+      "a long speech given by a president on television",
+      "to accidentally break a window with a ball",
+    ],
   },
   {
     id: 28,
@@ -491,17 +494,17 @@ export const batch01 = [
     meaning: "人工衛星、衛星",
     difficulty: 3,
     corrects: [
-      "a machine sent deep into space to orbit the earth and send signals",
-      "a natural round moon that moves around a much larger planet",
-      "an object in space used for collecting information and taking weather pictures"
+      "a machine sent into space to circle the earth",
+      "a natural object, like a moon, that circles a planet",
+      "an object in space used to collect information",
     ],
     wrongs: [
-      "a deep dark hole in the ground used for finding fresh drinking water",
-      "a fast long train that travels underground in a very big noisy city",
-      "a smart person who studies old rocks found high in the cold mountains",
-      "a small flat screen used to watch movies comfortably at your home",
-      "a fast jet airplane that flies very close to the ground during shows"
-    ]
+      "a deep hole in the ground for finding water",
+      "a fast train that travels under a big city",
+      "a person who studies rocks in the mountains",
+      "a small screen used to watch movies at home",
+      "a jet that flies close to the ground at shows",
+    ],
   },
   {
     id: 29,
@@ -509,17 +512,17 @@ export const batch01 = [
     meaning: "分析",
     difficulty: 3,
     corrects: [
-      "the careful deep study of something to understand its different parts",
-      "looking closely at numbers and data to find out what it means",
-      "a detailed close examination of how a complex system works perfectly"
+      "a careful study to understand the parts of something",
+      "looking closely at facts or numbers to find meaning",
+      "a detailed look at how something works",
     ],
     wrongs: [
-      "a very quick simple guess made without looking at any real facts",
-      "a daily physical exercise that makes your body much stronger and healthier",
-      "the bad act of ignoring important information on purpose during a meeting",
-      "a beautiful colorful picture drawn by a young happy child at school",
-      "a sudden strong feeling of being very scared in the dark"
-    ]
+      "a quick guess made without looking at any facts",
+      "a daily exercise that makes your body stronger",
+      "the act of ignoring important information on purpose",
+      "a colorful picture drawn by a young child",
+      "a sudden feeling of fear in the dark",
+    ],
   },
   {
     id: 30,
@@ -527,17 +530,17 @@ export const batch01 = [
     meaning: "～について投票する",
     difficulty: 1,
     corrects: [
-      "to make an official final choice about a plan or a new rule",
-      "to express your own opinion formally in an election or a big meeting",
-      "to raise your hand or use a paper to formally choose an option"
+      "to make an official choice about a plan or rule",
+      "to formally share your opinion in an election",
+      "to choose an option by raising your hand or a paper",
     ],
     wrongs: [
-      "to completely refuse to participate in any group decisions at the office",
-      "to aggressively force someone else to do what you want them to do",
-      "to carefully write a long interesting story about your own early life",
-      "to happily travel to a different hot country for a summer holiday",
-      "to calmly eat a delicious dinner with your family at a quiet restaurant"
-    ]
+      "to refuse to take part in a group decision",
+      "to force someone to do what you want",
+      "to write a long story about your own life",
+      "to travel to a warm country for a holiday",
+      "to eat dinner quietly with your family",
+    ],
   },
   {
     id: 31,
@@ -545,17 +548,17 @@ export const batch01 = [
     meaning: "許可する",
     difficulty: 1,
     corrects: [
-      "to give someone official permission to do something they really want to do",
-      "to happily let something happen without trying to stop it at all",
-      "to make it easily possible for a person to enter a restricted place"
+      "to give someone permission to do something",
+      "to let something happen without stopping it",
+      "to make it possible for someone to enter a place",
     ],
     wrongs: [
-      "to completely strictly forbid people from talking in a quiet library room",
-      "to aggressively force someone to stay outside in the very cold rain",
-      "to badly break a serious promise that you made to a good friend",
-      "to carefully hide an important paper document in a secret wooden box",
-      "to angrily shout loudly at someone who made a very small mistake"
-    ]
+      "to strictly forbid people from talking",
+      "to force someone to stay outside in the rain",
+      "to break a promise you made to a friend",
+      "to hide an important paper in a secret box",
+      "to shout loudly at someone for a small mistake",
+    ],
   },
   {
     id: 32,
@@ -563,17 +566,17 @@ export const batch01 = [
     meaning: "証明された",
     difficulty: 2,
     corrects: [
-      "shown clearly to be true or highly effective by evidence and past facts",
-      "well known to work perfectly because it has been tested many times",
-      "firmly established beyond any doubt through careful and strict scientific testing"
+      "shown to be true or effective by facts",
+      "known to work well because it has been tested",
+      "confirmed to be true through careful testing",
     ],
     wrongs: [
-      "completely untested and totally unknown if it will actually work at all",
-      "an old crazy theory that everyone knows is totally false and wrong",
-      "a hopeful person who is currently looking for a new better job",
-      "a sudden completely new idea that just came to someone's mind today",
-      "a bad old machine that often breaks down for absolutely no reason"
-    ]
+      "completely untested and unknown if it works",
+      "an old idea that everyone knows is false",
+      "a person who is currently looking for a job",
+      "a new idea that just came to someone's mind",
+      "an old machine that often breaks for no reason",
+    ],
   },
   {
     id: 33,
@@ -581,17 +584,17 @@ export const batch01 = [
     meaning: "不動産",
     difficulty: 2,
     corrects: [
-      "property mainly consisting of valuable land and the buildings on it",
-      "the big business of buying and selling houses and large office spaces",
-      "physical solid land and structures that can be legally owned or rented"
+      "land and the buildings built on it",
+      "the business of buying and selling houses",
+      "property such as houses and office buildings",
     ],
     wrongs: [
-      "paper money that is kept safely in a secure local bank account",
-      "a small beautiful piece of expensive jewelry made of solid shiny gold",
-      "a bright red car that is driven very fast in professional races",
-      "a friendly person who sells fresh green vegetables at a local street market",
-      "a warm happy feeling of being very rich and comfortable in life"
-    ]
+      "paper money kept safely in a bank account",
+      "a piece of jewelry made of solid gold",
+      "a fast car driven in professional races",
+      "a person who sells vegetables at a market",
+      "a feeling of being rich and comfortable",
+    ],
   },
   {
     id: 34,
@@ -599,17 +602,17 @@ export const batch01 = [
     meaning: "対処する、扱う、取っ手",
     difficulty: 2,
     corrects: [
-      "to successfully deal with a difficult situation or manage a complex problem",
-      "to touch, hold, or carefully move something important with your own hands",
-      "the small projecting part of a door or cup that you hold firmly"
+      "to successfully deal with a difficult situation",
+      "to hold or move something carefully with your hands",
+      "the part of a door or cup that you hold",
     ],
     wrongs: [
-      "to completely ignore a huge problem and just hope it goes away",
-      "a round black rubber part of a car that touches the hard road",
-      "a strong bad feeling of anger when you are very busy and tired",
-      "to quietly watch a long boring movie on a very large screen",
-      "a mean selfish person who strongly refuses to help anyone else ever"
-    ]
+      "to completely ignore a problem and hope it goes away",
+      "a round part of a car that touches the road",
+      "a strong feeling of anger when you are busy",
+      "to watch a long movie on a big screen",
+      "a person who refuses to help anyone else",
+    ],
   },
   {
     id: 35,
@@ -617,17 +620,17 @@ export const batch01 = [
     meaning: "受け取り、迎え",
     difficulty: 2,
     corrects: [
-      "the simple act of collecting a person or goods from a specific place",
-      "briefly stopping a vehicle to kindly let someone get inside the car",
-      "taking a waiting package from a store or a busy delivery person"
+      "the act of collecting a person or goods",
+      "stopping a vehicle to let someone get in",
+      "taking a package from a store or driver",
     ],
     wrongs: [
-      "accidentally leaving your heavy luggage at home by mistake before a trip",
-      "a beautiful type of bird that flies very high in the blue sky",
-      "quickly sending an electronic email to a friend in another distant country",
-      "throwing away dirty garbage into a large green bin placed outside",
-      "walking for many long hours without taking a short break to rest"
-    ]
+      "leaving your bags at home by mistake",
+      "a bird that flies very high in the sky",
+      "sending an email to a friend far away",
+      "throwing garbage into a large outdoor bin",
+      "walking for hours without taking a break",
+    ],
   },
   {
     id: 36,
@@ -635,35 +638,35 @@ export const batch01 = [
     meaning: "故障、内訳",
     difficulty: 3,
     corrects: [
-      "a sudden mechanical failure of a machine to work properly as it should",
-      "a detailed written list that shows exactly how a total amount is divided",
-      "a sad situation where a complex system or a relationship completely fails"
+      "a sudden failure of a machine to work properly",
+      "a list that shows how a total amount is divided",
+      "a situation where a system completely stops working",
     ],
     wrongs: [
-      "a brand new shiny car that runs perfectly smoothly without any problems",
-      "a sudden large increase in the daily price of fresh healthy food",
-      "a warm wonderful feeling of great happiness and joy in your heart",
-      "a heavy metal tool used for quickly fixing broken glass windows safely",
-      "a very short relaxing holiday spent happily sleeping on a quiet beach"
-    ]
+      "a new car that runs smoothly with no problems",
+      "a sudden rise in the price of food",
+      "a warm feeling of happiness and joy",
+      "a tool used to fix broken glass",
+      "a short holiday spent sleeping on a beach",
+    ],
   },
   {
     id: 37,
     word: "outlet",
-    meaning: "店舗、コンセント、はけ口",
+    meaning: "店舗、コンセント",
     difficulty: 3,
     corrects: [
-      "a retail store that sells various goods directly to the general public",
-      "a place on a wall where you can plug in electrical things safely",
-      "a healthy active way to express your strong deep feelings or extra energy"
+      "a store that sells goods to shoppers",
+      "a place on a wall where you plug in a device",
+      "a shop, often selling one company's products at a lower price",
     ],
     wrongs: [
-      "a rich person who buys many expensive clothes online every single day",
-      "a very deep fast river that flows directly into the vast blue ocean",
-      "a tight small wooden box used for storing heavy winter clothes away",
-      "a sudden very loud noise that quickly wakes you up at night",
-      "a thick heavy book that explains how to fix a broken car engine"
-    ]
+      "a person who buys many clothes every day",
+      "a deep river that flows into the ocean",
+      "a box used to store winter clothes",
+      "a loud noise that wakes you up at night",
+      "a book that explains how to fix a car",
+    ],
   },
   {
     id: 38,
@@ -671,17 +674,17 @@ export const batch01 = [
     meaning: "複製の、複製する",
     difficulty: 3,
     corrects: [
-      "exactly the same as something else that already exists in the world",
-      "to carefully make an exact perfect copy of a document or file",
-      "a second exact copy of an item kept safely in case it gets lost"
+      "exactly the same as something that already exists",
+      "to make an exact copy of a document",
+      "a second copy of an item kept in case one is lost",
     ],
     wrongs: [
-      "completely unique and entirely different from absolutely anything else you have seen",
-      "a rare single precious item that can never ever be copied by anyone",
-      "a small bad mistake made when writing a quick letter to a friend",
-      "to angrily destroy a piece of important paper by tearing it into pieces",
-      "a strong bad feeling of being totally confused about a math problem"
-    ]
+      "completely unique and unlike anything else",
+      "a rare item that can never be copied",
+      "a small mistake made while writing a letter",
+      "to destroy a paper by tearing it up",
+      "a confused feeling about a math problem",
+    ],
   },
   {
     id: 39,
@@ -689,17 +692,17 @@ export const batch01 = [
     meaning: "～に参加する",
     difficulty: 2,
     corrects: [
-      "to take an active part in an activity or event with other people",
-      "to be fully involved in doing something alongside a large group",
-      "to formally join a meeting or a game and share the experience together"
+      "to take part in an activity with other people",
+      "to be involved in doing something with a group",
+      "to join an event and take part in it",
     ],
     wrongs: [
-      "to silently watch other people play without doing anything yourself at all",
-      "to stay safely at home completely alone and read a quiet book",
-      "to sleep very deeply while other team members are working very hard",
-      "to leave a crowded room secretly without saying a polite goodbye to anyone",
-      "to foolishly forget to bring your sports clothes to a big important game"
-    ]
+      "to watch others do something without joining in",
+      "to stay home alone and read quietly",
+      "to sleep while others are working hard",
+      "to leave a room without saying goodbye",
+      "to forget to bring your things to an event",
+    ],
   },
   {
     id: 40,
@@ -707,17 +710,17 @@ export const batch01 = [
     meaning: "～を強く主張する",
     difficulty: 2,
     corrects: [
-      "to demand something firmly and completely refuse to accept no for an answer",
-      "to say very strongly that you must do something in a certain exact way",
-      "to firmly state that something is definitely true despite what others think"
+      "to demand something firmly and not accept no",
+      "to say strongly that something must be done a certain way",
+      "to firmly state that something is true",
     ],
     wrongs: [
-      "to easily and happily agree with whatever other people suggest to you immediately",
-      "to very quickly give up on your own good ideas without even trying",
-      "to gently and politely ask a simple question to a complete stranger",
-      "to quietly and patiently wait alone in a dark corner of a room",
-      "to completely and utterly forget what you really wanted to say today"
-    ]
+      "to easily agree with whatever others suggest",
+      "to quickly give up on your own ideas",
+      "to gently ask a simple question",
+      "to wait quietly alone in a room",
+      "to completely forget what you wanted to say",
+    ],
   },
   {
     id: 41,
@@ -725,17 +728,17 @@ export const batch01 = [
     meaning: "傑出した、未払いの",
     difficulty: 3,
     corrects: [
-      "clearly very much better than what is usual or normally expected",
-      "an exact amount of owed money that has not yet been paid back",
-      "excellent high quality work that deeply impresses everyone who sees it"
+      "much better than what is normally expected",
+      "an amount of money that has not yet been paid",
+      "excellent work that impresses everyone",
     ],
     wrongs: [
-      "very average and totally boring, not being special in any way at all",
-      "a normal electric bill that was already fully paid early last month",
-      "a quiet shy person who stays inside the dark house all day long",
-      "a quick short walk taken outside to get some healthy fresh air",
-      "a terrible bad mistake that unfortunately causes a whole project to fail completely"
-    ]
+      "very average, not special in any way",
+      "a bill that was already paid last month",
+      "a quiet person who stays inside all day",
+      "a short walk taken to get fresh air",
+      "a mistake that causes a project to fail",
+    ],
   },
   {
     id: 42,
@@ -743,17 +746,17 @@ export const batch01 = [
     meaning: "局、案内所、整理ダンス",
     difficulty: 4,
     corrects: [
-      "an office or formal organization that provides information or a specific public service",
-      "a large government department strictly responsible for a specific important national task",
-      "a large heavy piece of wooden furniture with drawers for keeping clothes inside"
+      "an office that provides information or a service",
+      "a government department for a specific task",
+      "a piece of furniture with drawers for clothes",
     ],
     wrongs: [
-      "a very large wild green forest with tall old trees and dangerous animals",
-      "a fast modern machine specially used for flying very high in the sky",
-      "a beautiful small white cup mainly used for drinking hot green tea",
-      "a strong skilled person who builds large houses using heavy natural wood",
-      "a sad terrible feeling of being very bored and tired at school"
-    ]
+      "a large forest with tall trees and animals",
+      "a machine used to fly high in the sky",
+      "a small cup used for drinking hot tea",
+      "a worker who builds houses with wood",
+      "a feeling of being bored at school",
+    ],
   },
   {
     id: 43,
@@ -761,17 +764,17 @@ export const batch01 = [
     meaning: "不可欠な",
     difficulty: 2,
     corrects: [
-      "completely necessary for something to succeed or to work properly as planned",
-      "a very basic and highly important main part of a plan or system",
-      "something vital that you absolutely must have and simply cannot do without"
+      "completely necessary for something to work",
+      "a very important basic part of a plan",
+      "something you absolutely must have",
     ],
     wrongs: [
-      "a useless extra item that you really do not need at all ever",
-      "a lazy person who never helps with any of the hard office work",
-      "a tiny minor detail that absolutely everyone quickly forgets about the next day",
-      "a very simple soft toy played with happily by a small young child",
-      "something cheap and dirty that is very easy to throw away quickly"
-    ]
+      "a useless item that you do not need at all",
+      "a lazy person who avoids hard work",
+      "a small detail that everyone forgets",
+      "a simple toy played with by a child",
+      "something cheap that is easy to throw away",
+    ],
   },
   {
     id: 44,
@@ -779,17 +782,17 @@ export const batch01 = [
     meaning: "邪魔をする、干渉する",
     difficulty: 3,
     corrects: [
-      "to get badly involved in a situation where you are absolutely not wanted",
-      "to stop something from smoothly happening or working as it should naturally do",
-      "to carelessly step into a process and cause annoying trouble or a delay"
+      "to get involved where you are not wanted",
+      "to stop something from working properly",
+      "to cause trouble by getting involved in a process",
     ],
     wrongs: [
-      "to quietly and politely help someone finish their hard work much faster today",
-      "to stay far away and safely let people handle their own private problems",
-      "to kindly give a polite useful suggestion when someone asks for it nicely",
-      "to calmly stand perfectly still without making any noise in the quiet room",
-      "to happily buy a very useful heavy tool for a good close friend"
-    ]
+      "to quietly help someone finish their work faster",
+      "to stay away and let people solve their problems",
+      "to give a helpful suggestion when asked",
+      "to stand still and quiet in a room",
+      "to buy a useful tool for a friend",
+    ],
   },
   {
     id: 45,
@@ -797,17 +800,17 @@ export const batch01 = [
     meaning: "経営、管理",
     difficulty: 2,
     corrects: [
-      "the important group of people who control and direct a large busy business",
-      "the complex act of organizing and smoothly running a busy office or project",
-      "the strict process of dealing with or carefully controlling things or many people"
+      "the people who control and direct a business",
+      "the act of organizing and running a project",
+      "the process of controlling things or people",
     ],
     wrongs: [
-      "a young entry-level worker who just started their very first job today morning",
-      "a modern smart machine that automatically prints documents without needing any human help",
-      "the sad process of rapidly losing all your money in a very bad bet",
-      "a scary terrible feeling of being completely out of control in your life",
-      "a normal happy customer who is quietly buying goods at a local shop"
-    ]
+      "a new worker who just started their first job",
+      "a machine that prints documents automatically",
+      "the process of losing money in a bad bet",
+      "a scary feeling of losing control of your life",
+      "a customer buying goods at a local shop",
+    ],
   },
   {
     id: 46,
@@ -815,17 +818,17 @@ export const batch01 = [
     meaning: "解決する",
     difficulty: 1,
     corrects: [
-      "to finally find a clear answer to a problem or a difficult puzzle",
-      "to successfully figure out a smart way to deal with a bad situation",
-      "to carefully discover the hidden truth about a mystery or a bad crime"
+      "to find the answer to a problem",
+      "to figure out how to deal with a bad situation",
+      "to discover the truth about a difficult question",
     ],
     wrongs: [
-      "to foolishly make a small problem much worse than it originally was before",
-      "to completely ignore a very difficult question in a hard math school exam",
-      "to intentionally break a useful machine so that it totally stops working forever",
-      "to safely hide an important clue from the police in a secret place",
-      "to angrily complain loudly about something without actually trying to fix it yourself"
-    ]
+      "to make a small problem much worse",
+      "to ignore a difficult question completely",
+      "to break a machine so it stops working",
+      "to hide a clue from the police",
+      "to complain loudly without trying to fix it",
+    ],
   },
   {
     id: 47,
@@ -833,17 +836,17 @@ export const batch01 = [
     meaning: "専門にする",
     difficulty: 2,
     corrects: [
-      "to spend most of your time deeply studying one particular narrow difficult subject",
-      "to strongly focus a business on a very specific type of product or service",
-      "to successfully become an expert in a very narrow and specific field of work"
+      "to focus your study on one particular subject",
+      "to focus a business on one type of product",
+      "to become an expert in a narrow area of work",
     ],
     wrongs: [
-      "to only know a tiny little bit about a thousand different random things",
-      "to lazily work at a very simple job that requires absolutely no skills at all",
-      "to stubbornly refuse to learn anything new after leaving high school long ago",
-      "to constantly change your mind about what you want to do every single day",
-      "to happily travel all over the big world without any clear plan or map"
-    ]
+      "to know a small amount about many things",
+      "to work at a simple job needing no skills",
+      "to refuse to learn anything new after school",
+      "to change your mind about your job every day",
+      "to travel the world without any clear plan",
+    ],
   },
   {
     id: 48,
@@ -851,17 +854,17 @@ export const batch01 = [
     meaning: "祝祭、特別なお祝い",
     difficulty: 4,
     corrects: [
-      "a very special public occasion or a large party with fun live entertainment",
-      "a large formal happy event held to celebrate something very important and special",
-      "a fancy formal evening dinner often held to raise a lot of money for charity"
+      "a special public event with fun entertainment",
+      "a large formal party to celebrate something important",
+      "a formal dinner event, often to raise money for charity",
     ],
     wrongs: [
-      "a very sad serious meeting where many crying people say their final goodbye",
-      "a completely normal boring day at the quiet office doing regular slow paperwork",
-      "a small warm cup of black coffee drank completely alone in the early morning",
-      "a comfortable loose piece of clothing usually worn for a daily tough workout",
-      "a totally quiet small room where nervous students go to study for hard exams"
-    ]
+      "a sad meeting where people say goodbye",
+      "a normal boring day at the office",
+      "a cup of coffee drunk alone in the morning",
+      "loose clothing worn for daily exercise",
+      "a quiet room where students study for exams",
+    ],
   },
   {
     id: 49,
@@ -869,17 +872,17 @@ export const batch01 = [
     meaning: "顧客、依頼人",
     difficulty: 1,
     corrects: [
-      "a person who formally pays a professional for a specific service or expert advice",
-      "someone who formally uses the services of a professional lawyer or a company",
-      "a valued customer who regularly does formal business with an agency or a firm"
+      "a person who pays for a professional service",
+      "someone who uses the services of a company or lawyer",
+      "a customer who does business with a company",
     ],
     wrongs: [
-      "a friendly person who sells fresh vegetables at the side of the country road",
-      "the rich powerful owner of a very large factory that makes fast cars",
-      "a loud heavy machine used for quickly printing hundreds of large white papers",
-      "a small cute animal kept safely at home as a friendly loyal companion",
-      "a tired young worker who strictly follows direct orders from their angry boss"
-    ]
+      "a person who sells vegetables by the road",
+      "the owner of a large factory that makes cars",
+      "a machine used to print many papers quickly",
+      "a pet kept at home as a companion",
+      "a worker who follows orders from a boss",
+    ],
   },
   {
     id: 50,
@@ -887,16 +890,16 @@ export const batch01 = [
     meaning: "特注で作る、カスタマイズする",
     difficulty: 2,
     corrects: [
-      "to carefully change the way something looks or works to fit a specific user",
-      "to cleverly alter a product so that it meets a buyer's exact unique needs",
-      "to skillfully build something specially designed for one particular demanding person"
+      "to change something to fit one person's needs",
+      "to alter a product to match what a buyer wants",
+      "to design something specially for one person",
     ],
     wrongs: [
-      "to stubbornly force absolutely everyone to use the exact same standard boring product",
-      "to carelessly buy something very quickly without looking at the small important details",
-      "to completely destroy a beautiful object until it can never be used again safely",
-      "to totally forget how a very simple machine is actually supposed to work properly",
-      "to angrily return a broken item to a busy store because it is useless"
-    ]
-  }
+      "to force everyone to use the exact same product",
+      "to buy something quickly without checking details",
+      "to destroy an object so it cannot be used",
+      "to forget how a simple machine works",
+      "to return a broken item to a busy store",
+    ],
+  },
 ];
