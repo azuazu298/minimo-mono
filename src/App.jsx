@@ -1026,7 +1026,7 @@ const CSS = `
   height: min(100cqh, calc(100cqw * 1778 / 1000));
   container-type: size;
   overflow: hidden;
-  border-radius: 60px;
+  border-radius: 46px;
 }
 
 /* The fixed "photograph": always exactly 1000x1778 design pixels,
@@ -1063,7 +1063,7 @@ const CSS = `
   padding: var(--gap);
   background: var(--surface);
   border: var(--bw) solid var(--line);
-  border-radius: var(--r-xl);
+  border-radius: var(--r-lg);
   overflow: hidden;
 }
 
