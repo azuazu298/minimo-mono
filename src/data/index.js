@@ -8,7 +8,7 @@
 //   }
 //
 // How to add a new batch:
-//   1. Create src/data/batch-13.js (words 601-650), etc.
+//   1. Create src/data/batch-21.js (words 1001-1050), etc.
 //      Batch N uses ids (N-1)*50 + 1 ... N*50, so ids never collide.
 //   2. Import it below and add it to the WORDS array.
 // That's it — nothing else in the app needs to change.
@@ -25,7 +25,15 @@ import { WORDS_BATCH_09 } from "./batch-09.js";
 import { WORDS_BATCH_10 } from "./batch-10.js";
 import { WORDS_BATCH_11 } from "./batch-11.js";
 import { WORDS_BATCH_12 } from "./batch-12.js";
-// import { WORDS_BATCH_13 } from "./batch-13.js";
+import { WORDS_BATCH_13 } from "./batch-13.js";
+import { WORDS_BATCH_14 } from "./batch-14.js";
+import { WORDS_BATCH_15 } from "./batch-15.js";
+import { WORDS_BATCH_16 } from "./batch-16.js";
+import { WORDS_BATCH_17 } from "./batch-17.js";
+import { WORDS_BATCH_18 } from "./batch-18.js";
+import { WORDS_BATCH_19 } from "./batch-19.js";
+import { WORDS_BATCH_20 } from "./batch-20.js";
+// import { WORDS_BATCH_21 } from "./batch-21.js";
 
 export const WORDS = [
   ...WORDS_BATCH_01,
@@ -40,5 +48,13 @@ export const WORDS = [
   ...WORDS_BATCH_10,
   ...WORDS_BATCH_11,
   ...WORDS_BATCH_12,
-  // ...WORDS_BATCH_13,
+  ...WORDS_BATCH_13,
+  ...WORDS_BATCH_14,
+  ...WORDS_BATCH_15,
+  ...WORDS_BATCH_16,
+  ...WORDS_BATCH_17,
+  ...WORDS_BATCH_18,
+  ...WORDS_BATCH_19,
+  ...WORDS_BATCH_20,
+  // ...WORDS_BATCH_21,
 ];
