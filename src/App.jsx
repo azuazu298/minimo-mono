@@ -485,7 +485,7 @@ function PlayScreen({ config, sound, bookmarks, onToggleBookmark, onGameOver }) 
             else state = "is-dim";
           }
           return (
-            <Btn key={o.id} className={`mm-option ${state}`} onClick={() => choose(o)} disabled={answered}>
+            <Btn key={`${current.id}-${o.id}`} className={`mm-option ${state}`} onClick={() => choose(o)} disabled={answered}>
               <span className="mm-option-text">{o.text}</span>
               {state === "is-correct" && <Ico as={Check} s={4} />}
               {state === "is-wrong" && <Ico as={X} s={4} />}
