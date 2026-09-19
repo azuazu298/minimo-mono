@@ -1216,11 +1216,12 @@ const CSS = `
   border-color: var(--line);
   text-align: left;
   font-size: var(--fs-sm);
+  transform: translateZ(0);
 }
 .mm-option-text { flex: 1; }
 .mm-option.is-correct { opacity: 1; color: var(--good); border-color: var(--good); background: var(--good-bg); }
 .mm-option.is-wrong { opacity: 1; color: var(--bad); border-color: var(--bad); background: var(--bad-bg); }
-.mm-option.is-dim { opacity: .3; }
+.mm-option.is-dim { opacity: 1; color: var(--ink-40); border-color: var(--line); background: var(--surface); }
 .mm-cta-start { border-color: var(--ink-15); }
 
 .mm-next {
