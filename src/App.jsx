@@ -450,12 +450,6 @@ function PlayScreen({ config, sound, bookmarks, onToggleBookmark, onGameOver }) 
         </div>
       </Panel>
 
-      {instantToken > 0 && (
-        <span key={instantToken} className="mm-instant-badge">
-          即答！
-        </span>
-      )}
-
       <Panel className="mm-question">
         <div className="mm-question-top">
           <span className="mm-eyebrow">lv.{current.difficulty}</span>
@@ -469,6 +463,11 @@ function PlayScreen({ config, sound, bookmarks, onToggleBookmark, onGameOver }) 
           </Btn>
         </div>
         <div className="mm-question-body">
+          {instantToken > 0 && (
+            <span key={instantToken} className="mm-instant-badge">
+              即答！
+            </span>
+          )}
           <h2 className="mm-word">{current.word}</h2>
           <p key={`${qNum}-${current.id}`} className={`mm-meaning ${answered ? "show" : ""}`}>
             {current.meaning}
@@ -1186,6 +1185,7 @@ const CSS = `
 }
 .mm-question-top { display: flex; align-items: center; justify-content: space-between; }
 .mm-question-body {
+  position: relative;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   text-align: center; gap: 12px; padding: 15px 0 30px;
 }
@@ -1418,9 +1418,9 @@ const CSS = `
 @keyframes mmPulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
 .mm-instant-badge {
   position: absolute;
-  top: calc(var(--pad) * 0.35);
-  right: var(--pad);
-  z-index: 30;
+  top: 0;
+  left: 50%;
+  z-index: 5;
   font-size: var(--fs-xs);
   font-weight: 600;
   letter-spacing: .02em;
@@ -1431,10 +1431,10 @@ const CSS = `
   animation: mmInstantBadge 1.1s ease forwards;
 }
 @keyframes mmInstantBadge {
-  0% { opacity: 0; transform: translateY(4px); }
-  18% { opacity: 1; transform: translateY(0); }
-  70% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-4px); }
+  0% { opacity: 0; transform: translate(-50%, 4px); }
+  18% { opacity: 1; transform: translate(-50%, 0); }
+  70% { opacity: 1; transform: translate(-50%, 0); }
+  100% { opacity: 0; transform: translate(-50%, -4px); }
 }
 @media (prefers-reduced-motion: reduce) {
   .mm-root *, .mm-root *::before, .mm-root *::after {
