@@ -1420,7 +1420,7 @@ const CSS = `
 @keyframes mmPulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
 .mm-instant-badge {
   position: absolute;
-  top: 0;
+  top: -24px;
   left: 50%;
   z-index: 5;
   font-size: var(--fs-xs);
