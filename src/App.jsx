@@ -274,10 +274,10 @@ function HomeScreen({ best, bookmarks, onPlay, onList, onInfo, onNotice }) {
 
 const SEGMENTS = 26;
 
-function Meter({ ratio }) {
+function Meter({ ratio, settled }) {
   const filled = Math.ceil(ratio * SEGMENTS);
   return (
-    <div className="mm-meter" aria-hidden="true">
+    <div className={`mm-meter ${settled ? "mm-meter--settled" : ""}`} aria-hidden="true">
       {Array.from({ length: SEGMENTS }).map((_, i) => (
         <span key={i} className={`mm-seg ${i < filled ? "on" : ""}`} />
       ))}
@@ -473,7 +473,7 @@ function PlayScreen({ config, sound, bookmarks, onToggleBookmark, onGameOver }) 
             {current.meaning}
           </p>
         </div>
-        <Meter ratio={timeLeft / ROUND_TIME} />
+        <Meter ratio={timeLeft / ROUND_TIME} settled={answered} />
       </Panel>
 
       <div className="mm-options">
@@ -1199,6 +1199,7 @@ const CSS = `
 .mm-meter { display: flex; gap: 5px; width: 100%; }
 .mm-seg { flex: 1; height: 12px; border-radius: 990px; background: var(--ink-15); transition: background .15s linear; }
 .mm-seg.on { background: var(--ink); }
+.mm-meter--settled .mm-seg { transition: none; }
 
 .mm-options {
   flex: 1 1 auto; display: flex; flex-direction: column; gap: var(--gap);
