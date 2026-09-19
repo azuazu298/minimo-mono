@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { toBlob } from "html-to-image";
 import { WORDS as QUESTIONS } from "./data";
+import { INFO } from "./data/content.js";
 import {
   Menu,
   Home,
@@ -18,34 +19,6 @@ import {
   BookOpen,
   Info,
 } from "lucide-react";
-
-const INFO = {
-  classic: {
-    title: "Classic",
-    body:
-      "全100問に挑戦するメインモードです。\n進むほど難易度が上がり、ライフは3つ。\nベストスコアはこのモードでのみ記録されます。",
-  },
-  dogrun: {
-    title: "Dogrun（開発中）",
-    body:
-      "Classic の高難易度バージョンです。\n最初から上位レベルの問題だけが出題されます。\n\n現在開発中のため、まだ開けません。",
-  },
-  practice: {
-    title: "Practice",
-    body:
-      "Lv.1〜4：選んだ難易度だけを繰り返し練習できます。\nList：全問題の確認と、星（ブックマーク）の管理。\nCustom：星をつけた問題だけを出題します。\n\nPracticeの各モードではスコアは記録されません。",
-  },
-  howto: {
-    title: "How to play",
-    body:
-      "英語のフレーズに対して、正しい意味を4択から選びます。\n\n・制限時間は1問あたり15秒。\n・スコアは「基本点＋難易度ボーナス＋残り時間」で決まります。\n・間違い、または時間切れでライフが1つ減ります。\n・ライフが0になるとその回は終了です。\n\n気になったフレーズは★を押すと保存され、Customモードでまとめて復習できます。",
-  },
-  credits: {
-    title: "Credits",
-    body:
-      "minimo-mono\nversion 0.1.0 — web preview\n\nDesign & build: you\nBuilt with React\n\n© minimo-mono",
-  },
-};
 
 const ANIMALS = [
   "lion", "tiger", "panda", "koala", "penguin", "dolphin",
@@ -78,6 +51,8 @@ const pickDifficulty = (qNum) => {
 
 const ROUND_TIME = 15;
 const CLASSIC_LENGTH = 100;
+const SPEED_BONUS_THRESHOLD = 7.5;
+const SPEED_BONUS_POINTS = 20;
 
 function useSound() {
   const ctxRef = useRef(null);
@@ -330,6 +305,7 @@ function PlayScreen({ config, sound, bookmarks, onToggleBookmark, onGameOver }) 
   const [lives, setLives] = useState(3);
   const [picked, setPicked] = useState(null);
   const [timeLeft, setTimeLeft] = useState(ROUND_TIME);
+  const [instantToken, setInstantToken] = useState(0);
   const overRef = useRef(false);
 
   const buildOptionsFor = useCallback((w) => {
@@ -395,9 +371,11 @@ function PlayScreen({ config, sound, bookmarks, onToggleBookmark, onGameOver }) 
       let nextScore = score;
       let nextLives = lives;
       if (isCorrect) {
-        nextScore += 100 + (current.difficulty - 1) * 20 + Math.ceil(remaining) * 5;
+        const speedBonus = remaining >= SPEED_BONUS_THRESHOLD ? SPEED_BONUS_POINTS : 0;
+        nextScore += 100 + (current.difficulty - 1) * 10 + speedBonus;
         setScore(nextScore);
         setCorrect((c) => c + 1);
+        if (speedBonus > 0) setInstantToken((t) => t + 1);
         sound.correct();
       } else {
         nextLives -= 1;
@@ -467,6 +445,11 @@ function PlayScreen({ config, sound, bookmarks, onToggleBookmark, onGameOver }) 
           ))}
         </div>
         <div className="mm-status-right">
+          {instantToken > 0 && (
+            <span key={instantToken} className="mm-instant-badge">
+              即答！
+            </span>
+          )}
           <span className="mm-score">{score}</span>
           <span className="mm-badge">{config.mode}</span>
         </div>
@@ -1184,7 +1167,7 @@ const CSS = `
 
 .mm-status { flex-direction: row; align-items: center; justify-content: space-between; padding: calc(var(--pad) * 0.6) var(--pad); }
 .mm-status-left { flex: 1 1 0; display: flex; flex-direction: column; align-items: flex-start; }
-.mm-status-right { flex: 1 1 0; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.mm-status-right { position: relative; flex: 1 1 0; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
 .mm-qnum { font-family: var(--mono); font-size: var(--fs-md); font-weight: 500; }
 .mm-qnum i { font-style: normal; color: var(--ink-40); }
 .mm-score { font-family: var(--mono); font-size: var(--fs-md); font-weight: 600; }
@@ -1432,6 +1415,25 @@ const CSS = `
 @keyframes mmRise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
 @keyframes mmPop { from { opacity: 0; transform: scale(.86); } to { opacity: 1; transform: none; } }
 @keyframes mmPulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+.mm-instant-badge {
+  position: absolute;
+  top: -34px;
+  right: 0;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: var(--good);
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  animation: mmInstantBadge 1.1s ease forwards;
+}
+@keyframes mmInstantBadge {
+  0% { opacity: 0; transform: translateY(4px); }
+  18% { opacity: 1; transform: translateY(0); }
+  70% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-4px); }
+}
 @media (prefers-reduced-motion: reduce) {
   .mm-root *, .mm-root *::before, .mm-root *::after {
     animation-duration: .001ms !important; transition-duration: .001ms !important;
