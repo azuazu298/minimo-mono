@@ -445,15 +445,16 @@ function PlayScreen({ config, sound, bookmarks, onToggleBookmark, onGameOver }) 
           ))}
         </div>
         <div className="mm-status-right">
-          {instantToken > 0 && (
-            <span key={instantToken} className="mm-instant-badge">
-              即答！
-            </span>
-          )}
           <span className="mm-score">{score}</span>
           <span className="mm-badge">{config.mode}</span>
         </div>
       </Panel>
+
+      {instantToken > 0 && (
+        <span key={instantToken} className="mm-instant-badge">
+          即答！
+        </span>
+      )}
 
       <Panel className="mm-question">
         <div className="mm-question-top">
@@ -1022,7 +1023,7 @@ const CSS = `
 }
 
 .mm-main { flex: 1; min-height: 0; display: flex; }
-.mm-stack { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: var(--gap); }
+.mm-stack { position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; gap: var(--gap); }
 
 .mm-header {
   flex-direction: row;
@@ -1417,8 +1418,9 @@ const CSS = `
 @keyframes mmPulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
 .mm-instant-badge {
   position: absolute;
-  top: -34px;
-  right: 0;
+  top: calc(var(--pad) * 0.35);
+  right: var(--pad);
+  z-index: 30;
   font-size: var(--fs-xs);
   font-weight: 600;
   letter-spacing: .02em;
