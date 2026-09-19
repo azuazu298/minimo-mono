@@ -1,5 +1,3 @@
-// TOEIC batch 36 (FINAL) — new 1800-word source list, words 1751-1800 (source order)
-// New format: 3 corrects (paraphrases) + 5 pooled wrongs per word.
 export const WORDS_BATCH_36 = [
   {
     id: 1751,

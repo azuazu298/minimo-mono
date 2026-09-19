@@ -1,5 +1,3 @@
-// TOEIC batch 30 — new 1800-word source list, words 1451-1500 (source order)
-// New format: 3 corrects (paraphrases) + 5 pooled wrongs per word.
 export const WORDS_BATCH_30 = [
   {
     id: 1451,

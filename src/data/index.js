@@ -1,14 +1,3 @@
-// Combines all word batches into one list.
-//
-// Data shape each batch file must export (new format):
-//   {
-//     id, word, meaning, difficulty,
-//     corrects: ["...", "...", "..."],       // exactly 3
-//     wrongs:   ["...", "...", "...", "...", "..."], // exactly 5
-//   }
-//
-// All 36 batches (1800 words total, words 1-1800) are included below.
-
 import { WORDS_BATCH_01 } from "./batch-01.js";
 import { WORDS_BATCH_02 } from "./batch-02.js";
 import { WORDS_BATCH_03 } from "./batch-03.js";

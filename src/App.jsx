@@ -19,15 +19,6 @@ import {
   Info,
 } from "lucide-react";
 
-/* ============================================================
-   minimo-mono — English phrase quiz
-   Web (React) build. Bento panels / skeleton buttons / round edges.
-   All internal sizing is a fixed 1000x1778 design canvas, uniformly scaled
-   via transform: scale() to fit the device's safe-area-adjusted screen.
-   ============================================================ */
-
-/* ---------- Data ---------- */
-
 const INFO = {
   classic: {
     title: "Classic",
@@ -64,8 +55,6 @@ const ANIMALS = [
   "deer", "crocodile", "flamingo", "peacock", "turtle", "bear",
 ];
 
-/* ---------- Helpers ---------- */
-
 const shuffle = (arr) => {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -89,8 +78,6 @@ const pickDifficulty = (qNum) => {
 
 const ROUND_TIME = 15;
 const CLASSIC_LENGTH = 100;
-
-/* ---------- Sound (WebAudio, no assets) ---------- */
 
 function useSound() {
   const ctxRef = useRef(null);
@@ -122,7 +109,7 @@ function useSound() {
       osc.start(t0);
       osc.stop(t0 + dur + 0.02);
     } catch (e) {
-      /* audio is optional */
+
     }
   }, []);
 
@@ -134,8 +121,6 @@ function useSound() {
     tap: useCallback(() => { tone(660, 0.05); }, [tone]),
   };
 }
-
-/* ---------- Small UI atoms ---------- */
 
 const Ico = ({ as: C, s = 5, fill = "none" }) => (
   <span className="mm-ico" style={{ width: `${s * 10}px`, height: `${s * 10}px` }}>
@@ -172,8 +157,6 @@ const Btn = ({ children, onClick, disabled, variant = "", className = "", title 
   </button>
 );
 
-/* ---------- Chrome: header / footer ---------- */
-
 function Header({ screen, onHome, onOpenSettings }) {
   const homeEnabled = screen === "play" || screen === "list" || screen === "result";
   return (
@@ -198,8 +181,6 @@ function Footer({ note }) {
   );
 }
 
-/* ---------- Overlay (modal / settings) ---------- */
-
 function Overlay({ open, onClose, title, children, footer }) {
   if (!open) return null;
   return (
@@ -218,8 +199,6 @@ function Overlay({ open, onClose, title, children, footer }) {
   );
 }
 
-/* ---------- Screen: Start ---------- */
-
 function StartScreen({ onStart }) {
   return (
     <button className="mm-start" onClick={onStart}>
@@ -232,8 +211,6 @@ function StartScreen({ onStart }) {
     </button>
   );
 }
-
-/* ---------- Screen: Home ---------- */
 
 function ModeCard({ eyebrow, name, statValue, action, onInfo, locked }) {
   return (
@@ -320,8 +297,6 @@ function HomeScreen({ best, bookmarks, onPlay, onList, onInfo, onNotice }) {
   );
 }
 
-/* ---------- Screen: Play ---------- */
-
 const SEGMENTS = 26;
 
 function Meter({ ratio }) {
@@ -358,8 +333,7 @@ function PlayScreen({ config, sound, bookmarks, onToggleBookmark, onGameOver }) 
   const overRef = useRef(false);
 
   const buildOptionsFor = useCallback((w) => {
-    // { corrects: [...3 strings], wrongs: [...5 strings] }
-    // 1 correct is drawn at random, plus 3 of the 5 pooled wrongs, then shuffled.
+
     const correctText = w.corrects[Math.floor(Math.random() * w.corrects.length)];
     const wrongPool = shuffle(w.wrongs).slice(0, 3);
     const options = [
@@ -411,7 +385,7 @@ function PlayScreen({ config, sound, bookmarks, onToggleBookmark, onGameOver }) 
       }
     }, 800);
     return () => clearInterval(id);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, []);
 
   const answered = picked !== null;
@@ -545,8 +519,6 @@ function PlayScreen({ config, sound, bookmarks, onToggleBookmark, onGameOver }) 
   );
 }
 
-/* ---------- Screen: Result ---------- */
-
 function ResultScreen({ result, best, isBest, onAgain, onHome }) {
   const [share, setShare] = useState(false);
   const [capturing, setCapturing] = useState(false);
@@ -649,8 +621,6 @@ function ResultScreen({ result, best, isBest, onAgain, onHome }) {
   );
 }
 
-/* ---------- Screen: List ---------- */
-
 const FILTERS = [
   { id: "all", label: "All" },
   { id: "1", label: "Lv.1" },
@@ -727,8 +697,6 @@ function ListScreen({ bookmarks, onToggleBookmark }) {
   );
 }
 
-/* ---------- App ---------- */
-
 export default function MinimoMono() {
   const [screen, setScreen] = useState("start");
   const [config, setConfig] = useState({ mode: "classic" });
@@ -785,7 +753,7 @@ export default function MinimoMono() {
     try {
       localStorage.setItem("minimo-mono:best", String(best));
     } catch (e) {
-      /* storage unavailable; best score just won't persist */
+
     }
   }, [best]);
 
@@ -793,7 +761,7 @@ export default function MinimoMono() {
     try {
       localStorage.setItem("minimo-mono:bookmarks", JSON.stringify(bookmarks));
     } catch (e) {
-      /* storage unavailable; stars just won't persist */
+
     }
   }, [bookmarks]);
 
@@ -979,8 +947,6 @@ export default function MinimoMono() {
   );
 }
 
-/* ---------- Styles ---------- */
-
 const CSS = `
 .mm-root {
   --ink: #111113;
@@ -999,8 +965,6 @@ const CSS = `
   --sans: ui-sans-serif, -apple-system, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 
-  /* Invisible device boundary: safe-area (notch/home-indicator) top & bottom,
-     plus a small fixed cosmetic margin left & right. */
   position: fixed;
   inset: 0;
   padding-top: calc(env(safe-area-inset-top, 0px) + 10px);
@@ -1018,8 +982,6 @@ const CSS = `
   container-type: size;
 }
 
-/* Ratio-correct box (1000:1778) that grows until it touches one of the
-   invisible boundary lines set by mm-root's padding above. */
 .mm-sizer {
   position: relative;
   width: min(100cqw, calc(100cqh * 1000 / 1778));
@@ -1028,8 +990,6 @@ const CSS = `
   overflow: hidden;
 }
 
-/* The fixed "photograph": always exactly 1000x1778 design pixels,
-   laid out identically everywhere, then scaled uniformly to fit mm-sizer. */
 .mm-canvas {
   position: absolute;
   top: 0;
@@ -1081,7 +1041,6 @@ const CSS = `
 .mm-main { flex: 1; min-height: 0; display: flex; }
 .mm-stack { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: var(--gap); }
 
-/* header + footer */
 .mm-header {
   flex-direction: row;
   align-items: center;
@@ -1110,7 +1069,6 @@ const CSS = `
 .mm-footer-note { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .mm-footer-mark { flex: 0 0 auto; }
 
-/* labels */
 .mm-eyebrow-row { display: flex; align-items: center; justify-content: space-between; gap: var(--gap); }
 .mm-eyebrow {
   font-family: var(--mono);
@@ -1120,7 +1078,6 @@ const CSS = `
   color: var(--ink-40);
 }
 
-/* buttons — skeleton first */
 .mm-btn {
   display: flex;
   flex-direction: column;
@@ -1169,7 +1126,6 @@ const CSS = `
 .mm-tall { flex: 1; height: 100%; }
 .mm-danger { color: var(--bad); border-color: rgba(163,58,50,.3); }
 
-/* start */
 .mm-start {
   flex: 1;
   display: flex;
@@ -1201,7 +1157,6 @@ const CSS = `
   animation: mmPulse 2.4s ease-in-out infinite;
 }
 
-/* home */
 .mm-mode { flex: 0 0 auto; gap: var(--gap); padding: calc(var(--pad) * 0.8) var(--pad); }
 .mm-mode-row { flex: 1; display: flex; align-items: center; justify-content: space-between; gap: var(--gap); }
 .mm-mode-name { margin: 0; font-size: 74px; font-weight: 600; letter-spacing: -0.02em; }
@@ -1227,7 +1182,6 @@ const CSS = `
 .mm-grid-sub { font-family: var(--mono); font-size: var(--fs-xs); letter-spacing: 0.12em; color: var(--ink-40); }
 .mm-row-2 { flex: 1; display: flex; gap: var(--gap); min-height: 140px; }
 
-/* play */
 .mm-status { flex-direction: row; align-items: center; justify-content: space-between; padding: calc(var(--pad) * 0.6) var(--pad); }
 .mm-status-left { flex: 1 1 0; display: flex; flex-direction: column; align-items: flex-start; }
 .mm-status-right { flex: 1 1 0; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
@@ -1297,7 +1251,6 @@ const CSS = `
 .mm-count { flex: 1; align-items: center; justify-content: center; gap: 30px; }
 .mm-count-num { font-family: var(--mono); font-size: 220px; font-weight: 300; letter-spacing: -0.04em; animation: mmPop .5s ease; }
 
-/* result */
 .mm-result { align-items: center; justify-content: flex-start; text-align: center; gap: 0; }
 .mm-result-head { display: flex; align-items: center; justify-content: space-between; width: 100%; }
 .mm-result-body {
@@ -1320,7 +1273,6 @@ const CSS = `
 .mm-note { margin: 0; font-size: var(--fs-xs); color: var(--ink-40); }
 .mm-note--center { text-align: center; }
 
-/* list */
 .mm-list-head { gap: calc(var(--gap) * 1.2); }
 .mm-filters { display: flex; flex-wrap: wrap; gap: 12px; }
 .mm-chip {
@@ -1366,7 +1318,6 @@ const CSS = `
 .mm-star:active { transform: scale(.92); }
 .mm-empty { font-size: var(--fs-sm); color: var(--ink-40); text-align: center; padding: 60px 0; }
 
-/* overlay */
 .mm-overlay {
   position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
   padding: 6%; background: rgba(17,17,19,.28); backdrop-filter: blur(8px);
@@ -1463,7 +1414,6 @@ const CSS = `
   font-family: var(--mono); font-size: var(--fs-xs); letter-spacing: 0.1em; color: var(--ink-40);
 }
 
-/* pointer-only: keeps tapped buttons from staying highlighted on touch */
 @media (hover: hover) and (pointer: fine) {
   .mm-btn:hover:not(:disabled) { border-color: var(--ink-40); background: rgba(17,17,19,.035); }
   .mm-btn--solid:hover:not(:disabled) { background: rgba(17,17,19,.04); }
@@ -1477,7 +1427,6 @@ const CSS = `
   .mm-danger--solid:hover { background: #8f322b; border-color: #8f322b; color: #fff; }
 }
 
-/* motion */
 .mm-fade { animation: mmFade .32s ease both; }
 @keyframes mmFade { from { opacity: 0; } to { opacity: 1; } }
 @keyframes mmRise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }

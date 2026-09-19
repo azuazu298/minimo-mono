@@ -1,5 +1,3 @@
-// TOEIC batch 08 — new 1800-word source list, words 351-400 (source order)
-// New format: 3 corrects (paraphrases) + 5 pooled wrongs per word.
 export const WORDS_BATCH_08 = [
   {
     id: 351,
